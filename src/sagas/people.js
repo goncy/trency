@@ -4,7 +4,7 @@ import {delay} from 'redux-saga'
 import {fetchPerson} from '../actions/api'
 
 export function fetchPersonApi(id) {
-  return fetch(`http://swapi.co/api/people/${id}` )
+  return fetch(`https://swapi.co/api/people/${id}` )
     .then(response => response.json())
 }
 
