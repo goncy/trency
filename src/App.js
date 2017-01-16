@@ -1,27 +1,27 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
 
-import {fetchPerson} from './actions/api'
+import {fetchJoke} from './actions/api'
 import './App.css';
 
 class App extends Component {
   componentDidMount () {
     for (let i = 1; i < 10; i++) {
-      this.props.fetchPerson(i)
+      this.props.fetchJoke()
     }
   }
 
   render() {
-    const {people} = this.props
+    const {jokes} = this.props
     return (
       <div className="App">
         <div className="App-header">
-          <h2>SWAPI People</h2>
+          <h2>Chuck jokes</h2>
         </div>
         <div className="App-intro">
-          {people.map((person, key) => (
+          {jokes.map((joke, key) => (
             <div key={key}>
-              <p>{person.name}</p>  
+              <p>{joke.value}</p>  
             </div>
           ))}
         </div>
@@ -30,12 +30,12 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = ({people}) => ({
-  people: people.toArray()
+const mapStateToProps = ({jokes}) => ({
+  jokes: jokes.toArray()
 })
 
 const mapDispatchToProps = {
-  fetchPerson: fetchPerson.run
+  fetchJoke: fetchJoke.run
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -2,6 +2,7 @@
   "name": "create-react-redux-sagas-flow-immutable-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://goncy.github.io/create-react-redux-sagas-flow-immutable-app",
   "devDependencies": {
     "flow-bin": "^0.37.4",
     "react-scripts": "0.8.5"

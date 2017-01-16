@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
 
-import people from './people'
+import jokes from './jokes'
 
 const rootReducer = combineReducers({
-  people
+  jokes
 })
 
 export default rootReducer

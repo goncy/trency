@@ -1,2 +1,1 @@
-export const FETCH_PERSON = 'FETCH_PERSON'
-export const FETCH_PERSONS = 'FETCH_PERSONS'
+export const FETCH_JOKE = 'FETCH_JOKE'

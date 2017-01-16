@@ -1,9 +1,9 @@
 import {fork} from 'redux-saga/effects'
 
-import people from './people'
+import jokes from './jokes'
 
 export default function* rootSaga () {
   yield [
-    fork(...people)
+    fork(...jokes)
   ]
 }
