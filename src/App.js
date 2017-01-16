@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {connect} from 'react-redux'
 
 import {fetchJoke} from './actions/api'
 import {getJokes} from './reducers/jokes'
-import './App.css';
+import './App.css'
 
 class App extends Component {
   componentDidMount () {
@@ -12,7 +12,7 @@ class App extends Component {
     }
   }
 
-  render() {
+  render () {
     const {jokes} = this.props
     return (
       <div className="App">
@@ -22,12 +22,12 @@ class App extends Component {
         <div className="App-intro">
           {jokes.map((joke, key) => (
             <div key={key}>
-              <p>{joke}</p>  
+              <p>{joke}</p>
             </div>
           ))}
         </div>
       </div>
-    );
+    )
   }
 }
 
@@ -39,4 +39,4 @@ const mapDispatchToProps = {
   fetchJoke: fetchJoke.run
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App)
