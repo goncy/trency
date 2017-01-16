@@ -9,13 +9,16 @@ type jokesAction = {
   payload: any
 }
 
-const jokes = (state: jokesState = Immutable.List(), {type, payload}: jokesAction) => {
+const jokes = (state: jokesState = Immutable.Set(), {type, payload}: jokesAction) => {
   switch (type) {
     case fetchJoke.SUCCESS:
-      return state.push(payload)
+      return state.add(payload)
     default:
       return state
   }
 }
+
+export const getJokes = jokes => jokes
+  .map(joke => joke.value)
 
 export default jokes

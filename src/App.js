@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux'
 
 import {fetchJoke} from './actions/api'
+import {getJokes} from './reducers/jokes'
 import './App.css';
 
 class App extends Component {
   componentDidMount () {
-    for (let i = 1; i < 10; i++) {
+    for (let i = 0; i < 10; i++) {
       this.props.fetchJoke()
     }
   }
@@ -21,7 +22,7 @@ class App extends Component {
         <div className="App-intro">
           {jokes.map((joke, key) => (
             <div key={key}>
-              <p>{joke.value}</p>  
+              <p>{joke}</p>  
             </div>
           ))}
         </div>
@@ -31,7 +32,7 @@ class App extends Component {
 }
 
 const mapStateToProps = ({jokes}) => ({
-  jokes: jokes.toArray()
+  jokes: getJokes(jokes)
 })
 
 const mapDispatchToProps = {
