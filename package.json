@@ -29,7 +29,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy": "yarn build && gh-pages -d build",
-    "flow": "flow stop && flow start"
+    "flow": "flow stop && flow start",
+    "lintfix": "eslint ./src"
   },
   "eslintConfig": {
     "extends": [

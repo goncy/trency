@@ -1,3 +1,3 @@
-export default function randomString () {
+export default function randomString (): string {
   return Math.random().toString(36).substring(5, 15)
 }
