@@ -1,8 +1,8 @@
 {
-  "name": "create-react-redux-sagas-flow-immutable-app",
+  "name": "trenes",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://goncy.github.io/create-react-redux-sagas-flow-immutable-app",
+  "homepage": "https://goncy.github.io/trenes",
   "devDependencies": {
     "eslint-config-standard": "^6.2.1",
     "eslint-plugin-promise": "^3.4.0",
