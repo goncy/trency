@@ -1,0 +1,10 @@
+.PreferencesSetter .subtitle a {
+  margin: 5px;
+}
+
+.PreferencesSetter .hero-foot {
+  position: absolute !important;
+  bottom: 10px;
+  left: 10px;
+  width: 100%;
+}

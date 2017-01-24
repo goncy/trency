@@ -1,9 +1,13 @@
 import { combineReducers } from 'redux'
 
-import jokes from './jokes'
+import trenes from './trenes'
+import preferences from './preferences'
+import horarios from './horarios'
 
 const rootReducer = combineReducers({
-  jokes
+  trenes,
+  preferences,
+  horarios
 })
 
 export default rootReducer

@@ -12,7 +12,10 @@
     "react-scripts": "0.8.5"
   },
   "dependencies": {
+    "animate.css": "^3.5.2",
+    "bulma": "^0.3.1",
     "immutable": "^3.8.1",
+    "load-google-maps-api": "^0.0.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.2",
@@ -20,13 +23,18 @@
     "redux-saga": "^0.14.2"
   },
   "scripts": {
+    "prestart": "yarn flow",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "yarn build && gh-pages -d build"
+    "deploy": "yarn build && gh-pages -d build",
+    "flow": "flow stop && flow start"
   },
   "eslintConfig": {
-    "extends": ["react-app", "standard"]
+    "extends": [
+      "react-app",
+      "standard"
+    ]
   }
 }

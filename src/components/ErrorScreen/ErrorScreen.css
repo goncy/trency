@@ -1,0 +1,15 @@
+.ErrorScreen {
+  position: absolute !important;
+  display: flex;
+  background: #FFDE57;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ErrorScreen p {
+  color: white;
+}

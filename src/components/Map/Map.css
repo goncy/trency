@@ -1,0 +1,8 @@
+#map-canvas {
+  flex: 1;
+  position: relative !important;
+}
+
+.gm-style-cc {
+  display: none;
+}

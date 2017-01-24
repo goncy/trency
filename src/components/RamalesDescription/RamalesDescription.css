@@ -1,0 +1,11 @@
+.RamalesDescription {
+  display: flex;
+  flex-direction: column;
+  position: absolute !important;
+  top: 10px;
+  left: 10px;
+}
+
+.RamalesDescription span {
+  margin-bottom: 10px;
+}

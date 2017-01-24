@@ -1,2 +1,5 @@
 [ignore]
 <PROJECT_ROOT>/node_modules/fbjs/.*
+suppress_comment= \\(.\\|\n\\)*\\$global
+[libs]
+./src/flowtypes.js
