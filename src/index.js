@@ -5,6 +5,7 @@ import configureStore from './store/configureStore'
 import rootSaga from './sagas'
 
 import App from './components/App/'
+
 import './index.css'
 
 import 'bulma/css/bulma.css'

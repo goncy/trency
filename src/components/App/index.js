@@ -4,18 +4,21 @@ import loadGoogleMapsAPI from 'load-google-maps-api'
 
 import {preferencesSet} from '../../reducers/preferences'
 import {trenesIsEmpty} from '../../reducers/trenes'
+import {gmapsLoaded, gmapsFailed, dataLoaded, dataFailed} from './selectors'
 
 import App from './App'
 import PreferencesSetter from '../PreferencesSetter'
-import Spinner from '../Spinner'
-import ErrorScreen from '../ErrorScreen'
+import LoadingGMaps from './scenes/LoadingGMaps'
+import LoadingData from './scenes/LoadingData'
 
 import './App.css'
 
 class AppContainer extends Component {
   state = {
-    googleMapsLoaded: false,
-    googleMapsLoadingError: null
+    gmaps: {
+      loaded: false,
+      error: null
+    }
   }
 
   componentDidMount () {
@@ -24,57 +27,58 @@ class AppContainer extends Component {
 
   loadGMaps () {
     return loadGoogleMapsAPI({libraries: 'geometry'})
-      .then(() => {
-        this.setState({
-          googleMapsLoaded: true
-        })
-      })
-      .catch(err => {
-        return this.setState({
-          googleMapsLoaded: false,
-          googleMapsLoadingError: err
-        })
-      })
+      .then(() => this.setState({
+        gmaps: {
+          loaded: true,
+          error: false
+        }
+      }))
+      .catch(() => this.setState({
+        gmaps: {
+          loaded: true,
+          error: true
+        }
+      }))
+  }
+
+  getScene () {
+    const {preferencesSet} = this.props
+    const {gmaps} = this.state
+
+    // Loading GMaps scene
+    if (!gmapsLoaded(gmaps)) {
+      return <LoadingGMaps.Loading />
+    } else {
+      // Failed loading GMaps scene
+      if (gmapsFailed(gmaps)) {
+        return <LoadingGMaps.Error retry={this.loadGMaps} />
+      } else {
+        // Set preferences scene
+        if (!preferencesSet) {
+          return <PreferencesSetter />
+        } else {
+          // Loading data failed scene
+          if (dataFailed(this.props)) {
+            return <LoadingData message='Cargando datos de ubicacion y horario de los trenes' />
+          } else {
+            // Loading data scene
+            if (!dataLoaded(this.props)) {
+              return <LoadingData />
+            } else {
+              // Application scene
+              return <App />
+            }
+          }
+        }
+      }
+    }
   }
 
   render () {
-    const {preferencesSet, trenesIsEmpty, horariosIsEmpty, trenesError, horariosError} = this.props
-    const {googleMapsLoaded, googleMapsLoadingError} = this.state
-
     return (
       <div className="App flex-column">
         <div className="App-intro flex-column">
-          {!googleMapsLoaded && !googleMapsLoadingError && <Spinner>
-            <p>Cargando libreria de Google Maps</p>
-          </Spinner>}
-          {!googleMapsLoaded && googleMapsLoadingError && <ErrorScreen>
-            <div>
-              Hubo un error cargando la libreria de Google Maps
-              <div>
-                <a
-                  onClick={() => this.loadGMaps()}
-                  className="button is-outlined is-inverted is-warning"
-                  style={{marginTop: 10}}
-                >
-                  Volver a intentar
-                </a>
-              </div>
-            </div>
-          </ErrorScreen>}
-          {googleMapsLoaded && !preferencesSet && <PreferencesSetter />}
-          {googleMapsLoaded && preferencesSet && (trenesIsEmpty || horariosIsEmpty) && (trenesError || horariosError) &&
-            <Spinner>
-              <p>Cargando datos de ubicacion y horario de los trenes
-              <br/>
-              <span style={{fontSize: 'small'}}>(parece que el servidor esta tardando en responder)</span></p>
-            </Spinner>
-          }
-          {googleMapsLoaded && preferencesSet && (trenesIsEmpty || horariosIsEmpty) && (!trenesError && !horariosError) &&
-            <Spinner>
-              <p>Cargando datos de ubicacion y horario de los trenes</p>
-            </Spinner>
-          }
-          {googleMapsLoaded && preferencesSet && (!trenesIsEmpty && !horariosIsEmpty) && <App />}
+          {this.getScene()}
         </div>
       </div>
     )
