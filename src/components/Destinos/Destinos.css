@@ -1,11 +1,12 @@
-.RamalesDescription {
+.Destinos {
   display: flex;
   flex-direction: column;
   position: absolute !important;
   top: 10px;
   left: 10px;
+  z-index: 1;
 }
 
-.RamalesDescription span {
+.Destinos span {
   margin-bottom: 10px;
 }

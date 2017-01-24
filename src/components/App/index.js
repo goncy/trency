@@ -15,10 +15,8 @@ import './App.css'
 
 class AppContainer extends Component {
   state = {
-    gmaps: {
-      loaded: false,
-      error: null
-    }
+    error: false,
+    library: null
   }
 
   componentDidMount () {
@@ -27,34 +25,27 @@ class AppContainer extends Component {
 
   loadGMaps () {
     return loadGoogleMapsAPI({libraries: 'geometry'})
-      .then(() => this.setState({
-        gmaps: {
-          loaded: true,
-          error: false
-        }
+      .then(maps => this.setState({
+        library: maps,
+        error: false
       }))
       .catch(() => this.setState({
-        gmaps: {
-          loaded: true,
-          error: true
-        }
+        library: null,
+        error: true
       }))
   }
 
   getScene () {
-    const {preferencesSet} = this.props
-    const {gmaps} = this.state
-
     // Loading GMaps scene
-    if (!gmapsLoaded(gmaps)) {
+    if (!gmapsLoaded(this.state)) {
       return <LoadingGMaps.Loading />
     } else {
       // Failed loading GMaps scene
-      if (gmapsFailed(gmaps)) {
+      if (gmapsFailed(this.state)) {
         return <LoadingGMaps.Error retry={this.loadGMaps} />
       } else {
         // Set preferences scene
-        if (!preferencesSet) {
+        if (!this.props.preferencesSet) {
           return <PreferencesSetter />
         } else {
           // Loading data failed scene
@@ -66,7 +57,7 @@ class AppContainer extends Component {
               return <LoadingData />
             } else {
               // Application scene
-              return <App />
+              return <App google={{maps: this.state.library}} />
             }
           }
         }

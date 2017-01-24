@@ -4,55 +4,40 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux'
 
 import {getTrenes} from '../../reducers/trenes'
-import {clearPreferences} from '../../actions/preferences'
 
 import Map from '../Map'
 import Marker from '../Marker'
-import RamalesDescription from '../RamalesDescription'
-import PreferencesSettings from '../PreferencesSettings'
-import RamalesHorarios from '../RamalesHorarios'
+import Destinos from '../Destinos'
+import Preferences from '../Preferences'
+import Horarios from '../Horarios'
 
 class App extends Component {
   render () {
-    const {trenes, preferences, horarios, clearPreferences} = this.props
+    const {trenes, google} = this.props
     return (
       <div className='App-container flex-column'>
-        <Map>
+        {/* Destinos */}
+        <Destinos />
+        {/* Preferences */}
+        <Preferences />
+        {/* Mapa */}
+        <Map google={google}>
           {trenes.map((tren, index) => (
             <Marker
               key={index}
-              position={tren.posicion}
-              ramalId={tren.ramal}
+              tren={tren}
             />
           ))}
         </Map>
-        <RamalesDescription
-          ramal={preferences.ramal}
-        />
-        <RamalesHorarios
-          ramal={preferences.ramal}
-          horario={horarios.activo}
-          estacion={preferences.estacion}
-        />
-        <PreferencesSettings
-          ramal={preferences.ramal}
-          linea={preferences.linea}
-          estacion={preferences.estacion}
-          clearPreferences={clearPreferences}
-        />
+        {/* Horarios */}
+        <Horarios />
       </div>
     )
   }
 }
 
-const mapStateToProps = ({trenes, preferences, horarios}) => ({
-  trenes: getTrenes(trenes),
-  preferences,
-  horarios
+const mapStateToProps = ({trenes}) => ({
+  trenes: getTrenes(trenes)
 })
 
-const mapDispatchToProps = {
-  clearPreferences: clearPreferences.run
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(mapStateToProps)(App)

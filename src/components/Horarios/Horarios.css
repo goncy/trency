@@ -1,12 +1,13 @@
-.RamalesHorarios {
+.Horarios {
   padding: 1em;
+  z-index: 1;
 }
 
-.RamalesHorarios .heading {
+.Horarios .heading {
   display: flex;
   align-items: baseline;
 }
 
-.RamalesHorarios .heading span {
+.Horarios .heading span {
   margin-left: 5px;
 }

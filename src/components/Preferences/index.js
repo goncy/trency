@@ -1,12 +1,15 @@
 import React from 'react'
+import {connect} from 'react-redux'
+
+import {clearPreferences} from '../../actions/preferences'
 
 import EditIcon from './edit.svg'
 
-import './PreferencesSettings.css'
+import './Preferences.css'
 
-const PreferencesSettings = ({ramal, linea, estacion, clearPreferences}) => {
+const Preferences = ({ramal, linea, estacion, clearPreferences}) => {
   return (
-    <div className='PreferencesSettings animated fadeInLeft'>
+    <div className='Preferences animated fadeInLeft'>
       <div className='preferences'>
         <p>{`Esperando a la linea ${linea.name}`}</p>
         <p>{`Ramal ${ramal.name}`}</p>
@@ -31,4 +34,14 @@ const PreferencesSettings = ({ramal, linea, estacion, clearPreferences}) => {
   )
 }
 
-export default PreferencesSettings
+const mapStateToProps = ({trenes, preferences, horarios}) => ({
+  ramal: preferences.ramal,
+  linea: preferences.linea,
+  estacion: preferences.estacion
+})
+
+const mapDispatchToProps = {
+  clearPreferences: clearPreferences.run
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Preferences)

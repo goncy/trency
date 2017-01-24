@@ -1,4 +1,4 @@
-.PreferencesSettings {
+.Preferences {
   display: flex;
   flex-direction: row;
   position: absolute !important;
@@ -6,26 +6,27 @@
   right: 10px;
   text-align: right;
   align-items: center;
+  z-index: 1;
 }
 
-.PreferencesSettings p {
+.Preferences p {
   font-size: small;
 }
 
-.PreferencesSettings .edit-img {
+.Preferences .edit-img {
   vertical-align: middle;
   border: 0 !important;
   padding: 0 !important;
   margin-left: 5px;
 }
 
-.PreferencesSettings .edit-text {
+.Preferences .edit-text {
   vertical-align: middle;
   font-size: 13px;
   color: #4a4a4a;
 }
 
-.PreferencesSettings .edit-btn {
+.Preferences .edit-btn {
   margin: 0;
   padding: 0;
   background: transparent;
