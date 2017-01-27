@@ -10,3 +10,5 @@ coverage
 .DS_Store
 .env
 npm-debug.log
+
+server

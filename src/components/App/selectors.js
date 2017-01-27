@@ -1,3 +1,5 @@
+// @flow
+
 type gmapsState = {
   library: ?any,
   error: boolean
@@ -5,5 +7,5 @@ type gmapsState = {
 
 export const gmapsLoaded = ({library, error}: gmapsState): boolean => !!library
 export const gmapsFailed = ({error}: gmapsState): boolean => error
-export const dataLoaded = ({trenesIsEmpty, horariosIsEmpty}) => (!trenesIsEmpty && !horariosIsEmpty)
-export const dataFailed = ({trenesError, horariosError}) => (trenesError || horariosError)
+export const dataLoaded = ({trenesIsEmpty, horariosIsEmpty}: any) => (!trenesIsEmpty && !horariosIsEmpty)
+export const dataFailed = ({trenesError, horariosError}: any) => (trenesError || horariosError)
