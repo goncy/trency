@@ -102,6 +102,7 @@ class PreferencesSetter extends Component {
           )}
         </div>
 
+        {/* Volver atras */}
         {step > 1 && step <= 3 && (
           <div className='hero-foot'>
             <nav className="level">

@@ -50,7 +50,7 @@ class AppContainer extends Component {
         } else {
           // Loading data failed scene
           if (dataFailed(this.props)) {
-            return <LoadingData message='Cargando datos de ubicacion y horario de los trenes' />
+            return <LoadingData>Cargando datos de ubicacion y horario de los trenes</LoadingData>
           } else {
             // Loading data scene
             if (!dataLoaded(this.props)) {

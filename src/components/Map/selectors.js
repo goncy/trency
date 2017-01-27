@@ -18,7 +18,7 @@ export const buildEstaciones = (ramal, estacion, map) => {
       const marker = new google.maps.Marker({
         map,
         zIndex: isSelected ? 9999 : -1,
-        position: est.posicion,
+        position: est.position,
         icon: new google.maps.MarkerImage(
           `/estacion${isSelected ? '-seleccionada' : ''}-marker.svg`,
           new google.maps.Size(15, 15),

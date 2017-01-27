@@ -22,7 +22,7 @@ type ShapedTrenType = {
   id: number,
   moviendose: boolean,
   funcionando: boolean,
-  posicion: Position,
+  position: Position,
   ramal: number
 }
 
@@ -74,7 +74,7 @@ export const getTrenes = (trenes: TrenesState): Immutable.List<ShapedTrenType> =
     ramal: tren.ramal,
     moviendose: tren.estado_mov === 1,
     funcionando: tren.estado_servicio === 1,
-    posicion: {lat: Number(tren.latitud), lng: Number(tren.longitud)}
+    position: {lat: Number(tren.latitud), lng: Number(tren.longitud)}
   }))
 
 export const trenesIsEmpty = (trenes: TrenesState): boolean => trenes
