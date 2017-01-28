@@ -1,1 +1,1 @@
-export const getInfoWindow = ({google, marker, content}) => new google.maps.InfoWindow({content})
+export const getInfoWindow = ({gmaps, marker, content}) => new gmaps.InfoWindow({content})

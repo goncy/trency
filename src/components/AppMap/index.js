@@ -1,8 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
-import {getTrenes} from '../../reducers/trenes'
-import {getTrenMarkerOptions, getEstacionMarkerOptions, getEstacionInfoWindowContent} from './selectors'
+import {getPositions} from '../../selectors/data'
+import {getPositionMarkerOptions, getStationMarkerOptions, getStationInfoWindowContent} from './selectors'
 
 import InfoWindow from '../InfoWindow'
 import PolyLine from '../PolyLine'
@@ -10,34 +10,34 @@ import Map from '../Map'
 import Marker from '../Marker'
 
 const AppMap = props => {
-  const {google, preferences, trenes} = props
+  const {gmaps, preferences, positions} = props
   return (
-    <Map google={google}>
+    <Map gmaps={gmaps}>
       {/* Recorrido */}
-      <PolyLine line={preferences.ramal.path} />
-      {/* Estaciones */}
-      {preferences.ramal.estaciones.map((estacion, index) => (
+      <PolyLine line={preferences.branch.path} />
+      {/* Stations */}
+      {preferences.branch.stations.map((station, index) => (
         <Marker
           key={index}
-          options={getEstacionMarkerOptions(props, estacion)}
+          options={getStationMarkerOptions(props, station)}
         >
-          {/* InfoWindow Estaciones */}
-          <InfoWindow content={getEstacionInfoWindowContent(props, estacion)} />
+          {/* InfoWindow Stations */}
+          <InfoWindow content={getStationInfoWindowContent(props, station)} />
         </Marker>
       ))}
-      {/* Trenes */}
-      {trenes.map((tren, index) => (
+      {/* Trains */}
+      {positions.map((position, index) => (
         <Marker
           key={index}
-          options={getTrenMarkerOptions(props, tren)}
+          options={getPositionMarkerOptions(props, position)}
         />
       ))}
     </Map>
   )
 }
 
-const mapStateToProps = ({trenes, preferences}) => ({
-  trenes: getTrenes(trenes),
+const mapStateToProps = ({data, preferences}) => ({
+  positions: getPositions(data),
   preferences
 })
 

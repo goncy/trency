@@ -3,21 +3,27 @@
 import React from 'react'
 
 import AppMap from '../AppMap'
-import Destinos from '../Destinos'
+import Directions from '../Directions'
 import Preferences from '../Preferences'
-import Horarios from '../Horarios'
+import Arrivals from '../Arrivals'
 
-const App = ({google}: any) => (
+import type {GMaps} from '../../flowtypes/globals'
+
+const App = ({gmaps}: GMaps) => (
   <div className='App-container flex-column'>
-    {/* Destinos */}
-    <Destinos />
+    {/* Directions */}
+    <Directions />
     {/* Preferences */}
     <Preferences />
     {/* Mapa */}
-    <AppMap google={google} />
-    {/* Horarios */}
-    <Horarios />
+    <AppMap gmaps={gmaps} />
+    {/* Arrivals */}
+    <Arrivals />
   </div>
 )
+
+App.propTypes = {
+  gmaps: React.PropTypes.object
+}
 
 export default App

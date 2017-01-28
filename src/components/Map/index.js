@@ -15,15 +15,15 @@ class Map extends Component {
   }
 
   setMap () {
-    const {preferences, google} = this.props
-    const {estacion} = preferences
+    const {preferences, gmaps} = this.props
+    const {station} = preferences
 
     this.setState({
-      map: new google.maps.Map(
+      map: new gmaps.Map(
         this.refs.map,
         {
           ...getOptions(this.props),
-          center: estacion.position
+          center: station.position
         }
       )
     })
@@ -31,7 +31,7 @@ class Map extends Component {
 
   render () {
     const {map} = this.state
-    const {preferences, google} = this.props
+    const {preferences, gmaps} = this.props
 
     return (
       <div ref="map" className={this.props.className} id="map-canvas">
@@ -41,7 +41,7 @@ class Map extends Component {
             element => React.cloneElement(
               element,
               {
-                google,
+                gmaps,
                 map,
                 preferences,
                 ...element.props

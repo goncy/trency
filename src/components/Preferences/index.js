@@ -7,12 +7,12 @@ import EditIcon from './edit.svg'
 
 import './Preferences.css'
 
-const Preferences = ({ramal, linea, estacion, clearPreferences}) => (
+const Preferences = ({branch, line, station, clearPreferences}) => (
   <div className='Preferences animated fadeInLeft'>
     <div className='preferences'>
-      <p>{`Esperando a la linea ${linea.name}`}</p>
-      <p>{`Ramal ${ramal.name}`}</p>
-      <p>{`En la estacion ${estacion.name}`}</p>
+      <p>{`Esperando a la line ${line.name}`}</p>
+      <p>{`Branch ${branch.name}`}</p>
+      <p>{`En la station ${station.name}`}</p>
       <button
         className='edit-btn'
         onClick={() => clearPreferences()}
@@ -33,9 +33,9 @@ const Preferences = ({ramal, linea, estacion, clearPreferences}) => (
 )
 
 const mapStateToProps = ({preferences}) => ({
-  ramal: preferences.ramal,
-  linea: preferences.linea,
-  estacion: preferences.estacion
+  branch: preferences.branch,
+  line: preferences.line,
+  station: preferences.station
 })
 
 const mapDispatchToProps = {

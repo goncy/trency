@@ -4,10 +4,10 @@ import {getInfoWindow} from './selectors'
 
 class InfoWindow extends Component {
   componentDidMount () {
-    const {marker, google, map} = this.props
+    const {marker, gmaps, map} = this.props
     if (marker) {
       this.infoWindow = getInfoWindow(this.props)
-      google.maps.event.addListener(marker, 'click', () => this.infoWindow.open(map, marker))
+      gmaps.event.addListener(marker, 'click', () => this.infoWindow.open(map, marker))
     }
   }
 

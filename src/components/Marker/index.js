@@ -1,17 +1,15 @@
 import React, {Component} from 'react'
 
-import {getPosition} from './selectors'
-
 export default class Marker extends Component {
   state = {
     marker: null
   }
 
   componentDidMount () {
-    const {google, map, options = {}} = this.props
+    const {gmaps, map, options = {}} = this.props
     if (options.position) {
       this.setState({
-        marker: new google.maps.Marker({
+        marker: new gmaps.Marker({
           map,
           ...options
         })
@@ -29,7 +27,7 @@ export default class Marker extends Component {
     const {options: prevOptions} = prevProps
 
     if (options.position && options.position !== prevOptions.position) {
-      marker.setPosition(getPosition(options.position))
+      marker.setPosition(options.position)
     } else if (!options.position) {
       this.removeMarker()
     }
@@ -43,7 +41,7 @@ export default class Marker extends Component {
   }
 
   render () {
-    const {google, map} = this.props
+    const {gmaps, map} = this.props
     const {marker} = this.state
 
     return (
@@ -55,7 +53,7 @@ export default class Marker extends Component {
               element,
               {
                 marker: marker,
-                google,
+                gmaps,
                 map,
                 ...element.props
               }

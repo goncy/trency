@@ -2,11 +2,11 @@ export const TRAIN_STATIC_DATA = [
   {
     id: 'roca',
     name: 'Roca',
-    ramales: [
+    branches: [
       {
-        id: 'laplata',
-        ramid: 11,
-        destinos: [
+        id: 11,
+        slug: 'laplata',
+        directions: [
           {
             id: 11,
             name: 'La Plata',
@@ -19,7 +19,7 @@ export const TRAIN_STATIC_DATA = [
           }
         ],
         name: 'Constitucion - La Plata',
-        estaciones: [
+        stations: [
           {
             id: 'constitucion',
             name: 'Constitucion',

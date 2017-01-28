@@ -1,31 +1,31 @@
 import {TRAIN_STATIC_DATA} from './constants'
 
-export const getLineas = TRAIN_STATIC_DATA
+export const getLines = TRAIN_STATIC_DATA
   .map(({id, name}) => ({id, name}))
 
-export const getRamales = linea => TRAIN_STATIC_DATA
-  .find(ln => ln.id === linea.id)
-  .ramales
+export const getBranches = line => TRAIN_STATIC_DATA
+  .find(ln => ln.id === line.id)
+  .branches
 
-export const getLinea = linea => TRAIN_STATIC_DATA
-  .find(ln => ln.id === linea)
+export const getLine = line => TRAIN_STATIC_DATA
+  .find(ln => ln.id === line)
 
-export const getRamal = (linea, ramal) => getRamales(linea)
-  .find(rm => rm.id === ramal)
+export const getBranch = (line, branch) => getBranches(line)
+  .find(rm => rm.id === branch)
 
-export const getEstaciones = (linea, ramal) => getRamales(linea)
-  .find(rm => rm.id === ramal)
-  .estaciones
+export const getStations = (line, branch) => getBranches(line)
+  .find(rm => rm.id === branch)
+  .stations
 
-export const getEstacion = (ramal, estacion) => ramal
-  .estaciones
-  .find(est => est.id === estacion)
+export const getStation = (branch, station) => branch
+  .stations
+  .find(est => est.id === station)
 
-export const getEstacionIndex = (ramal, estacion) => ramal
-  .estaciones
-  .findIndex(est => est.id === estacion)
+export const getStationIndex = (branch, station) => branch
+  .stations
+  .findIndex(est => est.id === station)
 
-export const getRamalColor = (ramal, id) => ramal
-  .destinos
-  .find(destino => destino.id === id)
+export const getBranchColor = (branch, id) => branch
+  .directions
+  .find(direction => direction.id === id)
   .color

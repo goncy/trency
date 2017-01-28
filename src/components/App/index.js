@@ -3,8 +3,8 @@ import {connect} from 'react-redux'
 import loadGoogleMapsAPI from 'load-google-maps-api'
 
 import {preferencesSet} from '../../reducers/preferences'
-import {trenesIsEmpty} from '../../reducers/trenes'
-import {gmapsLoaded, gmapsFailed, dataLoaded, dataFailed} from './selectors'
+import {hasData, hasError} from '../../selectors/data'
+import {gmapsLoaded, gmapsFailed} from './selectors'
 
 import App from './App'
 import PreferencesSetter from '../PreferencesSetter'
@@ -13,8 +13,13 @@ import LoadingData from './scenes/LoadingData'
 
 import './App.css'
 
+export type gmapsState = {
+  library: ?any,
+  error: boolean
+}
+
 class AppContainer extends Component {
-  state = {
+  state: gmapsState = {
     error: false,
     library: null
   }
@@ -36,6 +41,8 @@ class AppContainer extends Component {
   }
 
   getScene () {
+    const {hasData, hasError} = this.props
+
     // Loading GMaps scene
     if (!gmapsLoaded(this.state)) {
       return <LoadingGMaps.Loading />
@@ -49,15 +56,15 @@ class AppContainer extends Component {
           return <PreferencesSetter />
         } else {
           // Loading data failed scene
-          if (dataFailed(this.props)) {
-            return <LoadingData>Cargando datos de ubicacion y horario de los trenes</LoadingData>
+          if (hasError) {
+            return <LoadingData>Parece que el servidor esta teniendo problemas, volviendo a intentar</LoadingData>
           } else {
             // Loading data scene
-            if (!dataLoaded(this.props)) {
+            if (!hasData) {
               return <LoadingData />
             } else {
               // Application scene
-              return <App google={{maps: this.state.library}} />
+              return <App gmaps={this.state.library} />
             }
           }
         }
@@ -76,12 +83,10 @@ class AppContainer extends Component {
   }
 }
 
-const mapStateToProps = ({preferences, trenes, horarios}) => ({
+const mapStateToProps = ({preferences, data}) => ({
   preferencesSet: preferencesSet(preferences),
-  trenesIsEmpty: trenesIsEmpty(trenes),
-  horariosIsEmpty: !horarios.activo,
-  horariosError: horarios.error,
-  trenesError: trenes.error
+  hasData: hasData(data),
+  hasError: hasError(data)
 })
 
 export default connect(mapStateToProps)(AppContainer)

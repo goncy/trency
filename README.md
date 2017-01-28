@@ -1,6 +1,6 @@
-#Trenes
+#Trains
 
-Aplicacion para obtener la posicion y horario de los proximos trenes llegando a las estaciones
+Aplicacion para obtener la posicion y arrival de los proximos trenes llegando a las stations
 
 ##Librerias
 * React

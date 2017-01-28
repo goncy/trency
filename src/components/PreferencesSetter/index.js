@@ -3,8 +3,8 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 
-import {getLineas} from '../../selectors'
-import {changeLinea, changeRamal, changeEstacion} from '../../actions/preferences'
+import {getLines} from '../../selectors'
+import {changeLine, changeBranch, changeStation} from '../../actions/preferences'
 
 import './PreferencesSetter.css'
 
@@ -31,70 +31,70 @@ class PreferencesSetter extends Component {
   }
 
   render () {
-    const {preferences, changeLinea, changeRamal, changeEstacion} = this.props
-    const {linea, ramal} = preferences
+    const {preferences, changeLine, changeBranch, changeStation} = this.props
+    const {line, branch} = preferences
     const {step} = this.state
 
     return (
       <section className={`hero is-${this.getStepColor()} is-fullheight flex-column PreferencesSetter`}>
         <div className='hero-body'>
-          {/* Set linea */}
+          {/* Set line */}
           {step === 1 && (
             <div className='container has-text-centered animated fadeIn'>
               <h1 className='title'>Quiero tomarme la linea</h1>
               <h2 className='subtitle'>
-                {getLineas.map((linea, key) =>
+                {getLines.map((line, key) =>
                   <a
                   key={key}
                     className={`button is-${this.getStepColor()} is-inverted is-outlined`}
                     onClick={() => {
-                      changeLinea(linea.id)
+                      changeLine(line.id)
                       this.setStep(2)
                     }}
                   >
-                    {linea.name}
+                    {line.name}
                   </a>
                 )}
               </h2>
             </div>
           )}
 
-          {/* Set ramal */}
+          {/* Set branch */}
           {step === 2 && (
             <div className='container has-text-centered animated fadeIn'>
               <h1 className='title'>Ramal</h1>
               <h2 className='subtitle'>
-                {linea.ramales.map((ramal, key) =>
+                {line.branches.map((branch, key) =>
                   <a
                   key={key}
                     className={`button is-${this.getStepColor()} is-inverted is-outlined`}
                     onClick={() => {
-                      changeRamal(ramal.id)
+                      changeBranch(branch.id)
                       this.setStep(3)
                     }}
                   >
-                    {ramal.name}
+                    {branch.name}
                   </a>
                 )}
               </h2>
             </div>
           )}
 
-          {/* Set Estacion */}
+          {/* Set Station */}
           {step === 3 && (
             <div className='container has-text-centered animated fadeIn'>
               <h1 className='title'>En la estacion</h1>
               <h2 className='subtitle'>
-                {ramal.estaciones.map((estacion, key) =>
+                {branch.stations.map((station, key) =>
                   <a
                     key={key}
                     className={`button is-${this.getStepColor()} is-inverted is-outlined`}
                     onClick={() => {
-                      changeEstacion(estacion.id)
+                      changeStation(station.id)
                       this.setStep(0)
                     }}
                   >
-                    {estacion.name}
+                    {station.name}
                   </a>
                 )}
               </h2>
@@ -122,9 +122,9 @@ const mapStateToProps = ({preferences}) => ({
 })
 
 const mapDispatchToProps = {
-  changeLinea: changeLinea.run,
-  changeRamal: changeRamal.run,
-  changeEstacion: changeEstacion.run
+  changeLine: changeLine.run,
+  changeBranch: changeBranch.run,
+  changeStation: changeStation.run
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(PreferencesSetter)

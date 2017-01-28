@@ -1,13 +1,13 @@
-.Horarios {
+.Arrivals {
   padding: 1em;
   z-index: 1;
 }
 
-.Horarios .heading {
+.Arrivals .heading {
   display: flex;
   align-items: baseline;
 }
 
-.Horarios .heading span {
+.Arrivals .heading span {
   margin-left: 5px;
 }

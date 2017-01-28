@@ -1,12 +1,8 @@
 // @flow
-import {changeEstacion, changeLinea, changeRamal, clearPreferences} from '../actions/preferences'
-import {getLinea, getRamal, getEstacion} from '../selectors'
+import {changeStation, changeLine, changeBranch, clearPreferences} from '../actions/preferences'
+import {getLine, getBranch, getStation} from '../selectors'
 
-type PreferencesState = {
-  linea: ?any,
-  ramal: ?any,
-  estacion: ?string
-}
+import type {PreferencesState} from '../flowtypes/preferences'
 
 type PreferencesAction = {
   type: string,
@@ -14,41 +10,41 @@ type PreferencesAction = {
 }
 
 const preferences = (state: PreferencesState = {
-  linea: null,
-  ramal: null,
-  estacion: null
+  line: null,
+  branch: null,
+  station: null
 }, {type, payload}: PreferencesAction): PreferencesState => {
   switch (type) {
-    case changeLinea.type:
+    case changeLine.type:
       return {
         ...state,
-        ramal: null,
-        estacion: null,
-        linea: getLinea(payload)
+        branch: null,
+        station: null,
+        line: getLine(payload)
       }
-    case changeRamal.type:
+    case changeBranch.type:
       return {
         ...state,
-        estacion: null,
-        ramal: getRamal(state.linea, payload)
+        station: null,
+        branch: getBranch(state.line, payload)
       }
-    case changeEstacion.type:
+    case changeStation.type:
       return {
         ...state,
-        estacion: getEstacion(state.ramal, payload)
+        station: getStation(state.branch, payload)
       }
     case clearPreferences.type:
       return {
         ...state,
-        linea: null,
-        ramal: null,
-        estacion: null
+        line: null,
+        branch: null,
+        station: null
       }
     default:
       return state
   }
 }
 
-export const preferencesSet = ({linea, ramal, estacion}: PreferencesState): boolean => Boolean(linea && ramal && estacion)
+export const preferencesSet = ({line, branch, station}: PreferencesState): boolean => Boolean(line && branch && station)
 
 export default preferences

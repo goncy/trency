@@ -2,6 +2,6 @@
 * Armar tipos e interfaces
 * Refactor reducers
 * Refactor sagas
-* Hacer que si falla el call de horarios no se dispare el action de posiciones
-* Hacer que TrenMarker y EstacionMarker extiendan de Marker
+* Hacer que si falla el call de arrivals no se dispare el action de posiciones
+* Hacer que TrenMarker y StationMarker extiendan de Marker
 * Hacer que infoWindow sea un child de marker (en el clone element hacer marker && this.props.children, no al reves)

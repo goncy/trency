@@ -1,7 +1,6 @@
 import {fork} from 'redux-saga/effects'
 
-import trenes from './trenes'
-import horarios from './horarios'
+import data from './data'
 import preferences from './preferences'
 
 function startSagas (...sagas) {
@@ -11,7 +10,6 @@ function startSagas (...sagas) {
 }
 
 export default startSagas(
-  ...trenes,
-  ...horarios,
+  ...data,
   ...preferences
 )

@@ -1,42 +1,42 @@
 // @flow
 
-import {getRamalColor} from '../../selectors'
+import {getBranchColor} from '../../selectors'
 
-export const getEstacionMarkerOptions = ({google, preferences}: any, estacion: any) => {
-  const isSelected = estacion.id === preferences.estacion.id
+export const getStationMarkerOptions = ({gmaps, preferences}: any, station: any) => {
+  const isSelected = station.id === preferences.station.id
   return {
-    position: estacion.position,
+    position: station.position,
     zIndex: isSelected ? 9999 : 0,
-    icon: new google.maps.MarkerImage(
-      `/estacion${isSelected ? '-seleccionada' : ''}-marker.svg`,
-      new google.maps.Size(15, 15),
+    icon: new gmaps.MarkerImage(
+      `/station${isSelected ? '-seleccionada' : ''}-marker.svg`,
+      new gmaps.Size(15, 15),
       null,
-      new google.maps.Point(7.5, 7.5)
+      new gmaps.Point(7.5, 7.5)
     )
   }
 }
 
-export const getTrenMarkerOptions = ({google, preferences}: any, tren: any) => ({
-  position: tren.position,
-  icon: new google.maps.MarkerImage(
-    `/tren-${getRamalColor(preferences.ramal, tren.ramal)}.svg`,
+export const getPositionMarkerOptions = ({gmaps, preferences}: any, train: any) => ({
+  position: train.position,
+  icon: new gmaps.MarkerImage(
+    `/train-${getBranchColor(preferences.branch, train.branch)}.svg`,
     null,
     null,
-    new google.maps.Point(12, 12)
+    new gmaps.Point(12, 12)
   )
 })
 
-export const getEstacionInfoWindowContent = ({preferences}: any, estacion: any) => {
-  const isSelected = estacion.id === preferences.estacion.id
+export const getStationInfoWindowContent = ({preferences}: any, station: any) => {
+  const isSelected = station.id === preferences.station.id
   return `
   <table style='margin-top: 5px'>
     <tbody>
         <tr>
         <td>
-          <img alt='estacion' src='/estacion${isSelected ? '-seleccionada' : ''}-icon.svg' width='48px' />
+          <img alt='station' src='/station${isSelected ? '-seleccionada' : ''}-icon.svg' width='48px' />
         </td>
         <td style='vertical-align: middle'>
-          <a style='font-size: 16px; font-weight: 400; color: #333; margin-left: 5px'>Estacion ${estacion.name}</a>
+          <a style='font-size: 16px; font-weight: 400; color: #333; margin-left: 5px'>Estacion ${station.name}</a>
         </td>
         </tr>
     </tbody>
