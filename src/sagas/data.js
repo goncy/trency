@@ -6,7 +6,7 @@ import {fetchData} from '../actions/api'
 export function* fetchDataApi () {
   const {preferences} = yield select()
   const {branch} = preferences
-  return yield fetch('http://localhost:3005/' + branch.id)
+  return yield fetch('https://trenesargentinosapi.herokuapp.com/' + branch.id)
     .then(response => response.json())
     .then(response => response)
     .catch(error => ({error}))
