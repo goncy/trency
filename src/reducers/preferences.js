@@ -1,6 +1,6 @@
 // @flow
 import {changeStation, changeLine, changeBranch, clearPreferences} from '../actions/preferences'
-import {getLine, getBranch, getStation} from '../selectors'
+import {getLine, getBranch, getStation} from '../selectors/constants'
 
 import type {PreferencesState} from '../flowtypes/preferences'
 

@@ -36,7 +36,7 @@ export type Arrival = {
 // State
 export type DataState = {
   positions: List<Position>,
-  arrivals: ?Arrival,
+  arrivals: List<Arrival>,
   error: ?string,
   status: 'init' | 'pending' | 'success' | 'failure'
 }

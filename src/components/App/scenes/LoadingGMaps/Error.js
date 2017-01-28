@@ -1,8 +1,14 @@
-import React from 'react'
+// @flow
+
+import React, {PropTypes} from 'react'
 
 import ErrorScreen from '../../../ErrorScreen'
 
-const Loading = retry => <ErrorScreen>
+export type GMapsErrorProps = {
+  retry: () => void
+}
+
+const GMapsError = ({retry}: GMapsErrorProps) => <ErrorScreen>
   <div>
     Hubo un error cargando la libreria de Google Maps
     <div>
@@ -17,4 +23,8 @@ const Loading = retry => <ErrorScreen>
   </div>
 </ErrorScreen>
 
-export default Loading
+GMapsError.propTypes = {
+  retry: PropTypes.func
+}
+
+export default GMapsError

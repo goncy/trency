@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+// @flow
+
+import React, {Component, PropTypes} from 'react'
 import {connect} from 'react-redux'
 import loadGoogleMapsAPI from 'load-google-maps-api'
 
@@ -11,15 +13,29 @@ import PreferencesSetter from '../PreferencesSetter'
 import LoadingGMaps from './scenes/LoadingGMaps'
 import LoadingData from './scenes/LoadingData'
 
+import type {GMaps, AppState} from '../../flowtypes/globals'
+
 import './App.css'
 
-export type gmapsState = {
-  library: ?any,
+export type AppContainerState = {
+  library: GMaps,
   error: boolean
 }
 
+export type AppContainerProps = {
+  preferencesSet: boolean,
+  hasData: boolean,
+  hasError: boolean
+}
+
 class AppContainer extends Component {
-  state: gmapsState = {
+  static propTypes = {
+    preferencesSet: PropTypes.bool.isRequired,
+    hasData: PropTypes.bool.isRequired,
+    hasError: PropTypes.bool.isRequired
+  }
+
+  state: AppContainerState = {
     error: false,
     library: null
   }
@@ -83,7 +99,7 @@ class AppContainer extends Component {
   }
 }
 
-const mapStateToProps = ({preferences, data}) => ({
+const mapStateToProps = ({preferences, data}: AppState): AppContainerProps => ({
   preferencesSet: preferencesSet(preferences),
   hasData: hasData(data),
   hasError: hasError(data)

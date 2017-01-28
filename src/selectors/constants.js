@@ -1,4 +1,4 @@
-import {TRAIN_STATIC_DATA} from './constants'
+import {TRAIN_STATIC_DATA} from '../constants'
 
 export const getLines = TRAIN_STATIC_DATA
   .map(({id, name}) => ({id, name}))
@@ -12,10 +12,6 @@ export const getLine = line => TRAIN_STATIC_DATA
 
 export const getBranch = (line, branch) => getBranches(line)
   .find(rm => rm.id === branch)
-
-export const getStations = (line, branch) => getBranches(line)
-  .find(rm => rm.id === branch)
-  .stations
 
 export const getStation = (branch, station) => branch
   .stations

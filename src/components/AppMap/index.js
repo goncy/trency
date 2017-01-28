@@ -1,5 +1,8 @@
-import React from 'react'
+// @flow
+
+import React, {PropTypes} from 'react'
 import {connect} from 'react-redux'
+import {List} from 'immutable'
 
 import {getPositions} from '../../selectors/data'
 import {getPositionMarkerOptions, getStationMarkerOptions, getStationInfoWindowContent} from './selectors'
@@ -9,14 +12,26 @@ import PolyLine from '../PolyLine'
 import Map from '../Map'
 import Marker from '../Marker'
 
-const AppMap = props => {
-  const {gmaps, preferences, positions} = props
+import type {GMaps, AppState} from '../../flowtypes/globals'
+import type {PreferencesState, Branch, Station} from '../../flowtypes/preferences'
+import type {Position} from '../../flowtypes/data'
+
+export type AppMapProps = {
+  gmaps: GMaps,
+  preferences: PreferencesState,
+  branch: Branch,
+  station: Station,
+  positions: List<Position>
+}
+
+const AppMap = (props: AppMapProps) => {
+  const {gmaps, branch, positions} = props
   return (
     <Map gmaps={gmaps}>
       {/* Recorrido */}
-      <PolyLine line={preferences.branch.path} />
+      <PolyLine line={branch.path} />
       {/* Stations */}
-      {preferences.branch.stations.map((station, index) => (
+      {branch.stations.map((station, index) => (
         <Marker
           key={index}
           options={getStationMarkerOptions(props, station)}
@@ -36,9 +51,17 @@ const AppMap = props => {
   )
 }
 
-const mapStateToProps = ({data, preferences}) => ({
+AppMap.propTypes = {
+  positions: PropTypes.object.isRequired,
+  branch: PropTypes.object.isRequired,
+  station: PropTypes.object.isRequired,
+  gmaps: PropTypes.object.isRequired
+}
+
+const mapStateToProps = ({data, preferences}: AppState) => ({
   positions: getPositions(data),
-  preferences
+  branch: preferences.branch,
+  station: preferences.station
 })
 
 export default connect(mapStateToProps)(AppMap)

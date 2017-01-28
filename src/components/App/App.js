@@ -1,6 +1,6 @@
 // @flow
 
-import React from 'react'
+import React, {PropTypes} from 'react'
 
 import AppMap from '../AppMap'
 import Directions from '../Directions'
@@ -23,7 +23,7 @@ const App = ({gmaps}: GMaps) => (
 )
 
 App.propTypes = {
-  gmaps: React.PropTypes.object
+  gmaps: PropTypes.object.isRequired
 }
 
 export default App

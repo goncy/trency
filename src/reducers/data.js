@@ -19,7 +19,7 @@ type DataAction = {
 const data = (
   state: DataState = {
     positions: List(),
-    arrivals: null,
+    arrivals: List(),
     error: null,
     status: 'init'
   },

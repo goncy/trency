@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 
-import {getLines} from '../../selectors'
+import {getLines} from '../../selectors/constants'
 import {changeLine, changeBranch, changeStation} from '../../actions/preferences'
 
 import './PreferencesSetter.css'

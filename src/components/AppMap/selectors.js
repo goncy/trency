@@ -1,11 +1,11 @@
 // @flow
 
-import {getBranchColor} from '../../selectors'
+import {getBranchColor} from '../../selectors/constants'
 
-export const getStationMarkerOptions = ({gmaps, preferences}: any, station: any) => {
-  const isSelected = station.id === preferences.station.id
+export const getStationMarkerOptions = ({gmaps, station}: any, marker: any) => {
+  const isSelected = marker.id === station.id
   return {
-    position: station.position,
+    position: marker.position,
     zIndex: isSelected ? 9999 : 0,
     icon: new gmaps.MarkerImage(
       `/station${isSelected ? '-seleccionada' : ''}-marker.svg`,
@@ -16,18 +16,18 @@ export const getStationMarkerOptions = ({gmaps, preferences}: any, station: any)
   }
 }
 
-export const getPositionMarkerOptions = ({gmaps, preferences}: any, train: any) => ({
-  position: train.position,
+export const getPositionMarkerOptions = ({gmaps, branch}: any, marker: any) => ({
+  position: marker.position,
   icon: new gmaps.MarkerImage(
-    `/train-${getBranchColor(preferences.branch, train.branch)}.svg`,
+    `/train-${getBranchColor(branch, marker.branch)}.svg`,
     null,
     null,
     new gmaps.Point(12, 12)
   )
 })
 
-export const getStationInfoWindowContent = ({preferences}: any, station: any) => {
-  const isSelected = station.id === preferences.station.id
+export const getStationInfoWindowContent = ({station}: any, infoWindow: any) => {
+  const isSelected = infoWindow.id === station.id
   return `
   <table style='margin-top: 5px'>
     <tbody>
@@ -36,7 +36,7 @@ export const getStationInfoWindowContent = ({preferences}: any, station: any) =>
           <img alt='station' src='/station${isSelected ? '-seleccionada' : ''}-icon.svg' width='48px' />
         </td>
         <td style='vertical-align: middle'>
-          <a style='font-size: 16px; font-weight: 400; color: #333; margin-left: 5px'>Estacion ${station.name}</a>
+          <a style='font-size: 16px; font-weight: 400; color: #333; margin-left: 5px'>Estacion ${infoWindow.name}</a>
         </td>
         </tr>
     </tbody>

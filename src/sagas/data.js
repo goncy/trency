@@ -1,29 +1,30 @@
 import {put, call, takeEvery, select} from 'redux-saga/effects'
 
 import {fetchData} from '../actions/api'
-import {shapeResponse} from '../selectors/data'
+// import mockResponse from '../utils/mockResponse'
 
 export function* fetchDataApi () {
   const {preferences} = yield select()
   const {branch} = preferences
   return yield fetch('http://localhost:3005/' + branch.id)
-    .then(response => response.text())
-    .then(response => ({response: JSON.parse(response)}))
+    .then(response => response.json())
+    .then(response => response)
     .catch(error => ({error}))
 }
 
-export function* fetchDataSaga (): void {
+export function* fetchDataSaga () {
   yield put(fetchData.start())
   const {response, error} = yield call(fetchDataApi)
+  /* const response = mockResponse
+  const error = null */
   if (error) {
     yield put(fetchData.failure({error}))
   } else {
-    const shapedResponse = yield select(shapeResponse, response)
-    yield put(fetchData.success(shapedResponse))
+    yield put(fetchData.success(response))
   }
 }
 
-export function* fetchDataWatcher (): void {
+export function* fetchDataWatcher () {
   yield takeEvery(fetchData.type, fetchDataSaga)
 }
 
