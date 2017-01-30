@@ -8,7 +8,7 @@ import {preferencesSet} from '../reducers/preferences'
 export function* fetchLoop () {
   while (true) {
     yield put(fetchData.run())
-    yield call(delay, 15000)
+    yield call(delay, 10000)
   }
 }
 

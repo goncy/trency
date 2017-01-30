@@ -1,7 +1,6 @@
 import {put, call, takeEvery, select} from 'redux-saga/effects'
 
 import {fetchData} from '../actions/api'
-// import mockResponse from '../utils/mockResponse'
 
 export function* fetchDataApi () {
   const {preferences} = yield select()
@@ -15,8 +14,6 @@ export function* fetchDataApi () {
 export function* fetchDataSaga () {
   yield put(fetchData.start())
   const {response, error} = yield call(fetchDataApi)
-  /* const response = mockResponse
-  const error = null */
   if (error) {
     yield put(fetchData.failure({error}))
   } else {
