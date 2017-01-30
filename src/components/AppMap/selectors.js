@@ -1,6 +1,6 @@
 // @flow
 
-import {getBranchColor} from '../../selectors/constants'
+import {getBranchColor, getBranchDirection} from '../../selectors/constants'
 
 export const getStationMarkerOptions = ({gmaps, station}: any, marker: any) => {
   const isSelected = marker.id === station.id
@@ -42,4 +42,11 @@ export const getStationInfoWindowContent = ({station}: any, infoWindow: any) => 
     </tbody>
   </table>
 `
+}
+
+export const getPositionInfoWindowContent = ({branch}: any, position: any) => {
+  const direction = getBranchDirection(branch, position.branch)
+  return `
+    <span style='margin: 10px 5px 8px 5px' class='tag is-${direction.color} is-medium'>Destino ${direction.name}</span>
+  `
 }

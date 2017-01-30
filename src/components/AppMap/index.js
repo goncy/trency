@@ -5,7 +5,7 @@ import {connect} from 'react-redux'
 import {List} from 'immutable'
 
 import {getPositions} from '../../selectors/data'
-import {getPositionMarkerOptions, getStationMarkerOptions, getStationInfoWindowContent} from './selectors'
+import {getPositionMarkerOptions, getStationMarkerOptions, getPositionInfoWindowContent, getStationInfoWindowContent} from './selectors'
 
 import InfoWindow from '../InfoWindow'
 import PolyLine from '../PolyLine'
@@ -45,7 +45,10 @@ const AppMap = (props: AppMapProps) => {
         <Marker
           key={index}
           options={getPositionMarkerOptions(props, position)}
-        />
+        >
+          {/* InfoWindow Positions */}
+          <InfoWindow content={getPositionInfoWindowContent(props, position)} />
+        </Marker>
       ))}
     </Map>
   )

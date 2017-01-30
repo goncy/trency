@@ -21,6 +21,10 @@ export const getStationIndex = (branch, station) => branch
   .stations
   .findIndex(est => est.id === station)
 
+export const getBranchDirection = (branch, id) => branch
+  .directions
+  .find(direction => direction.id === id)
+
 export const getBranchColor = (branch, id) => branch
   .directions
   .find(direction => direction.id === id)

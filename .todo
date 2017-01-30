@@ -5,3 +5,6 @@
 * Hacer que si falla el call de arrivals no se dispare el action de posiciones
 * Hacer que TrenMarker y StationMarker extiendan de Marker
 * Hacer que infoWindow sea un child de marker (en el clone element hacer marker && this.props.children, no al reves)
+
+// Importants
+* En fail del request, despachar un request a los 2 o 3 segundos en vez de cada 15 o 10
