@@ -1,26 +1,15 @@
-import {select, race, take, call, put} from 'redux-saga/effects'
-import {delay} from 'redux-saga'
+import {select, take, put} from 'redux-saga/effects'
 
-import {changeStation, changeLine, changeBranch, clearPreferences} from '../actions/preferences'
-import {fetchData} from '../actions/api'
+import {changeStation, changeLine, changeBranch, clearPreferences, preferencesReady, preferencesChanged} from '../actions/preferences'
 import {preferencesSet} from '../reducers/preferences'
 
-export function* fetchLoop () {
-  while (true) {
-    yield put(fetchData.run())
-    yield call(delay, 10000)
-  }
-}
-
-export function* preferencesChangeWatcher (): void {
+export function* preferencesChangeWatcher () {
   const changeActions = take([changeStation.type, changeLine.type, changeBranch.type, clearPreferences.type])
   while (yield changeActions) {
+    yield put(preferencesChanged.run())
     const {preferences} = yield select()
     if (preferencesSet(preferences)) {
-      yield race({
-        task: call(fetchLoop),
-        cancel: changeActions
-      })
+      yield put(preferencesReady.run())
     }
   }
 }

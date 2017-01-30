@@ -1,6 +1,8 @@
-import {put, call, takeEvery, select} from 'redux-saga/effects'
+import {put, call, takeEvery, select, take, race, fork} from 'redux-saga/effects'
+import {delay} from 'redux-saga'
 
 import {fetchData} from '../actions/api'
+import {preferencesReady, preferencesChanged} from '../actions/preferences'
 
 export function* fetchDataApi () {
   const {preferences} = yield select()
@@ -9,6 +11,13 @@ export function* fetchDataApi () {
     .then(response => response.json())
     .then(response => response)
     .catch(error => ({error}))
+}
+
+export function* fetchDataLoop (time = 10000) {
+  while (true) {
+    yield call(delay, time)
+    yield put(fetchData.run())
+  }
 }
 
 export function* fetchDataSaga () {
@@ -21,10 +30,40 @@ export function* fetchDataSaga () {
   }
 }
 
+export function* preferencesReadyWorker (): void {
+  while (true) {
+    yield put(fetchData.run())
+    const fetchResult = yield take([fetchData.SUCCESS, fetchData.FAILURE])
+    if (fetchResult.type === fetchData.SUCCESS) {
+      yield race({
+        task: call(fetchDataLoop),
+        cancel: take(fetchData.FAILURE)
+      })
+    }
+    if (fetchResult.type === fetchData.FAILURE) {
+      yield race({
+        task: call(fetchDataLoop, 3000),
+        cancel: take(fetchData.SUCCESS)
+      })
+    }
+  }
+}
+
 export function* fetchDataWatcher () {
   yield takeEvery(fetchData.type, fetchDataSaga)
 }
 
+export function* preferencesReadyWatcher (): void {
+  const changeAction = take(preferencesChanged.type)
+  while (yield take(preferencesReady.type)) {
+    yield race({
+      task: fork(preferencesReadyWorker),
+      cancel: changeAction
+    })
+  }
+}
+
 export default [
-  fetchDataWatcher
+  fetchDataWatcher,
+  preferencesReadyWatcher
 ]
