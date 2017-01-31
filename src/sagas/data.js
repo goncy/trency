@@ -16,7 +16,7 @@ export function* fetchDataApi () {
 export function* fetchDataLoop (time = 10000) {
   while (true) {
     yield call(delay, time)
-    yield call(fetchDataSaga)
+    yield put(fetchData.run())
   }
 }
 
@@ -32,7 +32,7 @@ export function* fetchDataSaga () {
 
 export function* preferencesReadyWorker (): void {
   while (true) {
-    yield call(fetchDataSaga)
+    yield put(fetchData.run())
     const fetchResult = yield take([fetchData.SUCCESS, fetchData.FAILURE])
     if (fetchResult.type === fetchData.SUCCESS) {
       yield race({

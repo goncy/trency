@@ -5,3 +5,4 @@
 // Importants
 * No mostrar pantalla de error de carga una vez que ya se cargo correctamente una vez
 * Hacer animacion en posicion de marker
+* Mostrar tiempo para el proximo fetch
