@@ -14,6 +14,7 @@ import LoadingGMaps from './scenes/LoadingGMaps'
 import LoadingData from './scenes/LoadingData'
 
 import type {GMaps, AppState} from '../../flowtypes/globals'
+import {googleMapsApiKey} from '../../constants'
 
 import './App.css'
 
@@ -45,15 +46,18 @@ class AppContainer extends Component {
   }
 
   loadGMaps () {
-    return loadGoogleMapsAPI({libraries: 'geometry'})
-      .then(maps => this.setState({
-        library: maps,
-        error: false
-      }))
-      .catch(() => this.setState({
-        library: null,
-        error: true
-      }))
+    return loadGoogleMapsAPI({
+      libraries: 'geometry',
+      key: googleMapsApiKey
+    })
+    .then(maps => this.setState({
+      library: maps,
+      error: false
+    }))
+    .catch(() => this.setState({
+      library: null,
+      error: true
+    }))
   }
 
   getScene () {

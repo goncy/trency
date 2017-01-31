@@ -121,3 +121,5 @@ export const TRAIN_STATIC_DATA = [
     ]
   }
 ]
+
+export const googleMapsApiKey = 'AIzaSyD40iBClWX-S8w5BeFPSfWFDJNfa2DI8fw'
