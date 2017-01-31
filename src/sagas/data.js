@@ -1,4 +1,4 @@
-import {put, call, takeEvery, select, take, race, fork} from 'redux-saga/effects'
+import {put, call, takeEvery, select, take, race} from 'redux-saga/effects'
 import {delay} from 'redux-saga'
 
 import {fetchData} from '../actions/api'
@@ -16,7 +16,7 @@ export function* fetchDataApi () {
 export function* fetchDataLoop (time = 10000) {
   while (true) {
     yield call(delay, time)
-    yield put(fetchData.run())
+    yield call(fetchDataSaga)
   }
 }
 
@@ -32,7 +32,7 @@ export function* fetchDataSaga () {
 
 export function* preferencesReadyWorker (): void {
   while (true) {
-    yield put(fetchData.run())
+    yield call(fetchDataSaga)
     const fetchResult = yield take([fetchData.SUCCESS, fetchData.FAILURE])
     if (fetchResult.type === fetchData.SUCCESS) {
       yield race({
@@ -54,11 +54,10 @@ export function* fetchDataWatcher () {
 }
 
 export function* preferencesReadyWatcher (): void {
-  const changeAction = take(preferencesChanged.type)
   while (yield take(preferencesReady.type)) {
     yield race({
-      task: fork(preferencesReadyWorker),
-      cancel: changeAction
+      task: call(preferencesReadyWorker),
+      cancel: take(preferencesChanged.type)
     })
   }
 }
