@@ -122,4 +122,6 @@ export const TRAIN_STATIC_DATA = [
   }
 ]
 
-export const googleMapsApiKey = 'AIzaSyD40iBClWX-S8w5BeFPSfWFDJNfa2DI8fw'
+export const GOOGLE_MAPS_API_KEY = 'AIzaSyD40iBClWX-S8w5BeFPSfWFDJNfa2DI8fw'
+export const SUCCESS_FETCH_TIME = 10000
+export const FAILURE_FETCH_TIME = 3000

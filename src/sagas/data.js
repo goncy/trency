@@ -3,6 +3,7 @@ import {delay} from 'redux-saga'
 
 import {fetchData} from '../actions/api'
 import {preferencesReady, preferencesChanged} from '../actions/preferences'
+import {FAILURE_FETCH_TIME, SUCCESS_FETCH_TIME} from '../constants'
 
 export function* fetchDataApi () {
   const {preferences} = yield select()
@@ -23,7 +24,7 @@ export function* fetchDataSaga () {
   }
 }
 
-export function* fetchDataLoop (time = 10000) {
+export function* fetchDataLoop (time = SUCCESS_FETCH_TIME) {
   while (true) {
     yield call(delay, time)
     yield put(fetchData.run())
@@ -39,14 +40,14 @@ export function* preferencesReadyWorker (): void {
         task: call(fetchDataLoop),
         cancel: take(fetchData.FAILURE)
       })
-      yield call(delay, 3000)
+      yield call(delay, FAILURE_FETCH_TIME)
     }
     if (fetchResult.type === fetchData.FAILURE) {
       yield race({
-        task: call(fetchDataLoop, 3000),
+        task: call(fetchDataLoop, FAILURE_FETCH_TIME),
         cancel: take(fetchData.SUCCESS)
       })
-      yield call(delay, 10000)
+      yield call(delay, SUCCESS_FETCH_TIME)
     }
   }
 }

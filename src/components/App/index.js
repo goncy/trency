@@ -14,7 +14,7 @@ import LoadingGMaps from './scenes/LoadingGMaps'
 import LoadingData from './scenes/LoadingData'
 
 import type {GMaps, AppState} from '../../flowtypes/globals'
-import {googleMapsApiKey} from '../../constants'
+import {GOOGLE_MAPS_API_KEY} from '../../constants'
 
 import './App.css'
 
@@ -48,7 +48,7 @@ class AppContainer extends Component {
   loadGMaps () {
     return loadGoogleMapsAPI({
       libraries: 'geometry',
-      key: googleMapsApiKey
+      key: GOOGLE_MAPS_API_KEY
     })
     .then(maps => this.setState({
       library: maps,
@@ -76,7 +76,7 @@ class AppContainer extends Component {
           return <PreferencesSetter />
         } else {
           // Loading data failed scene
-          if (hasError) {
+          if (hasError && !hasData) {
             return <LoadingData>Parece que el servidor esta teniendo problemas, volviendo a intentar</LoadingData>
           } else {
             // Loading data scene
