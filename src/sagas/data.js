@@ -13,13 +13,6 @@ export function* fetchDataApi () {
     .catch(error => ({error}))
 }
 
-export function* fetchDataLoop (time = 10000) {
-  while (true) {
-    yield call(delay, time)
-    yield put(fetchData.run())
-  }
-}
-
 export function* fetchDataSaga () {
   yield put(fetchData.start())
   const {response, error} = yield call(fetchDataApi)
@@ -27,6 +20,13 @@ export function* fetchDataSaga () {
     yield put(fetchData.failure({error}))
   } else {
     yield put(fetchData.success(response))
+  }
+}
+
+export function* fetchDataLoop (time = 10000) {
+  while (true) {
+    yield call(delay, time)
+    yield put(fetchData.run())
   }
 }
 
