@@ -32,7 +32,7 @@ const Arrivals = (props: ArrivalsProps) => {
           </div>
           <div className="level-item has-text-centered">
             <div>
-              <p className="heading">Siguiente train <span className={`tag is-${branch.color} is-small`}>destino {branch.destino}</span></p>
+              <p className="heading">Siguiente tren <span className={`tag is-${branch.color} is-small`}>destino {branch.destino}</span></p>
               <p className="title">{branch.arrivals.segundo}</p>
             </div>
           </div>

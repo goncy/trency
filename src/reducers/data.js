@@ -11,7 +11,7 @@ type DataAction = {
   type: string,
   payload: {
     positions: RawPosition[],
-    arrivals: RawArrival,
+    arrivals: RawArrival[],
     error: ?string
   }
 }
