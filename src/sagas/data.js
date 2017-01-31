@@ -39,12 +39,14 @@ export function* preferencesReadyWorker (): void {
         task: call(fetchDataLoop),
         cancel: take(fetchData.FAILURE)
       })
+      yield call(delay, 3000)
     }
     if (fetchResult.type === fetchData.FAILURE) {
       yield race({
         task: call(fetchDataLoop, 3000),
         cancel: take(fetchData.SUCCESS)
       })
+      yield call(delay, 10000)
     }
   }
 }
