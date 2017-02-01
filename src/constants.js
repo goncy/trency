@@ -589,7 +589,7 @@ export const LINES = [
     branches: [
       {
         id: 21,
-        name: 'M.C.G Belgrano',
+        name: 'M.C.G Belgrano - Buenos Aires',
         slug: 'mcgbelgrano',
         directions: [
           {
