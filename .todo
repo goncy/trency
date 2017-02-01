@@ -3,6 +3,7 @@
 * Refactor reducers
 
 // Importants
-* No mostrar pantalla de error de carga una vez que ya se cargo correctamente una vez
 * Hacer animacion en posicion de marker
 * Mostrar tiempo para el proximo fetch
+* Agregar marker de tren parado
+* Cambiar los markers para mostrar a que lado apuntan

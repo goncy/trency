@@ -1,7 +1,7 @@
 export const MAP_DEFAULT_OPTIONS = {
   center: { lat: -34.764643, lng: -58.207313 },
   zoom: 12,
-  minZoom: 11,
+  minZoom: 10,
   fullscreenControl: false,
   mapTypeControlOptions: {
     position: 11,

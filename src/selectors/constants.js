@@ -1,13 +1,13 @@
-import {TRAIN_STATIC_DATA} from '../constants'
+import {LINES} from '../constants'
 
-export const getLines = TRAIN_STATIC_DATA
+export const getLines = LINES
   .map(({id, name}) => ({id, name}))
 
-export const getBranches = line => TRAIN_STATIC_DATA
+export const getBranches = line => LINES
   .find(ln => ln.id === line.id)
   .branches
 
-export const getLine = line => TRAIN_STATIC_DATA
+export const getLine = line => LINES
   .find(ln => ln.id === line)
 
 export const getBranch = (line, branch) => getBranches(line)
