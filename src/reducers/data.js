@@ -4,7 +4,7 @@ import {List} from 'immutable'
 
 import type {DataState, RawPosition, RawArrival} from '../flowtypes/data'
 
-import {fetchData} from '../actions/api'
+import {fetchData, clearData} from '../actions/api'
 import {shapeArrivals, shapePositions} from '../selectors/data'
 
 type DataAction = {
@@ -43,6 +43,13 @@ const data = (
       return {
         ...state,
         status: 'pending'
+      }
+    case clearData.type:
+      return {
+        positions: List(),
+        arrivals: List(),
+        error: null,
+        status: 'init'
       }
     default:
       return state

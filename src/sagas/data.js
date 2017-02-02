@@ -1,8 +1,8 @@
 import {put, call, takeEvery, select, take, race} from 'redux-saga/effects'
 import {delay} from 'redux-saga'
 
-import {fetchData} from '../actions/api'
-import {preferencesReady, preferencesChanged} from '../actions/preferences'
+import {fetchData, clearData} from '../actions/api'
+import {preferencesReady, preferencesChanged, clearPreferences} from '../actions/preferences'
 import {FAILURE_FETCH_TIME, SUCCESS_FETCH_TIME} from '../constants'
 
 export function* fetchDataApi () {
@@ -52,8 +52,16 @@ export function* preferencesReadyWorker (): void {
   }
 }
 
+export function* clearDataWorker () {
+  yield put(clearData.run())
+}
+
 export function* fetchDataWatcher () {
   yield takeEvery(fetchData.type, fetchDataSaga)
+}
+
+export function* clearDataWatcher () {
+  yield takeEvery(clearPreferences.type, clearDataWorker)
 }
 
 export function* preferencesReadyWatcher (): void {
@@ -67,5 +75,6 @@ export function* preferencesReadyWatcher (): void {
 
 export default [
   fetchDataWatcher,
+  clearDataWatcher,
   preferencesReadyWatcher
 ]
