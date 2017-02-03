@@ -1058,6 +1058,92 @@ export const LINES = [
           }
         ],
         path: 'z~brE~ihcJSb@Sb@Ub@S%60@Ub@Sb@Sb@Ub@Sb@U%60@Sb@Sb@Ub@Sb@Ub@S%60@Sb@Ub@Sb@Ub@Sb@S%60@Ub@Sb@Sb@Ub@U%60@W%5EU%60@W%60@U%60@W%60@U%5EW%60@U%60@W%60@S%60@Ub@Sb@Ub@S%60@Ub@Ub@Sb@U%60@Sb@Ub@Sb@W%5EU%60@U%60@W%60@U%60@Y%5EW%5EW%5CY%5EW%5EY%5EW%5CY%5EW%5EW%5EY%5CW%5EY%5EW%5EW%5EW%5EY%5EW%5EW%5EU%60@U%60@Ub@Qb@Sb@Sd@Sb@Qd@Qd@Qd@Qd@Qd@Qd@Qd@Qd@Od@Qd@Qd@Od@Qd@Qf@Od@Qd@Od@Qd@Qd@Od@Of@Mf@Mf@Mf@Of@Mf@Mf@Of@Od@Of@Qd@Od@Od@Od@Sd@Sb@Sb@Sb@Sd@U%60@W%60@U%60@W%60@W%5EW%5CY%5EW%5EW%5EY%5EY%5CY%5CY%5CY%5CY%5EY%5CY%5CY%5CY%5CY%5CY%5CY%5CY%5CY%5CY%5CY%5EY%5CY%5CY%5CY%5CY%5CY%5CW%5EY%5CY%5CY%5CY%5CY%5CY%5CY%5CY%5EYZ%5B%5CY%5CY%5CYZ%5B%5CY%5CY%5C%5BZY%5CY%5CY%5C%5BZY%5CY%5CY%5C%5BZY%5EW%5CY%5CY%5CY%5CY%5EY%5CY%5CY%5CU%60@W%60@W%60@U%5ESd@Sb@Sb@Sb@Sb@Of@Od@Of@Od@Of@Of@Od@Kh@Mf@Kf@Kh@Mf@Kf@Mh@Gh@Gh@Gh@Gh@Gh@Ih@Aj@Cj@Ch@Aj@Cj@Cj@Ah@Cj@Cj@?j@Aj@?j@Aj@?j@?j@Aj@Ah@Aj@?j@Aj@Ah@Ej@Ch@Eh@Gh@Ih@Ih@Mf@Kh@Mf@Od@Qd@Of@Qd@Od@Qd@Qd@Qd@Sb@Qd@Qd@Sb@Qd@Qd@Sb@Qd@Qb@Qd@Sd@Qb@Qd@Sd@Qb@Qd@Sd@Qb@Qd@Qb@Qd@Qd@Qd@Qd@Qd@Qd@Qd@Qd@Qd@Qd@Qb@Oh@Mf@Mf@Mf@Ih@Gh@Ih@Gh@Gh@Gj@Gh@Gj@Gh@Gj@Gh@Gj@Ch@Eh@Cj@Eh@Ch@Eh@?j@Aj@?j@Ah@?j@Aj@?j@?j@Aj@?h@Aj@?j@Aj@?j@?h@Aj@?j@?j@Aj@?h@?j@Aj@?j@?h@?j@Aj@?j@?j@Ah@?j@?j@Aj@Ah@Aj@Aj@Cj@Aj@Ah@Aj@Ej@Ch@Ej@Ej@Ch@Ej@Ch@Ej@Ih@Gh@Ih@Gh@Ih@Ij@Gh@Ih@Gh@Ih@Kf@Kh@Kf@Kh@Kf@Kh@Kf@Qf@Od@Of@Od@Od@Of@Qd@Of@Od@Sb@Qd@Sb@Sb@Sb@Qd@Sb@Sb@Sd@S%60@Sb@Ub@Sb@Sb@Ub@Sb@Sb@U%60@Sb@Ub@Sb@Sb@Ub@Sb@Sb@U%60@Sb@Sb@Ub@Sb@Sb@Ub@Sb@S%60@Ub@Sb@Sb@Ub@Sb@Sb@U%60@Sb@Sb@Ub@Sb@Sb@U%60@Sb@Sb@Ub@Sb@Ub@S%60@Sb@Ub@Ub@U%60@S%60@Ub@U%60@W%60@U%60@W%60@U%5EW%60@U%60@U%60@Y%5EW%5EW%5EY%5EW%5EW%5EY%5EYZY%5CY%5CY%5CYZY%5C%5BZY%5CYZ%5B%5CYZ%5BZ%5DX%5BZ%5BZ%5BZ%5DX%5BX%5DX%5BV%5DX%5BX%5DV%5BT%5BT%5BTYT%5BT%5BR%5DR_@R%5DR%5DR%5DR_@R%5DR%5DR%5DR_@R%5DR%5DP%5DRa@P_@Ra@Pa@La@La@Na@La@La@La@La@La@La@Na@La@La@Ja@Lc@La@La@Ja@La@La@La@Jc@La@La@Ja@La@La@La@Jc@La@La@La@La@La@Ja@La@Lc@La@La@La@Ja@La@La@Lc@Ja@La@La@Ja@La@La@La@Lc@La@La@La@Ja@La@La@La@La@La@La@La@Lc@Ja@La@La@La@Ja@La@Jc@La@Ja@La@La@Lc@Ja@La@La@La@La@La@Jc@La@La@La@La@Ja@Lc@La@Ja@La@La@La@Lc@La@La@La@Ja@La@La@La@Ja@La@La@La@La@Lc@Ja@Na@La@La@La@La@La@La@La@La@La@La@La@Na@Na@Na@La@Na@Na@La@N_@La@Na@La@Na@La@Na@N_@Na@Na@Na@N_@Na@Na@Na@Na@N_@Na@Na@La@Na@Na@N_@La@Na@Na@La@Na@Na@N_@La@Na@Na@Na@N_@Na@Na@La@Na@Na@Na@La@N_@Na@La@Na@Na@Na@L_@Na@Na@Na@Na@N_@Na@Na@Na@Na@La@Na@N_@Na@Na@La@Na@Na@Na@La@N_@Na@Na@Na@Na@N_@Na@Na@Na@L_@Na@Na@Na@Na@N_@La@Na@Na@La@N_@Na@La@Na@Na@La@Na@Na@La@Na@La@Na@La@Na@Na@La@Ja@Jc@Ja@Ja@Jc@Ha@Fa@Hc@Fc@De@Da@Hc@Fa@Fc@Fc@Ha@Fa@Jc@Ja@La@Ja@Ja@P_@Pa@P_@P_@V%5DT%5DT_@V%5DT%5DX%5BX%5DV%5BX%5B%5CYZ%5BZY%5EY%5CY%5CU%60@W%5EW%5EW%5EW%60@W%5EW%5EW%60@W%5EW%5EW%60@W%5EW%5EW%60@W%5EU%60@W%60@W%5EU%60@W%60@W%5EU%60@W%5EW%60@U%60@W%5EW%60@U%5EW%5EW%60@W%5EY%5CYZ%5B%5C%5BZ%5BX%5DX%5BV%5DX_@T%5DT_@T%5DV%5DT_@T%5DT_@V%5DT%5DV%5DV_@T%5DV%5DT_@V%5DT_@T%5DV%5DT_@V%5DT_@T%5DV%5DT_@V%5DT%5DV_@T%5DT%5DV%5DT_@V%5BX%5BZ%5BX%5BZ%5BX%5BZ%5BZ%5BZYZ%5BZYZ%5B%5C%5BZY%5CY%5CY%5EY%5CY%5CY%5EY%5CY%5C%5BZ%5BX%5BZ%5BX%5BX%5DV%5DV%5DX%5DV%5DV%5DT_@V%5DT_@T_@R_@T_@R_@R_@T_@R%5DR_@T_@R_@T%5DR_@T_@R_@T%5DT_@R_@T%5DR_@T_@R_@T%5DR_@T%5DX%5DV%5BX%5BZ%5BZ%5BZ%5BZY%5CW%5CY%5CY%5EY%5CY%5CU%60@W%5EW%5EW%60@W%5EW%60@W%5EW%60@W%5EU%5EW%60@W%5EW%60@W%5EW%5EW%5EW%60@W%5EW%5EW%5EW%5EW%60@W%5EW%5EW%5EW%5EW%60@W%5EW%5EW%5EW%60@W%5EW%5EW%5EW%5EW%60@W%5EW%5EW%5EW%5EY%5EY%5CW%5EY%5EY%5CW%5EY%5CY%5EW%5C%5DZ%5BX%5BX%5DX%5BX%5BZ%5BX%5BZ%5DX%5BZ%5BX%5BZ%5BZ%5BX%5BZ%5BZ%5BX%5BZ%5BZ%5BX%5BZ%5BZ%5BZ%5BX%5BZ%5BZ%5BZ%5BX%5BZ%5BZ%5BZ%5BZ%5BXYZ%5BZ%5DX%5BX%5BZ%5BX%5BX%5DZ%5BX%5BX%5BZ%5BX%5BZ%5DZ%5BX%5BZ%5BZY%5CY%5C%5BZW%5EY%5EW%5EW%5CW%60@U%60@U%60@U%60@U%60@Sb@Sd@Sb@Sb@Ub@Sb@Sb@Sb@Sb@Ub@S%60@U%60@U%60@W%60@W%5EW%60@W%5EW%5EY%5CY%5EW%5CY%5E%5BZYZ%5B%5CYZ%5B%5CYZ%5BZYZ%5BZ%5BZYZ%5BZ%5BZY%5C%5BZ%5BZYZ%5B%5C%5BZ%5BZ%5BZY%5C%5BZ%5BZY%5CY%5EY%5CW%5CW%5EW%60@W%5EW%5EUb@U%60@U%60@Ub@U%60@Sb@Sb@Sd@Qb@Sd@Qb@Qd@Of@Od@Qd@Od@Of@Mf@Md@Of@Mf@Kh@Ih@Kh@If@Kh@Ih@Gh@Ih@Gh@Gh@Gh@Ej@Eh@Ej@Ch@Ch@Cj@Ch@Ch@Cj@Cj@Cj@Aj@Ch@Cj@Cj@Cj@Aj@Ch@Cj@Cj@Cj@Cj@Eh@Eh@Ej@Gh@Gh@Gh@Gj@Gh@Ih@Gh@Ih@Kf@Ih@Kh@Md@Mf@Mf@Od@Of@Of@Of@Qd@Qb@Qd@Qb@Qd@Qb@Ud@Sb@Sb@Ub@Sb@U%60@W%60@U%60@W%5EU%60@U%60@W%5EW%60@W%5EU%5EW%60@W%5EU%60@W%5EW%60@W%5EU%60@W%5EW%60@W%5EU%60@W%5EW%60@U%5EW%60@W%5EW%60@U%5EW%60@W%5EW%60@W%60@U%5EW%60@W%5EW%60@U%5EW%60@W%60@W%5EW%60@U%5EW%60@W%5EW%5EW%5EW%5EW%5EW%60@Y%5EW%5EW%5EW%5EY%5CY%5EW%5CY%5EY%5CW%5EY%5CY%5EW%5CY%5EY%5EW%5CY%5EY%5CY%5CY%5CY%5CY%5CYZY%5C%5B%5CY%5CY%5CY%5CY%5CY%5CY%5EW%5EW%5EW%5EY%5EW%5EW%5EY%5CW%5EW%5EY%5EW%5EW%5CY%5EW%5EW%5EY%5EW%5EW%5CY%5EW%5EW%5EY%5EW%5EW%5EY%5CW%5EW%5EW%5EY%5EW%5EW%5EY%5EW%5EW%5CY%5EW%5EW%5EY%5EW%5EY%5CW%5EY%5EW%5CY%5EW%5EY%5EW%5CY%5EW%5EY%5CW%5EY%5EW%5EW%5EY%5CW%5EW%5EY%5EW%5EY%5EW%5CW%5EY%5CY%5CY%5C%5BZ%5BZ_@T%5DVa@P_@Pa@P_@Na@La@Na@Na@La@Na@N_@La@Na@La@Na@N_@Na@Na@Na@N_@R%5DR%5DX%5DV%5B%5CYZY%5CY%5CY%5CY%5CY%5CY%5EW%5CY%5EW%5EW%5EY%5EW%5EY%5CW%5EY%5EW%5EY%5CW%5EY%5EW%5EY%5CW%5EW%5EY%5EW%5CY%5EW%5EY%5CW%5EY%5EW%5EY%5CW%5EY%5CW%5EY%5EY%5CW%5EY%5EW%5CY%5EW%5EY%5CW%5EY%5EW%5CY%5EW%5EY%5CY%5EW%5EY%5CW%5CY%5EY%5CW%5EY%5CY%5EY%5CW%5CY%5EY%5CW%5EY%5CY%5CW%5E', //eslint-disable-line
+      },
+      {
+        id: 7,
+        name: 'Retiro - Mitre',
+        slug: 'mitre',
+        directions: [
+          {
+            id: 7,
+            name: 'Mitre',
+            color: 'success'
+          },
+          {
+            id: 8,
+            name: 'Retiro',
+            color: 'info'
+          }
+        ],
+        stations: [
+          {
+            index: 0,
+            id: 'retiro',
+            name: 'Retiro',
+            position: {lat: -34.5907031, lng: -58.3748806}
+          },
+          {
+            index: 1,
+            id: '3deFebrero',
+            name: '3 de Febrero',
+            position: {lat: -34.5717485, lng: -58.4249824}
+          },
+          {
+            index: 2,
+            id: 'ministroCarranza',
+            name: 'Ministro Carranza',
+            position: {lat: -34.5752730, lng: -58.4337443}
+          },
+          {
+            index: 3,
+            id: 'colegiales',
+            name: 'Colegiales',
+            position: {lat: -34.5729746, lng: -58.4482530}
+          },
+          {
+            index: 4,
+            id: 'belgranoR',
+            name: 'Belgrano R',
+            position: {lat: -34.5680506, lng: -58.4618081}
+          },
+          {
+            index: 5,
+            id: 'coghlan',
+            name: 'Coghlan',
+            position: {lat: -34.5652607, lng: -58.4753485}
+          },
+          {
+            index: 6,
+            id: 'saavedra',
+            name: 'Saavedra',
+            position: {lat: -34.5540735, lng: -58.4870632}
+          },
+          {
+            index: 7,
+            id: 'juanBJusto',
+            name: 'Juan B. Justo',
+            position: {lat: -34.5425501, lng: -58.4946570}
+          },
+          {
+            index: 8,
+            id: 'florida',
+            name: 'Florida',
+            position: {lat: -34.5304745, lng: -58.4944563}
+          },
+          {
+            index: 9,
+            id: 'drCetrangolo',
+            name: 'Dr. Cetrangolo',
+            position: {lat: -34.5230887, lng: -58.4941300}
+          },
+          {
+            index: 10,
+            id: 'mitre',
+            name: 'Mitre',
+            position: {lat: -34.5150276, lng: -58.4892365}
+          }
+        ],
+        path: 'z~brE~ihcJSb@Sb@Ub@S%60@Ub@Sb@Sb@Ub@Sb@U%60@Sb@Sb@Ub@Sb@Ub@S%60@Sb@Ub@Sb@Ub@Sb@S%60@Ub@Sb@Sb@Ub@U%60@W%5EU%60@W%60@U%60@W%60@U%5EW%60@U%60@W%60@S%60@Ub@Sb@Ub@S%60@Ub@Ub@Sb@U%60@Sb@Ub@Sb@W%5EU%60@U%60@W%60@U%60@Y%5EW%5EW%5CY%5EW%5EY%5EW%5CY%5EW%5EW%5EY%5CW%5EY%5EW%5EW%5EW%5EY%5EW%5EW%5EU%60@U%60@Ub@Qb@Sb@Sd@Sb@Qd@Qd@Qd@Qd@Qd@Qd@Qd@Qd@Od@Qd@Qd@Od@Qd@Qf@Od@Qd@Od@Qd@Qd@Od@Of@Mf@Mf@Mf@Of@Mf@Mf@Of@Od@Of@Qd@Od@Od@Od@Sd@Sb@Sb@Sb@Sd@U%60@W%60@U%60@W%60@W%5EW%5CY%5EW%5EW%5EY%5EY%5CY%5CY%5CY%5CY%5EY%5CY%5CY%5CY%5CY%5CY%5CY%5CY%5CY%5CY%5CY%5EY%5CY%5CY%5CY%5CY%5CY%5CW%5EY%5CY%5CY%5CY%5CY%5CY%5CY%5CY%5EYZ%5B%5CY%5CY%5CYZ%5B%5CY%5CY%5C%5BZY%5CY%5CY%5C%5BZY%5CY%5CY%5C%5BZY%5EW%5CY%5CY%5CY%5CY%5EY%5CY%5CY%5CU%60@W%60@W%60@U%5ESd@Sb@Sb@Sb@Sb@Of@Od@Of@Od@Of@Of@Od@Kh@Mf@Kf@Kh@Mf@Kf@Mh@Gh@Gh@Gh@Gh@Gh@Ih@??Cj@Ch@Ej@Aj@Ah@Cj@Aj@?j@Aj@?j@?j@?j@@h@@j@@j@@h@Bj@Bj@Bh@Bj@Dh@Dj@Dh@Dj@Hh@Jh@Hf@Hh@Hh@Hh@Lf@Nf@Lf@Lf@Nf@Nd@Nf@Nd@Pd@Nd@Pd@Rb@Rd@Rd@R%60@Rb@Tb@Rb@T%60@Rb@Tb@R%60@Tb@Rb@T%60@Rb@Rb@Tb@R%60@Tb@Rb@T%60@Rb@Tb@Rb@R%60@Tb@Rb@Tb@Rb@T%60@Rb@Rb@Tb@R%60@Rd@Rb@Pd@Rb@Rd@Rb@Nd@Pd@Pd@Pd@Pd@Nd@Pd@Pd@Nd@Pd@Lf@Nh@Lf@Lf@Jh@Jf@Jh@Jf@Jh@Hf@Jh@Jf@Hh@Hh@Jh@Hh@Hh@Hh@Jh@Hh@Hf@Jh@Hh@Hh@Jh@Hf@Jh@Hh@Hf@Jh@Hh@Jf@Fj@Hh@Dh@Dj@Dj@Dh@Dj@@j@@h@@j@@j@Ah@Aj@Aj@Ah@Cj@Cj@Eh@Ej@Gh@Ih@Ih@Ih@Ih@Kh@Kf@Mf@Kf@Of@Of@Od@Mf@Of@Od@Mf@Of@Od@Of@Of@Od@Of@Od@Of@Od@Of@Od@Of@Od@Of@Od@Of@Of@Od@Od@Of@Od@Of@Od@Of@Qd@Of@Od@Of@Od@Of@Od@Of@Qd@Od@Of@Od@Qf@Od@Of@Qd@Od@Of@Of@Od@Mf@Mf@Mf@Of@Mf@Md@Kh@Kh@Kf@Mh@Kf@Kh@Kf@Kh@Mf@Kf@Kh@Kf@Mh@Kf@Kf@Kh@Kh@Kf@Mh@Kf@Mf@Mf@Mf@Of@Mf@Mf@Of@Md@Of@Mf@Mf@Of@Mf@Od@Mf@Mf@Of@Mf@Of@Md@Of@Mf@Of@Mf@Od@Of@Mf@Of@Mf@Mf@Mf@Of@Mf@Mf@Mf@Of@Kf@Mf@Mf@Kh@Kh@Ih@If@Kh@Ih@Gh@Ih@Gh@Gj@Gh@Ej@Eh@Eh@Ej@Cj@Ch@Cj@Aj@Aj@Ah@Aj@@j@?h@?j@?j@@j@@h@@j@@j@@j@?j@@j@Ah@Cj@Eh@Gj@Gh@Kh@If@Mf@Mf@Of@Of@Od@Mf@Of@Od@Of@Od@Of@Mf@Od@Of@Of@Od@Of@Mf@Od@Of@Of@Mf@Od@Of@Of@Od@Of@Md@Of@Qf@Od@Qd@Qb@U%60@Ub@W%5EW%5E%5B%5CY%5CY%5C%5DV%5DV_@V%5DT_@T%5DT%5DT_@T%5DT_@T%5DT_@T_@R%5DT_@T%5DT_@T_@R%5DT_@T_@T%5DT_@T_@R%5DT_@T_@T%5DT_@T%5DR_@T_@T%5DT_@T_@T%5DR_@T_@T%5DT_@T%5DT_@T_@T%5DT_@T_@R%5DT_@T_@T%5DT_@T%5DT_@R_@T%5DT_@T_@T%5DT_@T%5DR_@T_@T%5DT_@T_@T%5DT_@T%5DR_@T_@T%5DT_@T%5DT_@T_@R%5DT_@T_@T%5DT_@T%5DT_@R_@T%5DT_@T%5DT_@T_@T%5DR_@T_@T%5DT_@T%5DT_@T_@T%5DR_@T_@T%5DT_@T_@T%5DT_@T_@T%5DR_@T_@T%5DT_@T%5DT_@T_@T%5DT_@R_@T_@R%5DTa@R_@R_@Na@Na@Na@J_@Lc@Fc@Fc@Fc@Bc@Dc@Bc@@c@?c@Ac@?c@Ac@?c@Ac@?c@Ac@Ac@?c@Ac@?c@Ac@?c@Ac@Ac@?c@Ac@?c@Ac@?e@Ac@?c@Ac@?c@Ac@Ac@?c@Ac@?c@Ac@?c@Ac@?c@?c@Ac@?c@Ac@?c@Ac@?c@Ac@?c@Ac@?c@Ac@?c@Ac@?c@Ac@?c@Ac@?c@Ac@?c@Ac@?c@Ac@?c@Ae@Ac@?c@Ac@Ac@?c@Ac@Ac@Ac@?c@Ac@Ac@?c@Ac@Ac@?c@Ac@Ac@?c@Ac@Ac@?c@Ac@Ac@?c@Ac@Ac@Ac@Ac@Ac@Ac@Ac@Ac@Ac@Ac@Ac@Ac@?c@Ac@Ac@Ac@Ac@Ac@Ac@Ac@Ac@Ac@Ac@Ec@Ea@Gc@Ic@Ic@Ia@Ka@Ic@K_@Oa@Oa@O_@Oa@Q_@O_@U_@U%5DU%5DY%5DW%5DY%5DW%5BY%5DW%5DY%5DW%5BY%5DW%5DY%5DW%5BW%5DY%5DW%5DY%5DW%5BY%5DW%5DY%5DW%5DW%5BY%5DW%5DY%5DW%5DY%5BW%5DW%5DY%5DW%5DY%5BW%5DW%5DY%5DW%5DY%5DW%5BY%5DW%5DW%5DY%5DW%5BY%5DW', //eslint-disable-line
       }
     ]
   },
