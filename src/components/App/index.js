@@ -89,7 +89,7 @@ class AppContainer extends Component {
                 return <LoadingData.Empty goBack={clearPreferences} />
               } else {
                 // Application scene
-                return <LoadingData.Empty goBack={clearPreferences} />
+                return <App gmaps={this.state.library} />
               }
             }
           }
