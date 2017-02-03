@@ -14,7 +14,6 @@ export type RawPosition = {
 export type Position = {
   id: number,
   moviendose: boolean,
-  funcionando: boolean,
   position: {lat: number, lng: number},
   branch: number
 }

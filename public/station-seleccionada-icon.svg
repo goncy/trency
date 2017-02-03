@@ -1,35 +1,28 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
-  <defs>
-    <style>
-      .cls-1 {
-        isolation: isolate;
-      }
-
-      .cls-2 {
-        fill: #3273dd;
-      }
-
-      .cls-3, .cls-4 {
-        fill: #fff;
-      }
-
-      .cls-3 {
-        stroke: #fff;
-        stroke-width: 0.25px;
-      }
-    </style>
-  </defs>
-  <title>estacion-icon</title>
-  <g id="sXmLPI.tif">
-    <image id="Layer_0" data-name="Layer 0" class="cls-1" width="50" height="50" transform="translate(1 1.01) scale(0.97)" xlink:href="data:image/png;base64,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"/>
-  </g>
-  <g id="g1327">
-    <path id="path1329" class="cls-2" d="M5.6,0C2,0,0,1.86,0,5.64v39C0,48.15,1.81,50,5.39,50H44.6c3.58,0,5.4-1.76,5.4-5.39v-39C50,2,48.19,0,44.49,0H5.6Z"/>
-  </g>
-  <g id="layer1">
-    <g id="g2285">
-      <path id="path2251" class="cls-3" d="M10.73,10.11a1.75,1.75,0,0,0-1.5,1.31c-1.32,3.17-2.66,5.5-3.14,9.82-0.1,3-.25,6.06-0.21,9.14,0,1.84,2.14,4.67,3.95,4.67H44.1v-3.4l-0.21-.06v-3.1H44.1V27.57a25.13,25.13,0,0,1-16.39-15,3.6,3.6,0,0,0-3.18-2.49H10.73v0Zm-0.11,2H24c0.83,0,1.66,3.28,2.26,5,0.2,0.55,0,1.42-.38,1.42H8.48c-0.4,0-.56-0.71-0.4-1.38,0.85-1.66,1.82-5,2.54-5V12.11Zm18.61,7.2a27.22,27.22,0,0,0,2.93,2.84V28l-2.64-1.21c-0.25-2.43-.27-4.91-0.29-7.39h0V19.31Zm4.44,4.15a29.73,29.73,0,0,0,2.49,1.8V29.7l-2.49-1.06c-0.06-2.4,0-2.67,0-5.15h0v0ZM10,25.18h0a1.55,1.55,0,1,1-.07.07V25.18H10Zm13.11,0h0.08a1.55,1.55,0,1,1-.08.07V25.18Zm14.38,1,2.49,1v3.66a6.73,6.73,0,0,1-2.49-.7v-4ZM41,27.68l2,0.51v3.32a6.07,6.07,0,0,1-2-.35V27.68Z"/>
-      <path id="path2283" class="cls-4" d="M21.41,35.91v1.66H14.13V35.91h-5v1.66H5.89V39.9H29.07a43.26,43.26,0,0,1,15-3.59v-0.4H21.41Z"/>
-    </g>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#3273DD;}
+	.st1{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:0.25;}
+	.st2{fill:#FFFFFF;}
+</style>
+<g id="g1327">
+	<path id="path1329" class="st0" d="M5.6,0C2,0,0,1.9,0,5.6v39C0,48.2,1.8,50,5.4,50h39.2c3.6,0,5.4-1.8,5.4-5.4v-39
+		C50,2,48.2,0,44.5,0H5.6z"/>
+</g>
+<title>estacion-icon</title>
+<g id="layer1">
+	<g id="g2285">
+		<path id="path2251" class="st1" d="M10.7,10.1c-0.7,0.1-1.3,0.6-1.5,1.3c-1.3,3.2-2.7,5.5-3.1,9.8c-0.1,3-0.2,6.1-0.2,9.1
+			c0,1.8,2.1,4.7,3.9,4.7h34.3v-3.4l-0.2-0.1v-3.1h0.2v-0.9c-7.5-2.2-13.6-7.7-16.4-15c-0.5-1.4-1.7-2.4-3.2-2.5L10.7,10.1
+			L10.7,10.1L10.7,10.1z M10.6,12.1H24c0.8,0,1.7,3.3,2.3,5c0.2,0.5,0,1.4-0.4,1.4H8.5c-0.4,0-0.6-0.7-0.4-1.4
+			C8.9,15.5,9.9,12.2,10.6,12.1L10.6,12.1z M29.2,19.3c0.9,1,1.9,2,2.9,2.8V28l-2.6-1.2C29.3,24.4,29.2,21.9,29.2,19.3L29.2,19.3
+			L29.2,19.3z M33.7,23.5c0.8,0.6,1.6,1.2,2.5,1.8v4.4l-2.5-1.1C33.6,26.2,33.7,26,33.7,23.5L33.7,23.5L33.7,23.5L33.7,23.5z
+			 M10,25.2L10,25.2c0.6-0.6,1.6-0.6,2.2,0.1s0.6,1.6-0.1,2.2c-0.6,0.6-1.6,0.6-2.2-0.1C9.4,26.8,9.4,25.8,10,25.2L10,25.2L10,25.2z
+			 M23.1,25.2L23.1,25.2c0.7-0.5,1.7-0.4,2.3,0.2s0.4,1.6-0.2,2.2S23.5,28,23,27.4C22.5,26.7,22.5,25.8,23.1,25.2L23.1,25.2z
+			 M37.5,26.2l2.5,1v3.7c-0.9-0.1-1.7-0.3-2.5-0.7V26.2L37.5,26.2z M41,27.7l2,0.5v3.3c-0.7,0-1.4-0.1-2-0.4V27.7z"/>
+		<path id="path2283" class="st2" d="M21.4,35.9v1.7h-7.3v-1.7h-5v1.7H5.9v2.3h23.2c4.7-2.1,9.8-3.3,15-3.6v-0.4H21.4z"/>
+	</g>
+</g>
 </svg>

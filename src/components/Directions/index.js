@@ -9,6 +9,7 @@ const Directions = ({branch}) => {
       {branch.directions && branch.directions.map((direction, index) => (
         <span key={index} className={`tag is-${direction.color} is-medium`}>Destino {direction.name}</span>
       ))}
+      <span className={`tag is-danger is-medium`}>Tren parado</span>
     </div>
   )
 }

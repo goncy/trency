@@ -19,7 +19,9 @@ export const getStationMarkerOptions = ({gmaps, station}: any, marker: any) => {
 export const getPositionMarkerOptions = ({gmaps, branch}: any, marker: any) => ({
   position: marker.position,
   icon: {
-    url: `${process.env.PUBLIC_URL || ''}/train-${getBranchColor(branch, marker.branch)}.svg`,
+    url: marker.moviendose
+      ? `${process.env.PUBLIC_URL || ''}/train-${getBranchColor(branch, marker.branch)}.svg`
+      : `${process.env.PUBLIC_URL || ''}/train-danger.svg`,
     anchor: new gmaps.Point(12, 12)
   }
 })
@@ -46,5 +48,6 @@ export const getPositionInfoWindowContent = ({branch}: any, position: any) => {
   const direction = getBranchDirection(branch, position.branch)
   return `
     <span style='margin: 10px 5px 8px 5px' class='tag is-${direction.color} is-medium'>Destino ${direction.name}</span>
+    ${!position.moviendose ? '<span style="margin: 10px 5px 8px 5px" class="tag is-danger is-medium">Tren parado</span>' : ''}
   `
 }

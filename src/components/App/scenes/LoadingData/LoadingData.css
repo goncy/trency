@@ -1,4 +1,8 @@
 .LoadingData span {
-    font-size: small;
-    margin-top: 15px;
+  font-size: small;
+  margin-top: 15px;
+}
+
+.LoadingData {
+  padding: 0 1.5rem;
 }

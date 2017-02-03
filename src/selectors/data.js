@@ -24,8 +24,7 @@ export const shapePositions = (positions: RawPosition[]): List<Position> => List
   positions.map(position => ({
     id: position.formacion_id,
     branch: position.ramal,
-    moviendose: position.estado_mov === 1,
-    funcionando: position.estado_servicio === 1,
+    moviendose: position.estado_mov === 1 && position.estado_servicio === 1,
     position: {lat: Number(position.latitud), lng: Number(position.longitud)}
   })
 ))
