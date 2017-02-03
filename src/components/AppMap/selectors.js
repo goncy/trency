@@ -1,6 +1,6 @@
 // @flow
 
-import {getBranchColor, getBranchDirection, getStationMarkerIcon, getStationIcon, getPositionIcon} from '../../selectors/constants'
+import {getStationMarkerIcon, getStationIcon, getPositionIcon} from '../../selectors/constants'
 
 export const getStationMarkerOptions = ({gmaps, station}: any, marker: any) => {
   const isSelected = marker.id === station.id
@@ -16,11 +16,11 @@ export const getStationMarkerOptions = ({gmaps, station}: any, marker: any) => {
   }
 }
 
-export const getPositionMarkerOptions = ({gmaps, branch}: any, marker: any) => ({
+export const getPositionMarkerOptions = ({gmaps}: any, marker: any) => ({
   position: marker.position,
   icon: {
     url: marker.moviendose
-      ? getPositionIcon(getBranchColor(branch, marker.branch))
+      ? getPositionIcon(marker.direction.color)
       : getPositionIcon('danger'),
     anchor: new gmaps.Point(12, 12)
   }
@@ -44,10 +44,6 @@ export const getStationInfoWindowContent = ({station}: any, infoWindow: any) => 
 `
 }
 
-export const getPositionInfoWindowContent = ({branch}: any, position: any) => {
-  const direction = getBranchDirection(branch, position.branch)
-  return `
-    <span style='margin: 10px 5px 8px 5px' class='tag is-${direction.color} is-medium'>Destino ${direction.name}</span>
-    ${!position.moviendose ? '<span style="margin: 10px 5px 8px 5px" class="tag is-danger is-medium">Tren parado</span>' : ''}
-  `
-}
+export const getPositionInfoWindowContent = ({direction, moviendose}: any) => `
+  <span style='margin: 10px 5px 8px 5px' class='tag is-${direction.color} is-medium'>Destino ${direction.name}</span>
+`

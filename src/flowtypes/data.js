@@ -1,6 +1,8 @@
 // @flow
 import {List} from 'immutable'
 
+import type {Direction} from './constants'
+
 // Position
 export type RawPosition = {
   formacion_id: number,
@@ -14,8 +16,8 @@ export type RawPosition = {
 export type Position = {
   id: number,
   moviendose: boolean,
-  position: {lat: number, lng: number},
-  branch: number
+  direction: Direction,
+  position: {lat: number, lng: number}
 }
 
 // Arrivals

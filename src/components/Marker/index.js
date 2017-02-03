@@ -6,6 +6,10 @@ export default class Marker extends Component {
   }
 
   componentDidMount () {
+    this.placeMarker()
+  }
+
+  placeMarker () {
     const {gmaps, map, options = {}} = this.props
     if (options.position) {
       this.setState({
@@ -22,22 +26,32 @@ export default class Marker extends Component {
   }
 
   componentDidUpdate (prevProps) {
-    const {marker} = this.state
     const {options} = this.props
     const {options: prevOptions} = prevProps
 
-    if (options.position && options.position !== prevOptions.position) {
-      marker.setPosition(options.position)
-    } else if (!options.position) {
-      this.removeMarker()
+    if (options) {
+      // Position changed
+      if (options.position !== prevOptions.position) this.setPosition(options.position)
+      // Icon changed
+      if (options.icon.url !== prevOptions.icon.url) this.setIcon(options.icon)
+      // No position, remove marker
+      if (!options.position) this.removeMarker()
     }
+  }
+
+  setIcon (icon) {
+    const {marker} = this.state
+    marker.setIcon(icon)
+  }
+
+  setPosition (position) {
+    const {marker} = this.state
+    marker.setPosition(position)
   }
 
   removeMarker () {
     const {marker} = this.state
-    if (marker) {
-      marker.setMap(null)
-    }
+    if (marker) marker.setMap(null)
   }
 
   render () {
@@ -52,7 +66,7 @@ export default class Marker extends Component {
             element => React.cloneElement(
               element,
               {
-                marker: marker,
+                marker,
                 gmaps,
                 map,
                 ...element.props

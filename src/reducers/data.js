@@ -2,16 +2,15 @@
 
 import {List} from 'immutable'
 
-import type {DataState, RawPosition, RawArrival} from '../flowtypes/data'
+import type {DataState, Position, Arrival} from '../flowtypes/data'
 
 import {fetchData, clearData} from '../actions/api'
-import {shapeArrivals, shapePositions} from '../selectors/data'
 
 type DataAction = {
   type: string,
   payload: {
-    positions: RawPosition[],
-    arrivals: RawArrival[],
+    positions: List<Position>,
+    arrivals: List<Arrival>,
     error: ?string
   }
 }
@@ -30,8 +29,8 @@ const data = (
         ...state,
         status: 'success',
         error: null,
-        positions: shapePositions(payload.positions),
-        arrivals: shapeArrivals(payload.arrivals)
+        positions: payload.positions,
+        arrivals: payload.arrivals
       }
     case fetchData.FAILURE:
       return {

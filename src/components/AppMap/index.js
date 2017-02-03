@@ -13,7 +13,8 @@ import Map from '../Map'
 import Marker from '../Marker'
 
 import type {GMaps, AppState} from '../../flowtypes/globals'
-import type {PreferencesState, Branch, Station} from '../../flowtypes/preferences'
+import type {PreferencesState} from '../../flowtypes/preferences'
+import type {Branch, Station} from '../../flowtypes/constants'
 import type {Position} from '../../flowtypes/data'
 
 export type AppMapProps = {
@@ -47,7 +48,7 @@ const AppMap = (props: AppMapProps) => {
           options={getPositionMarkerOptions(props, position)}
         >
           {/* InfoWindow Positions */}
-          <InfoWindow content={getPositionInfoWindowContent(props, position)} />
+          <InfoWindow content={getPositionInfoWindowContent(position)} />
         </Marker>
       ))}
     </Map>

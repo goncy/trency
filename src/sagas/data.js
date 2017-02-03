@@ -4,6 +4,7 @@ import {delay} from 'redux-saga'
 import {fetchData, clearData} from '../actions/api'
 import {preferencesReady, preferencesChanged, clearPreferences} from '../actions/preferences'
 import {FAILURE_FETCH_TIME, SUCCESS_FETCH_TIME} from '../constants'
+import {shapeResponse} from '../selectors/data'
 
 export function* fetchDataApi () {
   const {preferences} = yield select()
@@ -20,7 +21,8 @@ export function* fetchDataSaga () {
   if (error) {
     yield put(fetchData.failure({error}))
   } else {
-    yield put(fetchData.success(response))
+    const shapedResponse = yield select(shapeResponse, response)
+    yield put(fetchData.success(shapedResponse))
   }
 }
 
