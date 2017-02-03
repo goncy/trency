@@ -242,12 +242,12 @@ export const LINES = [
           {
             id: 1,
             name: 'Moreno',
-            color: 'info'
+            color: 'success'
           },
           {
             id: 2,
             name: 'Once',
-            color: 'success'
+            color: 'info'
           }
         ],
         stations: [
@@ -348,12 +348,12 @@ export const LINES = [
           {
             id: 31,
             name: 'Cabred',
-            color: 'info'
+            color: 'success'
           },
           {
             id: 32,
             name: 'Retiro',
-            color: 'success'
+            color: 'info'
           }
         ],
         stations: [
@@ -484,12 +484,12 @@ export const LINES = [
           {
             id: 5,
             name: 'Tigre',
-            color: 'info'
+            color: 'success'
           },
           {
             id: 6,
             name: 'Retiro',
-            color: 'success'
+            color: 'info'
           }
         ],
         stations: [
@@ -595,12 +595,12 @@ export const LINES = [
           {
             id: 21,
             name: 'M.C.G Belgrano',
-            color: 'info'
+            color: 'success'
           },
           {
             id: 22,
             name: 'Buenos Aires',
-            color: 'success'
+            color: 'info'
           }
         ],
         stations: [
