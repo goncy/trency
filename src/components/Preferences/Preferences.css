@@ -13,13 +13,6 @@
   font-size: small;
 }
 
-.Preferences .edit-img {
-  vertical-align: middle;
-  border: 0 !important;
-  padding: 0 !important;
-  margin-left: 5px;
-}
-
 .Preferences .edit-text {
   vertical-align: middle;
   font-size: 13px;
@@ -27,9 +20,5 @@
 }
 
 .Preferences .edit-btn {
-  margin: 0;
-  padding: 0;
-  background: transparent;
-  border: 0;
-  cursor: pointer;
+  margin-top: 5px;
 }
