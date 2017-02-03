@@ -5,7 +5,7 @@ import {connect} from 'react-redux'
 import loadGoogleMapsAPI from 'load-google-maps-api'
 
 import {preferencesSet} from '../../reducers/preferences'
-import {hasData, hasError} from '../../selectors/data'
+import {hasData, hasError, hasSucceeded} from '../../selectors/data'
 import {gmapsLoaded, gmapsFailed} from './selectors'
 
 import App from './App'
@@ -15,6 +15,7 @@ import LoadingData from './scenes/LoadingData'
 
 import type {GMaps, AppState} from '../../flowtypes/globals'
 import {GOOGLE_MAPS_API_KEY} from '../../constants'
+import {clearPreferences} from '../../actions/preferences'
 
 import './App.css'
 
@@ -61,7 +62,7 @@ class AppContainer extends Component {
   }
 
   getScene () {
-    const {hasData, hasError} = this.props
+    const {hasData, hasError, hasSucceeded, clearPreferences} = this.props
 
     // Loading GMaps scene
     if (!gmapsLoaded(this.state)) {
@@ -77,14 +78,19 @@ class AppContainer extends Component {
         } else {
           // Loading data failed scene
           if (hasError && !hasData) {
-            return <LoadingData>Parece que el servidor esta teniendo problemas, volviendo a intentar</LoadingData>
+            return <LoadingData.Retrying />
           } else {
             // Loading data scene
-            if (!hasData) {
-              return <LoadingData />
+            if (!hasData && !hasSucceeded) {
+              return <LoadingData.Loading />
             } else {
-              // Application scene
-              return <App gmaps={this.state.library} />
+              if (!hasData && hasSucceeded) {
+                // Empty response
+                return <LoadingData.Empty goBack={clearPreferences} />
+              } else {
+                // Application scene
+                return <LoadingData.Empty goBack={clearPreferences} />
+              }
             }
           }
         }
@@ -106,7 +112,12 @@ class AppContainer extends Component {
 const mapStateToProps = ({preferences, data}: AppState): AppContainerProps => ({
   preferencesSet: preferencesSet(preferences),
   hasData: hasData(data),
+  hasSucceeded: hasSucceeded(data),
   hasError: hasError(data)
 })
 
-export default connect(mapStateToProps)(AppContainer)
+const mapDispatchToProp = {
+  clearPreferences: clearPreferences.run
+}
+
+export default connect(mapStateToProps, mapDispatchToProp)(AppContainer)

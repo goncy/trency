@@ -30,6 +30,7 @@ export const shapePositions = (positions: RawPosition[]): List<Position> => List
 ))
 
 export const hasData = ({positions, arrivals}: DataState): boolean => (!positions.isEmpty() && !!arrivals)
+export const hasSucceeded = ({status}: DataState): boolean => status === 'success'
 export const hasError = ({error}: DataState): boolean => !!error
 export const getPositions = ({positions}: DataState) => positions
 export const getArrivals = ({arrivals}: DataState) => arrivals

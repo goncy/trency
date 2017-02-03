@@ -1,15 +1,11 @@
-import React from 'react'
-
-import Spinner from '../../../Spinner'
-
 import './LoadingData.css'
 
-const LoadingData = ({children}) => <Spinner>
-  <p className='LoadingData'>
-    Cargando datos de ubicacion y horarios de los trenes
-    <br/>
-    <span>{children}</span>
-  </p>
-</Spinner>
+import Loading from './Loading'
+import Empty from './Empty'
+import Retrying from './Retrying'
 
-export default LoadingData
+export default {
+  Loading,
+  Empty,
+  Retrying
+}
