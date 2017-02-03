@@ -29,3 +29,13 @@ export const getBranchColor = (branch, id) => branch
   .directions
   .find(direction => direction.id === id)
   .color
+
+// Icons
+export const getPositionIcon = (color: string): string =>
+  `${process.env.PUBLIC_URL || ''}/train-${color}.svg`
+
+export const getStationMarkerIcon = (isSelected: boolean): string =>
+  `${process.env.PUBLIC_URL || ''}/station${isSelected ? '-seleccionada' : ''}-marker.svg`
+
+export const getStationIcon = (isSelected: boolean): string =>
+  `${process.env.PUBLIC_URL || ''}/station${isSelected ? '-seleccionada' : ''}-icon.svg`

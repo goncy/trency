@@ -1,6 +1,6 @@
 // @flow
 
-import {getBranchColor, getBranchDirection} from '../../selectors/constants'
+import {getBranchColor, getBranchDirection, getStationMarkerIcon, getStationIcon, getPositionIcon} from '../../selectors/constants'
 
 export const getStationMarkerOptions = ({gmaps, station}: any, marker: any) => {
   const isSelected = marker.id === station.id
@@ -9,7 +9,7 @@ export const getStationMarkerOptions = ({gmaps, station}: any, marker: any) => {
     zIndex: isSelected ? 9999 : 0,
     optimized: false,
     icon: {
-      url: `${process.env.PUBLIC_URL || ''}/station${isSelected ? '-seleccionada' : ''}-marker.svg`,
+      url: getStationMarkerIcon(isSelected),
       size: new gmaps.Size(32, 32),
       anchor: new gmaps.Point(16, 16)
     }
@@ -20,8 +20,8 @@ export const getPositionMarkerOptions = ({gmaps, branch}: any, marker: any) => (
   position: marker.position,
   icon: {
     url: marker.moviendose
-      ? `${process.env.PUBLIC_URL || ''}/train-${getBranchColor(branch, marker.branch)}.svg`
-      : `${process.env.PUBLIC_URL || ''}/train-danger.svg`,
+      ? getPositionIcon(getBranchColor(branch, marker.branch))
+      : getPositionIcon('danger'),
     anchor: new gmaps.Point(12, 12)
   }
 })
@@ -33,7 +33,7 @@ export const getStationInfoWindowContent = ({station}: any, infoWindow: any) => 
     <tbody>
         <tr>
         <td>
-          <img alt='station' src='${process.env.PUBLIC_URL || ''}/station${isSelected ? '-seleccionada' : ''}-icon.svg' width='48px' />
+          <img alt='station' src='${getStationIcon(isSelected)}' width='48px' />
         </td>
         <td style='vertical-align: middle'>
           <a style='font-size: 16px; font-weight: 400; color: #333; margin-left: 5px'>Estacion ${infoWindow.name}</a>
