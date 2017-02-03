@@ -4,7 +4,7 @@ import React, {Component, PropTypes} from 'react'
 import {connect} from 'react-redux'
 import loadGoogleMapsAPI from 'load-google-maps-api'
 
-import {preferencesSet} from '../../reducers/preferences'
+import {preferencesSet} from '../../selectors/preferences'
 import {hasData, hasError, hasSucceeded} from '../../selectors/data'
 import {gmapsLoaded, gmapsFailed} from './selectors'
 

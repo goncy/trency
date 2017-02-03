@@ -9,11 +9,13 @@ type PreferencesAction = {
   payload: string
 }
 
-const preferences = (state: PreferencesState = {
-  line: null,
-  branch: null,
-  station: null
-}, {type, payload}: PreferencesAction): PreferencesState => {
+const preferences = (
+  state: PreferencesState = {
+    line: null,
+    branch: null,
+    station: null
+  },
+  {type, payload}: PreferencesAction): PreferencesState => {
   switch (type) {
     case changeLine.type:
       return {
@@ -44,7 +46,5 @@ const preferences = (state: PreferencesState = {
       return state
   }
 }
-
-export const preferencesSet = ({line, branch, station}: PreferencesState): boolean => Boolean(line && branch && station)
 
 export default preferences

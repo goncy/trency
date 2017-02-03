@@ -3,13 +3,13 @@ import {delay} from 'redux-saga'
 
 import {fetchData, clearData} from '../actions/api'
 import {preferencesReady, preferencesChanged, clearPreferences} from '../actions/preferences'
-import {FAILURE_FETCH_TIME, SUCCESS_FETCH_TIME} from '../constants'
+import {FAILURE_FETCH_TIME, SUCCESS_FETCH_TIME, API_URL} from '../constants'
 import {shapeResponse} from '../selectors/data'
 
 export function* fetchDataApi () {
   const {preferences} = yield select()
   const {branch} = preferences
-  return yield fetch('https://trenesargentinosapi.herokuapp.com/' + branch.id)
+  return yield fetch(API_URL + branch.id)
     .then(response => response.json())
     .then(response => response)
     .catch(error => ({error}))
@@ -20,7 +20,7 @@ export function* fetchDataSaga () {
   const {response, error} = yield call(fetchDataApi)
   if (error) {
     yield put(fetchData.failure({error}))
-  } else {
+  } else if (response) {
     const shapedResponse = yield select(shapeResponse, response)
     yield put(fetchData.success(shapedResponse))
   }
@@ -33,7 +33,7 @@ export function* fetchDataLoop (time = SUCCESS_FETCH_TIME) {
   }
 }
 
-export function* preferencesReadyWorker (): void {
+export function* preferencesReadyWorker () {
   while (true) {
     yield put(fetchData.run())
     const fetchResult = yield take([fetchData.SUCCESS, fetchData.FAILURE])
@@ -66,7 +66,7 @@ export function* clearDataWatcher () {
   yield takeEvery(clearPreferences.type, clearDataWorker)
 }
 
-export function* preferencesReadyWatcher (): void {
+export function* preferencesReadyWatcher () {
   while (yield take(preferencesReady.type)) {
     yield race({
       task: call(preferencesReadyWorker),

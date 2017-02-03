@@ -1,30 +1,43 @@
+// @flow
 import {createSelector} from 'reselect'
 
 import {LINES} from '../constants'
 
-import type {Direction} from '../flowtypes/data'
-import type {Branch} from '../flowtypes/preferences'
+import type {Line, Branch, Station, Direction} from '../flowtypes/constants'
 
-export const getLines = LINES
+export const getLines: Line[] = LINES
   .map(({id, name}) => ({id, name}))
 
-export const getBranches = line => LINES
-  .find(ln => ln.id === line.id)
-  .branches
+export const getLine: Line = createSelector(
+  (id: string) => id,
+  (id: string) => LINES
+    .find(line => line.id === id)
+)
 
-export const getLine = line => LINES
-  .find(ln => ln.id === line)
+export const getBranch: Branch = createSelector(
+  (line: Line, id: number) => line,
+  (line: Line, id: number) => id,
+  (line: Line, id: number) => LINES
+    .find(ln => ln.id === line.id)
+    .branches
+    .find(branch => branch.id === id)
+)
 
-export const getBranch = (line, branch) => getBranches(line)
-  .find(rm => rm.id === branch)
+export const getStation: Station = createSelector(
+  (branch: Branch, id: number) => branch,
+  (branch: Branch, id: number) => id,
+  (branch: Branch, id: number) => branch
+    .stations
+    .find(station => station.id === id)
+)
 
-export const getStation = (branch, station) => branch
-  .stations
-  .find(est => est.id === station)
-
-export const getStationIndex = (branch, station) => branch
-  .stations
-  .findIndex(est => est.id === station)
+export const getDirection: Direction = createSelector(
+  (branch: Branch, id: number) => branch,
+  (branch: Branch, id: number) => id,
+  (branch: Branch, id: number) => branch
+    .directions
+    .find((direction: Direction) => direction.id === id)
+)
 
 // Icons
 export const getPositionIcon = (color: string): string =>
@@ -35,12 +48,3 @@ export const getStationMarkerIcon = (isSelected: boolean): string =>
 
 export const getStationIcon = (isSelected: boolean): string =>
   `${process.env.PUBLIC_URL || ''}/station${isSelected ? '-seleccionada' : ''}-icon.svg`
-
-// Experimental
-export const getDirection: Direction = createSelector(
-  (branch: Branch, id: number) => branch,
-  (branch: Branch, id: number) => id,
-  (branch: Branch, id: number) => branch
-    .directions
-    .find((direction: Direction) => direction.id === id)
-)

@@ -9,7 +9,7 @@ import {getBranches} from './selectors'
 import './Arrivals.css'
 
 import type {Arrival} from '../../flowtypes/data'
-import type {Station, Branch} from '../../flowtypes/preferences'
+import type {Station, Branch} from '../../flowtypes/constants'
 
 export type ArrivalsProps = {
   arrivals: List<Arrival>,

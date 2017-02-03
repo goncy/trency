@@ -1,7 +1,7 @@
 import {select, take, put} from 'redux-saga/effects'
 
 import {changeStation, changeLine, changeBranch, clearPreferences, preferencesReady, preferencesChanged} from '../actions/preferences'
-import {preferencesSet} from '../reducers/preferences'
+import {preferencesSet} from '../selectors/preferences'
 
 export function* preferencesChangeWatcher () {
   const changeActions = take([changeStation.type, changeLine.type, changeBranch.type, clearPreferences.type])

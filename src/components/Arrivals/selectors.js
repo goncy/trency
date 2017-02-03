@@ -1,13 +1,11 @@
 // @flow
 import {List} from 'immutable'
 
-import {getStationIndex} from '../../selectors/constants'
-
 import type {Arrival} from '../../flowtypes/data'
-import type {Branch, Station} from '../../flowtypes/preferences'
+import type {Branch, Station} from '../../flowtypes/constants'
 import type {ArrivalsProps} from './index'
 
-export const getArrival = (arrival: string) => {
+export const getArrivalTime = (arrival: string) => {
   const minutos = Number(arrival)
   if (minutos < 0) {
     return '-'
@@ -21,7 +19,7 @@ export const getArrival = (arrival: string) => {
 }
 
 export const getActiveArrivals = (arrivals: List<Arrival>, branch: Branch, station: Station): Arrival =>
-  arrivals.get(getStationIndex(branch, station.id))
+  arrivals.get(station.index)
 
 export const getBranch = ({branch, station, arrivals}: ArrivalsProps, index: number) => {
   const activeArrival = getActiveArrivals(arrivals, branch, station)
@@ -29,8 +27,8 @@ export const getBranch = ({branch, station, arrivals}: ArrivalsProps, index: num
     color: branch.directions[index].color,
     destino: branch.directions[index].name,
     arrivals: {
-      primero: getArrival(activeArrival.arrivals[index].primero),
-      segundo: getArrival(activeArrival.arrivals[index].segundo)
+      primero: getArrivalTime(activeArrival.arrivals[index].primero),
+      segundo: getArrivalTime(activeArrival.arrivals[index].segundo)
     }
   }
 }
