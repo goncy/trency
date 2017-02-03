@@ -7,23 +7,21 @@ export const getStationMarkerOptions = ({gmaps, station}: any, marker: any) => {
   return {
     position: marker.position,
     zIndex: isSelected ? 9999 : 0,
-    icon: new gmaps.MarkerImage(
-      `${process.env.PUBLIC_URL || ''}/station${isSelected ? '-seleccionada' : ''}-marker.svg`,
-      new gmaps.Size(15, 15),
-      null,
-      new gmaps.Point(7.5, 7.5)
-    )
+    optimized: false,
+    icon: {
+      url: `${process.env.PUBLIC_URL || ''}/station${isSelected ? '-seleccionada' : ''}-marker.svg`,
+      size: new gmaps.Size(32, 32),
+      anchor: new gmaps.Point(16, 16)
+    }
   }
 }
 
 export const getPositionMarkerOptions = ({gmaps, branch}: any, marker: any) => ({
   position: marker.position,
-  icon: new gmaps.MarkerImage(
-    `${process.env.PUBLIC_URL || ''}/train-${getBranchColor(branch, marker.branch)}.svg`,
-    null,
-    null,
-    new gmaps.Point(12, 12)
-  )
+  icon: {
+    url: `${process.env.PUBLIC_URL || ''}/train-${getBranchColor(branch, marker.branch)}.svg`,
+    anchor: new gmaps.Point(12, 12)
+  }
 })
 
 export const getStationInfoWindowContent = ({station}: any, infoWindow: any) => {
