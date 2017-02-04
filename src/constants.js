@@ -1562,4 +1562,4 @@ export const LINES = [
 export const GOOGLE_MAPS_API_KEY = 'AIzaSyD40iBClWX-S8w5BeFPSfWFDJNfa2DI8fw'
 export const SUCCESS_FETCH_TIME = 10000
 export const FAILURE_FETCH_TIME = 3000
-export const API_URL = 'https://trenesargentinosapi.herokuapp.com/'
+export const API_URL = 'https://trenesargentinosapi.herokuapp.com/api/v1/data/'
