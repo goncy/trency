@@ -7,9 +7,13 @@ const Directions = ({branch}) => {
   return (
     <div className='Directions animated fadeInLeft'>
       {branch.directions && branch.directions.map((direction, index) => (
-        <span key={index} className={`tag is-${direction.color} is-medium`}>Destino {direction.name}</span>
+        <div key={index}>
+          <span className={`tag is-hidden-mobile is-${direction.color} is-medium`}>Destino {direction.name}</span>
+          <span className={`tag is-hidden-tablet is-${direction.color}`}>Destino {direction.name}</span>
+        </div>
       ))}
-      <span className={`tag is-danger is-medium`}>Tren parado</span>
+      <span className={`tag is-hidden-mobile is-danger is-medium`}>Tren parado</span>
+      <span className={`tag is-hidden-tablet is-danger`}>Tren parado</span>
     </div>
   )
 }

@@ -3,6 +3,6 @@
   margin-top: 15px;
 }
 
-.LoadingData.loading, .LoadingData.empty {
+.LoadingData.loading, .LoadingData.empty, .LoadingData.retrying {
   padding: 0 1.5rem;
 }

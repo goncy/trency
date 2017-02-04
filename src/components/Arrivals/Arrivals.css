@@ -11,3 +11,11 @@
 .Arrivals .heading span {
   margin-left: 5px;
 }
+
+.Arrivals .is-hidden-tablet .arrival {
+  align-items: center;
+}
+
+.Arrivals .arrival .columns {
+  width: 100%;
+}
