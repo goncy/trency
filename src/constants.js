@@ -1144,6 +1144,116 @@ export const LINES = [
           }
         ],
         path: 'z~brE~ihcJSb@Sb@Ub@S%60@Ub@Sb@Sb@Ub@Sb@U%60@Sb@Sb@Ub@Sb@Ub@S%60@Sb@Ub@Sb@Ub@Sb@S%60@Ub@Sb@Sb@Ub@U%60@W%5EU%60@W%60@U%60@W%60@U%5EW%60@U%60@W%60@S%60@Ub@Sb@Ub@S%60@Ub@Ub@Sb@U%60@Sb@Ub@Sb@W%5EU%60@U%60@W%60@U%60@Y%5EW%5EW%5CY%5EW%5EY%5EW%5CY%5EW%5EW%5EY%5CW%5EY%5EW%5EW%5EW%5EY%5EW%5EW%5EU%60@U%60@Ub@Qb@Sb@Sd@Sb@Qd@Qd@Qd@Qd@Qd@Qd@Qd@Qd@Od@Qd@Qd@Od@Qd@Qf@Od@Qd@Od@Qd@Qd@Od@Of@Mf@Mf@Mf@Of@Mf@Mf@Of@Od@Of@Qd@Od@Od@Od@Sd@Sb@Sb@Sb@Sd@U%60@W%60@U%60@W%60@W%5EW%5CY%5EW%5EW%5EY%5EY%5CY%5CY%5CY%5CY%5EY%5CY%5CY%5CY%5CY%5CY%5CY%5CY%5CY%5CY%5CY%5EY%5CY%5CY%5CY%5CY%5CY%5CW%5EY%5CY%5CY%5CY%5CY%5CY%5CY%5CY%5EYZ%5B%5CY%5CY%5CYZ%5B%5CY%5CY%5C%5BZY%5CY%5CY%5C%5BZY%5CY%5CY%5C%5BZY%5EW%5CY%5CY%5CY%5CY%5EY%5CY%5CY%5CU%60@W%60@W%60@U%5ESd@Sb@Sb@Sb@Sb@Of@Od@Of@Od@Of@Of@Od@Kh@Mf@Kf@Kh@Mf@Kf@Mh@Gh@Gh@Gh@Gh@Gh@Ih@??Cj@Ch@Ej@Aj@Ah@Cj@Aj@?j@Aj@?j@?j@?j@@h@@j@@j@@h@Bj@Bj@Bh@Bj@Dh@Dj@Dh@Dj@Hh@Jh@Hf@Hh@Hh@Hh@Lf@Nf@Lf@Lf@Nf@Nd@Nf@Nd@Pd@Nd@Pd@Rb@Rd@Rd@R%60@Rb@Tb@Rb@T%60@Rb@Tb@R%60@Tb@Rb@T%60@Rb@Rb@Tb@R%60@Tb@Rb@T%60@Rb@Tb@Rb@R%60@Tb@Rb@Tb@Rb@T%60@Rb@Rb@Tb@R%60@Rd@Rb@Pd@Rb@Rd@Rb@Nd@Pd@Pd@Pd@Pd@Nd@Pd@Pd@Nd@Pd@Lf@Nh@Lf@Lf@Jh@Jf@Jh@Jf@Jh@Hf@Jh@Jf@Hh@Hh@Jh@Hh@Hh@Hh@Jh@Hh@Hf@Jh@Hh@Hh@Jh@Hf@Jh@Hh@Hf@Jh@Hh@Jf@Fj@Hh@Dh@Dj@Dj@Dh@Dj@@j@@h@@j@@j@Ah@Aj@Aj@Ah@Cj@Cj@Eh@Ej@Gh@Ih@Ih@Ih@Ih@Kh@Kf@Mf@Kf@Of@Of@Od@Mf@Of@Od@Mf@Of@Od@Of@Of@Od@Of@Od@Of@Od@Of@Od@Of@Od@Of@Od@Of@Of@Od@Od@Of@Od@Of@Od@Of@Qd@Of@Od@Of@Od@Of@Od@Of@Qd@Od@Of@Od@Qf@Od@Of@Qd@Od@Of@Of@Od@Mf@Mf@Mf@Of@Mf@Md@Kh@Kh@Kf@Mh@Kf@Kh@Kf@Kh@Mf@Kf@Kh@Kf@Mh@Kf@Kf@Kh@Kh@Kf@Mh@Kf@Mf@Mf@Mf@Of@Mf@Mf@Of@Md@Of@Mf@Mf@Of@Mf@Od@Mf@Mf@Of@Mf@Of@Md@Of@Mf@Of@Mf@Od@Of@Mf@Of@Mf@Mf@Mf@Of@Mf@Mf@Mf@Of@Kf@Mf@Mf@Kh@Kh@Ih@If@Kh@Ih@Gh@Ih@Gh@Gj@Gh@Ej@Eh@Eh@Ej@Cj@Ch@Cj@Aj@Aj@Ah@Aj@@j@?h@?j@?j@@j@@h@@j@@j@@j@?j@@j@Ah@Cj@Eh@Gj@Gh@Kh@If@Mf@Mf@Of@Of@Od@Mf@Of@Od@Of@Od@Of@Mf@Od@Of@Of@Od@Of@Mf@Od@Of@Of@Mf@Od@Of@Of@Od@Of@Md@Of@Qf@Od@Qd@Qb@U%60@Ub@W%5EW%5E%5B%5CY%5CY%5C%5DV%5DV_@V%5DT_@T%5DT%5DT_@T%5DT_@T%5DT_@T_@R%5DT_@T%5DT_@T_@R%5DT_@T_@T%5DT_@T_@R%5DT_@T_@T%5DT_@T%5DR_@T_@T%5DT_@T_@T%5DR_@T_@T%5DT_@T%5DT_@T_@T%5DT_@T_@R%5DT_@T_@T%5DT_@T%5DT_@R_@T%5DT_@T_@T%5DT_@T%5DR_@T_@T%5DT_@T_@T%5DT_@T%5DR_@T_@T%5DT_@T%5DT_@T_@R%5DT_@T_@T%5DT_@T%5DT_@R_@T%5DT_@T%5DT_@T_@T%5DR_@T_@T%5DT_@T%5DT_@T_@T%5DR_@T_@T%5DT_@T_@T%5DT_@T_@T%5DR_@T_@T%5DT_@T%5DT_@T_@T%5DT_@R_@T_@R%5DTa@R_@R_@Na@Na@Na@J_@Lc@Fc@Fc@Fc@Bc@Dc@Bc@@c@?c@Ac@?c@Ac@?c@Ac@?c@Ac@Ac@?c@Ac@?c@Ac@?c@Ac@Ac@?c@Ac@?c@Ac@?e@Ac@?c@Ac@?c@Ac@Ac@?c@Ac@?c@Ac@?c@Ac@?c@?c@Ac@?c@Ac@?c@Ac@?c@Ac@?c@Ac@?c@Ac@?c@Ac@?c@Ac@?c@Ac@?c@Ac@?c@Ac@?c@Ac@?c@Ae@Ac@?c@Ac@Ac@?c@Ac@Ac@Ac@?c@Ac@Ac@?c@Ac@Ac@?c@Ac@Ac@?c@Ac@Ac@?c@Ac@Ac@?c@Ac@Ac@Ac@Ac@Ac@Ac@Ac@Ac@Ac@Ac@Ac@Ac@?c@Ac@Ac@Ac@Ac@Ac@Ac@Ac@Ac@Ac@Ac@Ec@Ea@Gc@Ic@Ic@Ia@Ka@Ic@K_@Oa@Oa@O_@Oa@Q_@O_@U_@U%5DU%5DY%5DW%5DY%5DW%5BY%5DW%5DY%5DW%5BY%5DW%5DY%5DW%5BW%5DY%5DW%5DY%5DW%5BY%5DW%5DY%5DW%5DW%5BY%5DW%5DY%5DW%5DY%5BW%5DW%5DY%5DW%5DY%5BW%5DW%5DY%5DW%5DY%5DW%5BY%5DW%5DW%5DY%5DW%5BY%5DW', //eslint-disable-line
+      },
+      {
+        id: 9,
+        name: 'Retiro - J. L. Suarez',
+        slug: 'jlsuarez',
+        directions: [
+          {
+            id: 9,
+            name: 'J. L. Suarez',
+            color: 'success'
+          },
+          {
+            id: 10,
+            name: 'Retiro',
+            color: 'info'
+          }
+        ],
+        stations: [
+          {
+            index: 0,
+            id: 'retiro',
+            name: 'Retiro',
+            position: {lat: -34.5907031, lng: -58.3748806}
+          },
+          {
+            index: 1,
+            id: '3deFebrero',
+            name: '3 de Febrero',
+            position: {lat: -34.5717485, lng: -58.4249824}
+          },
+          {
+            index: 2,
+            id: 'ministroCarranza',
+            name: 'Ministro Carranza',
+            position: {lat: -34.5752730, lng: -58.4337443}
+          },
+          {
+            index: 3,
+            id: 'colegiales',
+            name: 'Colegiales',
+            position: {lat: -34.5729746, lng: -58.4482530}
+          },
+          {
+            index: 4,
+            id: 'belgranoR',
+            name: 'Belgrano R',
+            position: {lat: -34.5680506, lng: -58.4618081}
+          },
+          {
+            index: 5,
+            id: 'lmDrago',
+            name: 'L.M.Drago',
+            position: {lat: -34.5684173, lng: -58.4789912}
+          },
+          {
+            index: 6,
+            id: 'generalUrquiza',
+            name: 'General Urquiza',
+            position: {lat: -34.5747120, lng: -58.4878391}
+          },
+          {
+            index: 7,
+            id: 'pueyrredon',
+            name: 'Pueyrredon',
+            position: {lat: -34.5804962, lng: -58.5018980}
+          },
+          {
+            index: 8,
+            id: 'miguelete',
+            name: 'Miguelete',
+            position: {lat: -34.5810718, lng: -58.5170793}
+          },
+          {
+            index: 9,
+            id: 'sanMartin',
+            name: 'San Martin',
+            position: {lat: -34.5734195, lng: -58.5319579}
+          },
+          {
+            index: 10,
+            id: 'sanAndres',
+            name: 'San Andres',
+            position: {lat: -34.5635642, lng: -58.5406609}
+          },
+          {
+            index: 10,
+            id: 'malaver',
+            name: 'Malaver',
+            position: {lat: -34.5573725, lng: -58.5479328}
+          },
+          {
+            index: 10,
+            id: 'villaBallester',
+            name: 'Villa Ballester',
+            position: {lat: -34.5511617, lng: -58.5558262}
+          },
+          {
+            index: 10,
+            id: 'chilavert',
+            name: 'Chilavert',
+            position: {lat: -34.5422320, lng: -58.5669170}
+          },
+          {
+            index: 10,
+            id: 'jlsuarez',
+            name: 'J.L. Suarez',
+            position: {lat: -34.5348489, lng: -58.5758471}
+          }
+        ],
+        path: 'z~brE~ihcJSb@Sb@Ub@S%60@Ub@Sb@Sb@Ub@Sb@U%60@Sb@Sb@Ub@Sb@Ub@S%60@Sb@Ub@Sb@Ub@Sb@S%60@Ub@Sb@Sb@Ub@U%60@W%5EU%60@W%60@U%60@W%60@U%5EW%60@U%60@W%60@S%60@Ub@Sb@Ub@S%60@Ub@Ub@Sb@U%60@Sb@Ub@Sb@W%5EU%60@U%60@W%60@U%60@Y%5EW%5EW%5CY%5EW%5EY%5EW%5CY%5EW%5EW%5EY%5CW%5EY%5EW%5EW%5EW%5EY%5EW%5EW%5EU%60@U%60@Ub@Qb@Sb@Sd@Sb@Qd@Qd@Qd@Qd@Qd@Qd@Qd@Qd@Od@Qd@Qd@Od@Qd@Qf@Od@Qd@Od@Qd@Qd@Od@Of@Mf@Mf@Mf@Of@Mf@Mf@Of@Od@Of@Qd@Od@Od@Od@Sd@Sb@Sb@Sb@Sd@U%60@W%60@U%60@W%60@W%5EW%5CY%5EW%5EW%5EY%5EY%5CY%5CY%5CY%5CY%5EY%5CY%5CY%5CY%5CY%5CY%5CY%5CY%5CY%5CY%5CY%5EY%5CY%5CY%5CY%5CY%5CY%5CW%5EY%5CY%5CY%5CY%5CY%5CY%5CY%5CY%5EYZ%5B%5CY%5CY%5CYZ%5B%5CY%5CY%5C%5BZY%5CY%5CY%5C%5BZY%5CY%5CY%5C%5BZY%5EW%5CY%5CY%5CY%5CY%5EY%5CY%5CY%5CU%60@W%60@W%60@U%5ESd@Sb@Sb@Sb@Sb@Of@Od@Of@Od@Of@Of@Od@Kh@Mf@Kf@Kh@Mf@Kf@Mh@Gh@Gh@Gh@Gh@Gh@Ih@??Cj@Ch@Ej@Aj@Ah@Cj@Aj@?j@Aj@?j@?j@?j@@h@@j@@j@@h@Bj@Bj@Bh@Bj@Dh@Dj@Dh@Dj@Hh@Jh@Hf@Hh@Hh@Hh@Lf@Nf@Lf@Lf@Nf@Nd@Nf@Nd@Pd@Nd@Pd@Rb@Rd@Rd@R%60@Rb@Tb@Rb@T%60@Rb@Tb@R%60@Tb@Rb@T%60@Rb@Rb@Tb@R%60@Tb@Rb@T%60@Rb@Tb@Rb@R%60@Tb@Rb@Tb@Rb@T%60@Rb@Rb@Tb@R%60@Rd@Rb@Pd@Rb@Rd@Rb@Nd@Pd@Pd@Pd@Pd@Nd@Pd@Pd@Nd@Pd@Lf@Nh@Lf@Lf@Jh@Jf@Jh@Jf@Jh@Hf@Jh@Jf@Hh@Hh@Jh@Hh@Hh@Hh@Jh@Hh@Hf@Jh@Hh@Hh@Jh@Hf@Jh@Hh@Hf@Jh@Hh@Jf@Fj@Hh@Dh@Dj@Dj@Dh@Dj@@j@@h@@j@@j@Ah@Aj@Aj@Ah@Cj@Cj@Eh@Ej@Gh@Ih@Ih@Ih@Ih@Kh@Kf@Mf@Kf@Of@Of@Od@Mf@Of@Od@Mf@Of@Od@Of@Of@Od@Of@Od@Of@Od@Of@Od@Of@Od@Of@Od@Of@Of@Od@Od@Of@Od@Of@Od@Of@Qd@Of@Od@Of@Od@Of@Od@Of@Qd@Od@Of@Od@Qf@Od@Of@Qd@Od@Of@Of@Od@Mf@Mf@Mf@Of@Mf@Md@Kh@Kh@Kf@Mh@Kf@Kh@Kf@Kh@Mf@Kf@Kh@Kf@Mh@Kf@Kf@Kh@Kh@Kf@Mh@Kf@Mf@Mf@Mf@Of@Mf@Mf@Of@Md@Of@Mf@Mf@Of@Mf@Od@Mf@Mf@Of@Mf@Of@Md@Of@Mf@Of@Mf@Od@Of@Mf@Of@Mf@Mf@Mf@Of@Mf@Mf@Mf@Of@Kf@Mf@Mf@Kh@Kh@Ih@If@Kh@Ih@Gh@Ih@Gh@Gj@Gh@Ej@Eh@Eh@Ej@Cj@Ch@Cj@Aj@Aj@Ah@Aj@@j@?h@?j@?j@@j@@h@@j@@j@Fh@Dj@Dh@Dj@Fh@Dh@Fj@Fh@Hh@Fh@Hh@Fh@Jh@Hh@Hh@Lf@Nf@Lf@Lh@Lf@Lf@Nd@Lf@Nf@Ld@Nf@Lf@Lf@Nf@Lf@Lf@Lf@Nf@Lf@Lf@Nd@Nf@Lf@Nf@Nf@Ld@Nf@Rd@Pb@Rb@Pd@Tb@R%60@Rb@T%60@V%60@T%60@V%5EX%5EV%5EX%5EX%5CX%5CX%5CXZZ%5CXZZZX%5CZZZZXZZ%5CXZZ%5CX%5CX%5CX%5EX%5CX%5CV%5CX%5EX%5CV%5CX%5EV%5CX%5EV%5EV%5ETb@Tb@R%60@Rb@Tb@Rb@Rb@Rb@Tb@Rb@Rb@Tb@Rb@R%60@Rb@Tb@Rb@Rb@Rb@Tb@Rb@Rb@Rb@T%60@Rb@Rb@Tb@Rb@Rb@Rb@Tb@Rb@Rb@Rb@T%60@Rb@Rb@Rb@Tb@Rb@Rb@Rb@Rd@Tb@Pb@Pd@Pb@Lh@Nf@Nf@Lf@Lf@Jf@Lf@Lh@Lf@Jf@Lf@Jh@Hh@Jf@Hh@Jf@Jh@Fh@Hh@Hh@Hh@Fh@Hh@Hh@Fj@Dh@Fj@Dh@Fj@Dh@Bj@Bh@Dj@Bh@Bj@Bj@Bh@Bj@Bh@Dj@Bh@@j@Bj@Bj@Bh@@j@Bj@Bh@Bj@@j@Bh@Bj@Bj@@h@Bj@Bj@Bj@@h@Bj@Bj@Bh@@j@Bj@Bh@Bj@Bj@@j@Bh@Bj@Bj@Bh@@j@Bj@Bh@Bj@Bj@Bj@@h@@j@@j@@j@?h@@j@@j@Aj@?h@Aj@?j@Aj@?h@Aj@Cj@Ch@Cj@Cj@Ah@Cj@Cj@Ch@Cj@Ej@Eh@Ej@Ej@Eh@Ej@Gf@Gh@Ih@Gh@Ih@Ih@Ih@Ih@Ih@Ih@Kj@Ih@Ih@Mf@Kf@Mh@Kf@Mf@Kh@Mf@Kf@Od@Of@Qd@Of@Od@Of@Od@Od@Sd@Qd@Qd@Qb@Qd@Qd@Sd@Sb@Sb@Sb@Sb@Sb@Sb@Sb@U%60@U%60@Ub@W%60@U%60@U%60@U%60@U%60@Y%5EW%5EW%5EY%5EW%5EW%5EY%5CW%5EW%5EY%5EW%5CY%5EY%5CY%5EW%5CY%5EY%5CW%5CY%5EY%5CY%5EW%5CY%5EY%5CW%5EY%5EW%5CY%5EY%5CW%5EY%5EY%5CW%5EY%5CW%5EY%5EY%5CW%5EY%5CY%5EW%5CY%5EW%5C%5B%5CY%5CYZYTYTYTYVYR%5BT%5BTYT%5BR%5DV%5DV%5DV%5DT_@V%5DV%5DV%5DV%5DT%5DV_@V%5DV%5DT%5DV%5DV%5DV_@V%5DT%5DV%5DV%5DV%5DT_@V%5DV%5DV%5DT%5DV%5DV_@V%5DT%5DV%5DV%5DV%5DT_@V%5DV%5DV%5DT%5DV%5DV%5DV_@V%5DV%5DV%5DV%5DV%5DV%5BZ%5BX%5BZY%5CY%5CY%5EY%5CY%5CY%5CW%5EY%5EW%5CY%5EW%5EY%5CW%5EY%5EW%5CY%5EW%5EY%5EW%5CY%5EW%5EY%5CW%5EY%5EW%5EW%5CY%5EW%5EY%5EW%5EY%5CW%5EY%5EW%5EY%5CW%5EW%5EY%5EW%5EY%5CW%5EY%5EW%5EW%5EY%5EW%5CW%5EY%5EW%5EW%5EY%5EW%5EY%5EW%5CW%5EY%5EW%5EW%5EY%5EW%5EW%5EY%5CW%5EW%5EY%5EW%5EY%5CW%5EY%5EW%5EY%5CW%5EW%5EY%5EW%5CY%5EW%5EY%5EW%5CW%5EY%5EY%5CW%5EY%5EW%5CY%5EW%5EY%5CW%5EY%5EW%5CY%5EW%5EY%5CY%5EW%5EY%5CW%5EY%5CW%5EY%5EW%5CY%5EW%5EY%5CY%5EW%5CY%5EW%5EY%5CY%5EW%5CY%5EY%5CW%5EY%5EW%5CY%5EY%5CW%5EY%5CW%5EY%5EY%5CW%5EY%5CW%5EY%5CY%5EW%5EY%5CW%5EY%5EY%5CW%5EY%5EW%5CY%5EW%5EY%5CY%5EW%5EY%5CW%5EY%5EW%5CY%5EY%5EW%5CY%5EW%5EY%5CW%5EY%5CW%5EY%5EY%5CW%5EY%5CW%5EY%5EW%5CY%5EW%5CY%5EY%5EW%5CY%5EW%5EY%5CW%5EY%5CY%5EW%5EY%5CW%5EY%5CW%5EY%5EW%5CY%5EY%5CW%5EY%5EW%5CY%5EW%5CY%5EW%5EY%5CY%5EW%5CY%5EW%5EY%5CW%5EY%5CW%5EY%5EY%5CW%5EY%5CW%5EY%5EY%5EW%5CY%5EY%5EW%5CY%5EY%5EW%5C%5B%5CYZYZ%5BZ%5DX%5BX%5BZ%5BX%5DX%5BZY%5CY%5CY%5CY%5C', //eslint-disable-line
       }
     ]
   },
