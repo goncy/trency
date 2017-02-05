@@ -28,7 +28,7 @@ export type AppMapProps = {
 const AppMap = (props: AppMapProps) => {
   const {gmaps, branch, positions} = props
   return (
-    <Map gmaps={gmaps}>
+    <Map className='animated fadeIn' gmaps={gmaps}>
       {/* Recorrido */}
       <PolyLine line={branch.path} />
       {/* Stations */}

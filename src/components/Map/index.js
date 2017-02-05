@@ -31,13 +31,13 @@ class Map extends Component {
 
   render () {
     const {map} = this.state
-    const {preferences, gmaps} = this.props
+    const {preferences, gmaps, className, children} = this.props
 
     return (
-      <div ref="map" className={this.props.className} id="map-canvas">
-        {map && this.props.children && (
+      <div ref="map" className={className} id="map-canvas">
+        {map && children && (
           React.Children.map(
-            this.props.children,
+            children,
             element => React.cloneElement(
               element,
               {
