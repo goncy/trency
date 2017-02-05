@@ -15,3 +15,13 @@ Aplicacion para obtener la posicion y arrival de los proximos trenes llegando a 
 
 ##Code style
 * Standard
+
+##Instalacion
+```
+yarn install
+```
+
+##Inicializacion
+```
+yarn start
+```
