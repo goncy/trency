@@ -20,7 +20,7 @@ export type ArrivalsProps = {
 const Arrivals = (props: ArrivalsProps) => {
   const branches = getBranches(props)
   return (
-    <div className='Arrivals animated fadeInUp'>
+    <div className='Arrivals'>
       {/* Desktop */}
       <div className='is-hidden-mobile'>
         {branches.map((branch, key) => (

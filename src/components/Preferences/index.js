@@ -6,7 +6,7 @@ import {clearPreferences} from '../../actions/preferences'
 import './Preferences.css'
 
 const Preferences = ({branch, line, station, clearPreferences}) => (
-  <div className='Preferences animated fadeInLeft'>
+  <div className='Preferences'>
     <div className='preferences'>
       <p>{`Esperando a la linea ${line.name}`}</p>
       <p>{`Ramal ${branch.name}`}</p>

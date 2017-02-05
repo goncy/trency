@@ -5,7 +5,7 @@ import './Directions.css'
 
 const Directions = ({branch}) => {
   return (
-    <div className='Directions animated fadeInLeft'>
+    <div className='Directions'>
       {branch.directions && branch.directions.map((direction, index) => (
         <div key={index}>
           <span className={`tag is-hidden-mobile is-${direction.color} is-medium`}>Destino {direction.name}</span>
