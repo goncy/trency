@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 
 import {clearPreferences} from '../../actions/preferences'
 
@@ -11,12 +12,12 @@ const Preferences = ({branch, line, station, clearPreferences}) => (
       <p>{`Esperando a la linea ${line.name}`}</p>
       <p>{`Ramal ${branch.name}`}</p>
       <p>{`En la estacion ${station.name}`}</p>
-      <button
+      <Link
+        to='/'
         className='button edit-btn'
-        onClick={() => clearPreferences()}
       >
         Volver atras
-      </button>
+      </Link>
     </div>
   </div>
 )

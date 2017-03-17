@@ -40,7 +40,7 @@ export const LINES = [
           },
           {
             index: 3,
-            id: 'villaDominico',
+            id: 'villadominico',
             name: 'Villa Dominico',
             position: {lat: -34.6915355, lng: -58.3253499}
           },
@@ -52,7 +52,7 @@ export const LINES = [
           },
           {
             index: 5,
-            id: 'donBosco',
+            id: 'donbosco',
             name: 'Don Bosco',
             position: {lat: -34.7033242, lng: -58.2961718}
           },
@@ -100,13 +100,13 @@ export const LINES = [
           },
           {
             index: 13,
-            id: 'villaElisa',
+            id: 'villaelisa',
             name: 'Villa Elisa',
             position: {lat: -34.8495861, lng: -58.0751851}
           },
           {
             index: 14,
-            id: 'cityBell',
+            id: 'citybell',
             name: 'City Bell',
             position: {lat: -34.8657239, lng: -58.0420495}
           },
@@ -130,7 +130,7 @@ export const LINES = [
           },
           {
             index: 18,
-            id: 'laPlata',
+            id: 'laplata',
             name: 'La Plata',
             position: {lat: -34.9038945, lng: -57.9501740}
           }
@@ -162,13 +162,13 @@ export const LINES = [
           },
           {
             index: 1,
-            id: 'hipolitoYrigoyen',
+            id: 'hipolitoyrigoyen',
             name: 'Hipolito Yrigoyen',
             position: {lat: -34.6536422, lng: -58.3788878}
           },
           {
             index: 2,
-            id: 'santillanYKosteki',
+            id: 'santillanykosteki',
             name: 'Santillan Y Kosteki',
             position: {lat: -34.6613896, lng: -58.3768325}
           },
@@ -186,7 +186,7 @@ export const LINES = [
           },
           {
             index: 5,
-            id: 'remediosDeEscalada',
+            id: 'remediosdeescalada',
             name: 'Remedios De Escalada',
             position: {lat: -34.7270922, lng: -58.3936610}
           },
@@ -198,7 +198,7 @@ export const LINES = [
           },
           {
             index: 7,
-            id: 'lomasDeZamora',
+            id: 'lomasdezamora',
             name: 'Lomas De Zamora',
             position: {lat: -34.7610318, lng: -58.3973127}
           },
@@ -210,13 +210,13 @@ export const LINES = [
           },
           {
             index: 9,
-            id: 'joseMarmol',
+            id: 'josemarmol',
             name: 'Jose Marmol',
             position: {lat: -34.7919580, lng: -58.3809410}
           },
           {
             index: 10,
-            id: 'rafaelCalzada',
+            id: 'rafaelcalzada',
             name: 'Rafael Calzada',
             position: {lat: -34.7966735, lng: -58.3591724}
           },
@@ -228,13 +228,13 @@ export const LINES = [
           },
           {
             index: 12,
-            id: 'danteArdigo',
+            id: 'danteardigo',
             name: 'Dante Ardigo',
             position: {lat: -34.8089358, lng: -58.3022925}
           },
           {
             index: 13,
-            id: 'florencioVarela',
+            id: 'florenciovarela',
             name: 'Florencio Varela',
             position: {lat: -34.8111153, lng: -58.2740495}
           },
@@ -252,7 +252,7 @@ export const LINES = [
           },
           {
             index: 16,
-            id: 'santaSofia',
+            id: 'santasofia',
             name: 'Santa Sofia',
             position: {lat: -34.8250940, lng: -58.2130617}
           },
@@ -290,13 +290,13 @@ export const LINES = [
           },
           {
             index: 1,
-            id: 'hipolitoYrigoyen',
+            id: 'hipolitoyrigoyen',
             name: 'Hipolito Yrigoyen',
             position: {lat: -34.6536422, lng: -58.3788878}
           },
           {
             index: 2,
-            id: 'santillanYKosteki',
+            id: 'santillanykosteki',
             name: 'Santillon y Kosteki',
             position: {lat: -34.6613896, lng: -58.3768325}
           },
@@ -314,7 +314,7 @@ export const LINES = [
           },
           {
             index: 5,
-            id: 'remediosDeEscalada',
+            id: 'remediosdeescalada',
             name: 'Remedios de Escalada',
             position: {lat: -34.7270922, lng: -58.3936610}
           },
@@ -326,7 +326,7 @@ export const LINES = [
           },
           {
             index: 7,
-            id: 'lomasDeZamora',
+            id: 'lomasdezamora',
             name: 'Lomas de Zamora',
             position: {lat: -34.7610318, lng: -58.3973127}
           },
@@ -368,7 +368,7 @@ export const LINES = [
           },
           {
             index: 14,
-            id: 'alejandroKorn',
+            id: 'alejandrokorn',
             name: 'Alejandro Korn',
             position: {lat: -34.9804097, lng: -58.3738144}
           }
@@ -400,13 +400,13 @@ export const LINES = [
           },
           {
             index: 1,
-            id: 'hipolitoYrigoyen',
+            id: 'hipolitoyrigoyen',
             name: 'Hipolito Yrigoyen',
             position: {lat: -34.6536422, lng: -58.3788878}
           },
           {
             index: 2,
-            id: 'santillanYKosteki',
+            id: 'santillanykosteki',
             name: 'Santillan y Kosteki',
             position: {lat: -34.6613896, lng: -58.3768325}
           },
@@ -424,7 +424,7 @@ export const LINES = [
           },
           {
             index: 5,
-            id: 'remediosDeEscalada',
+            id: 'remediosdeescalada',
             name: 'Remedios de Escalada',
             position: {lat: -34.7270922, lng: -58.3936610}
           },
@@ -436,7 +436,7 @@ export const LINES = [
           },
           {
             index: 7,
-            id: 'lomasDeZamora',
+            id: 'lomasdezamora',
             name: 'Lomas de Zamora',
             position: {lat: -34.7610318, lng: -58.3973127}
           },
@@ -460,19 +460,19 @@ export const LINES = [
           },
           {
             index: 11,
-            id: 'luisGuillon',
+            id: 'luisguillon',
             name: 'Luis Guillon',
             position: {lat: -34.8032178, lng: -58.4485504}
           },
           {
             index: 12,
-            id: 'monteGrande',
+            id: 'montegrande',
             name: 'Monte Grande',
             position: {lat: -34.8144339, lng: -58.4696989}
           },
           {
             index: 13,
-            id: 'elJaguel',
+            id: 'eljaguel',
             name: 'El Jaguel',
             position: {lat: -34.8332274, lng: -58.4961652}
           },
@@ -510,19 +510,19 @@ export const LINES = [
           },
           {
             index: 1,
-            id: 'hospitalEspañol',
+            id: 'hospitalespañol',
             name: 'Hospital Español',
             position: {lat: -34.7862792, lng: -58.4072878}
           },
           {
             index: 2,
-            id: 'santaCatalina',
+            id: 'santacatalina',
             name: 'Santa Catalina',
             position: {lat: -34.7804203, lng: -58.4373374}
           },
           {
             index: 3,
-            id: 'juanXXIII',
+            id: 'juanxxiii',
             name: 'Juan XXIII',
             position: {lat: -34.7713636, lng: -58.4441098}
           },
@@ -534,13 +534,13 @@ export const LINES = [
           },
           {
             index: 5,
-            id: 'pTurner',
+            id: 'pturner',
             name: 'P. Turner',
             position: {lat: -34.7332318, lng: -58.4748755}
           },
           {
             index: 6,
-            id: 'AgustinDeElia',
+            id: 'agustindeelia',
             name: 'Agustin de Elia',
             position: {lat: -34.7099772, lng: -58.5059186}
           },
@@ -552,13 +552,13 @@ export const LINES = [
           },
           {
             index: 8,
-            id: 'sanJusto',
+            id: 'sanjusto',
             name: 'San Justo',
             position: {lat: -34.6741934, lng: -58.5553560}
           },
           {
             index: 9,
-            id: 'ingenieroSBrian',
+            id: 'ingenierosbrian',
             name: 'Ingeniero S. Brian',
             position: {lat: -34.6580457, lng: -58.5730377}
           },
@@ -596,37 +596,37 @@ export const LINES = [
           },
           {
             index: 1,
-            id: 'unionFerroviaria',
+            id: 'unionferroviaria',
             name: 'Union Ferroviaria',
             position: {lat: -34.8714807, lng: -58.5450132}
           },
           {
             index: 2,
-            id: 'tristanSuarez',
+            id: 'tristansuarez',
             name: 'Tristan Suarez',
             position: {lat: -34.8905761, lng: -58.5694728}
           },
           {
             index: 3,
-            id: 'carlosSpegazzini',
+            id: 'carlosspegazzini',
             name: 'Carlos Spegazzini',
             position: {lat: -34.9112666, lng: -58.5960173}
           },
           {
             index: 4,
-            id: 'maximoPaz',
+            id: 'maximopaz',
             name: 'Maximo Paz',
             position: {lat: -34.9378999, lng: -58.6219476}
           },
           {
             index: 5,
-            id: 'vicenteCasares',
+            id: 'vicentecasares',
             name: 'Vicente Casares',
             position: {lat: -34.9633260, lng: -58.6498149}
           },
           {
             index: 6,
-            id: 'alejandroPetion',
+            id: 'alejandropetion',
             name: 'Alejandro Petion',
             position: {lat: -34.9792038, lng: -58.6772183}
           },
@@ -638,7 +638,7 @@ export const LINES = [
           },
           {
             index: 8,
-            id: 'ricardoLevene',
+            id: 'ricardolevene',
             name: 'Ricardo Levene',
             position: {lat: -35.0229492, lng: -58.7252523}
           },
@@ -700,7 +700,7 @@ export const LINES = [
           },
           {
             index: 4,
-            id: 'villaLuro',
+            id: 'villaluro',
             name: 'Villa Luro',
             position: {lat: -34.6362494, lng: -58.5021311}
           },
@@ -718,7 +718,7 @@ export const LINES = [
           },
           {
             index: 7,
-            id: 'ramosMejia',
+            id: 'ramosmejia',
             name: 'Ramos Mejia',
             position: {lat: -34.6403849, lng: -58.5639475}
           },
@@ -748,7 +748,7 @@ export const LINES = [
           },
           {
             index: 12,
-            id: 'saDePadua',
+            id: 'sadepadua',
             name: 'San Antonio De Padua',
             position: {lat: -34.6654259, lng: -58.6979972}
           },
@@ -760,7 +760,7 @@ export const LINES = [
           },
           {
             index: 14,
-            id: 'pasoDelRey',
+            id: 'pasodelrey',
             name: 'Paso Del Rey',
             position: {lat: -34.6582665, lng: -58.7619414}
           },
@@ -810,19 +810,19 @@ export const LINES = [
           },
           {
             index: 2,
-            id: 'villaCrespo',
+            id: 'villacrespo',
             name: 'Villa Crespo',
             position: {lat: -34.5919613, lng: -58.4453294}
           },
           {
             index: 3,
-            id: 'laPaternal',
+            id: 'lapaternal',
             name: 'La Paternal',
             position: {lat: -34.5968375, lng: -58.4667191}
           },
           {
             index: 4,
-            id: 'villaDelParque',
+            id: 'villadelparque',
             name: 'Villa Del Parque',
             position: {lat: -34.6013699, lng: -58.4935315}
           },
@@ -834,13 +834,13 @@ export const LINES = [
           },
           {
             index: 6,
-            id: 'saenzPeña',
+            id: 'saenzpeña',
             name: 'Saenz Peña',
             position: {lat: -34.6031708, lng: -58.5278989}
           },
           {
             index: 7,
-            id: 'santosLugares',
+            id: 'santoslugares',
             name: 'Santos Lugares',
             position: {lat: -34.6036745, lng: -58.5407521}
           },
@@ -852,7 +852,7 @@ export const LINES = [
           },
           {
             index: 9,
-            id: 'elPalomar',
+            id: 'elpalomar',
             name: 'El Palomar',
             position: {lat: -34.6049240, lng: -58.5958736}
           },
@@ -864,13 +864,13 @@ export const LINES = [
           },
           {
             index: 11,
-            id: 'williamMorris',
+            id: 'williammorris',
             name: 'William Morris',
             position: {lat: -34.5784645, lng: -58.6565796}
           },
           {
             index: 12,
-            id: 'bellaVista',
+            id: 'bellavista',
             name: 'Bella Vista',
             position: {lat: -34.5637387, lng: -58.6847762}
           },
@@ -882,19 +882,19 @@ export const LINES = [
           },
           {
             index: 14,
-            id: 'sanMiguel',
+            id: 'sanmiguel',
             name: 'San Miguel',
             position: {lat: -34.5444483, lng: -58.7127330}
           },
           {
             index: 15,
-            id: 'joseCPaz',
+            id: 'josecpaz',
             name: 'Jose C Paz',
             position: {lat: -34.5191444, lng: -58.7500379}
           },
           {
             index: 16,
-            id: 'solYVerde',
+            id: 'solyverde',
             name: 'Sol Y Verde',
             position: {lat: -34.5039897, lng: -58.7976033}
           },
@@ -906,7 +906,7 @@ export const LINES = [
           },
           {
             index: 18,
-            id: 'villaAstolfi',
+            id: 'villaastolfi',
             name: 'Villa Astolfi',
             position: {lat: -34.4786178, lng: -58.8770376}
           },
@@ -962,13 +962,13 @@ export const LINES = [
           },
           {
             index: 1,
-            id: 'lisandroDeLaTorre',
+            id: 'lisandrodelatorre',
             name: 'Lisandro De La Torre',
             position: {lat: -34.5625299, lng: -58.4367116}
           },
           {
             index: 2,
-            id: 'belgranoC',
+            id: 'belgranoc',
             name: 'Belgrano C',
             position: {lat: -34.5588016, lng: -58.4489445}
           },
@@ -986,7 +986,7 @@ export const LINES = [
           },
           {
             index: 5,
-            id: 'vicenteLopez',
+            id: 'vicentelopez',
             name: 'Vicente Lopez',
             position: {lat: -34.5247233, lng: -58.4728065}
           },
@@ -998,7 +998,7 @@ export const LINES = [
           },
           {
             index: 7,
-            id: 'laLucila',
+            id: 'lalucila',
             name: 'La Lucila',
             position: {lat: -34.4975978, lng: -58.4884466}
           },
@@ -1016,7 +1016,7 @@ export const LINES = [
           },
           {
             index: 10,
-            id: 'sanIsidroC',
+            id: 'sanisidroc',
             name: 'San Isidro C',
             position: {lat: -34.4722074, lng: -58.5133831}
           },
@@ -1040,7 +1040,7 @@ export const LINES = [
           },
           {
             index: 14,
-            id: 'sanFernandoC',
+            id: 'sanfernandoc',
             name: 'San Fernando C',
             position: {lat: -34.4443381, lng: -58.5587407}
           },
@@ -1084,13 +1084,13 @@ export const LINES = [
           },
           {
             index: 1,
-            id: '3deFebrero',
+            id: '3defebrero',
             name: '3 de Febrero',
             position: {lat: -34.5717485, lng: -58.4249824}
           },
           {
             index: 2,
-            id: 'ministroCarranza',
+            id: 'ministrocarranza',
             name: 'Ministro Carranza',
             position: {lat: -34.5752730, lng: -58.4337443}
           },
@@ -1102,7 +1102,7 @@ export const LINES = [
           },
           {
             index: 4,
-            id: 'belgranoR',
+            id: 'belgranor',
             name: 'Belgrano R',
             position: {lat: -34.5680506, lng: -58.4618081}
           },
@@ -1120,7 +1120,7 @@ export const LINES = [
           },
           {
             index: 7,
-            id: 'juanBJusto',
+            id: 'juanbjusto',
             name: 'Juan B. Justo',
             position: {lat: -34.5425501, lng: -58.4946570}
           },
@@ -1132,7 +1132,7 @@ export const LINES = [
           },
           {
             index: 9,
-            id: 'drCetrangolo',
+            id: 'drcetrangolo',
             name: 'Dr. Cetrangolo',
             position: {lat: -34.5230887, lng: -58.4941300}
           },
@@ -1170,13 +1170,13 @@ export const LINES = [
           },
           {
             index: 1,
-            id: '3deFebrero',
+            id: '3defebrero',
             name: '3 de Febrero',
             position: {lat: -34.5717485, lng: -58.4249824}
           },
           {
             index: 2,
-            id: 'ministroCarranza',
+            id: 'ministrocarranza',
             name: 'Ministro Carranza',
             position: {lat: -34.5752730, lng: -58.4337443}
           },
@@ -1188,19 +1188,19 @@ export const LINES = [
           },
           {
             index: 4,
-            id: 'belgranoR',
+            id: 'belgranor',
             name: 'Belgrano R',
             position: {lat: -34.5680506, lng: -58.4618081}
           },
           {
             index: 5,
-            id: 'lmDrago',
+            id: 'lmdrago',
             name: 'L.M.Drago',
             position: {lat: -34.5684173, lng: -58.4789912}
           },
           {
             index: 6,
-            id: 'generalUrquiza',
+            id: 'generalurquiza',
             name: 'General Urquiza',
             position: {lat: -34.5747120, lng: -58.4878391}
           },
@@ -1218,13 +1218,13 @@ export const LINES = [
           },
           {
             index: 9,
-            id: 'sanMartin',
+            id: 'sanmartin',
             name: 'San Martin',
             position: {lat: -34.5734195, lng: -58.5319579}
           },
           {
             index: 10,
-            id: 'sanAndres',
+            id: 'sanandres',
             name: 'San Andres',
             position: {lat: -34.5635642, lng: -58.5406609}
           },
@@ -1236,7 +1236,7 @@ export const LINES = [
           },
           {
             index: 12,
-            id: 'villaBallester',
+            id: 'villaballester',
             name: 'Villa Ballester',
             position: {lat: -34.5511617, lng: -58.5558262}
           },
@@ -1280,43 +1280,43 @@ export const LINES = [
         stations: [
           {
             index: 0,
-            id: 'buenosAires',
+            id: 'buenosaires',
             name: 'Buenos Aires',
             position: {lat: -34.6455629, lng: -58.3939958}
           },
           {
             index: 1,
-            id: 'drSaenz',
+            id: 'drsaenz',
             name: 'Dr Saenz',
             position: {lat: -34.6490653, lng: -58.4154020}
           },
           {
             index: 2,
-            id: 'villaSoldati',
+            id: 'villasoldati',
             name: 'Villa Soldati',
             position: {lat: -34.6622014, lng: -58.4408973}
           },
           {
             index: 3,
-            id: 'presidenteIllia',
+            id: 'presidenteillia',
             name: 'Presidente Illia',
             position: {lat: -34.6660552, lng: -58.4500286}
           },
           {
             index: 4,
-            id: 'villaLugano',
+            id: 'villalugano',
             name: 'Villa Lugano',
             position: {lat: -34.6771300, lng: -58.4769699}
           },
           {
             index: 5,
-            id: 'villaMadero',
+            id: 'villamadero',
             name: 'Villa Madero',
             position: {lat: -34.6840978, lng: -58.4925366}
           },
           {
             index: 6,
-            id: 'marinosDelFournier',
+            id: 'marinosdelfournier',
             name: 'Marinos del Fournier',
             position: {lat: -34.6901777, lng: -58.5076299}
           },
@@ -1328,43 +1328,43 @@ export const LINES = [
           },
           {
             index: 8,
-            id: 'aldoBonzi',
+            id: 'aldobonzi',
             name: 'Aldo Bonzi',
             position: {lat: -34.7107066, lng: -58.5143488}
           },
           {
             index: 9,
-            id: 'sanchezDeMendeville',
+            id: 'sanchezdemendeville',
             name: 'Sanchez de Mendeville',
             position: {lat: -34.7124465, lng: -58.5238732}
           },
           {
             index: 10,
-            id: 'joseIngenieros',
+            id: 'joseingenieros',
             name: 'Jose Ingenieros',
             position: {lat: -34.7107620, lng: -58.5372560}
           },
           {
             index: 11,
-            id: 'justoVillegas',
+            id: 'justovillegas',
             name: 'Justo Villegas',
             position: {lat: -34.7089650, lng: -58.5519393}
           },
           {
             index: 12,
-            id: 'isidroCasanova',
+            id: 'isidrocasanova',
             name: 'Isidro Casanova',
             position: {lat: -34.7045467, lng: -58.5873422}
           },
           {
             index: 13,
-            id: 'rafaelCastillo',
+            id: 'rafaelcastillo',
             name: 'Rafael Castillo',
             position: {lat: -34.6996965, lng: -58.6261936}
           },
           {
             index: 14,
-            id: 'merloGomez',
+            id: 'merlogomez',
             name: 'Merlo Gomez',
             position: {lat: -34.6969888, lng: -58.6477766}
           },
@@ -1376,7 +1376,7 @@ export const LINES = [
           },
           {
             index: 16,
-            id: 'marinosCGBelgrano',
+            id: 'marinoscgbelgrano',
             name: 'Marinos C. G Belgrano',
             position: {lat: -34.7087611, lng: -58.7309016}
           }
@@ -1402,49 +1402,49 @@ export const LINES = [
         stations: [
           {
             index: 0,
-            id: 'puenteAlsina',
+            id: 'puentealsina',
             name: 'Puente Alsina',
             position: {lat: -34.6614611, lng: -58.4145870}
           },
           {
             index: 1,
-            id: 'villaDiamante',
+            id: 'villadiamante',
             name: 'Villa Diamante',
             position: {lat: -34.6817442, lng: -58.4283297}
           },
           {
             index: 2,
-            id: 'villaCaraza',
+            id: 'villacaraza',
             name: 'Villa Caraza',
             position: {lat: -34.6980032, lng: -58.4290641}
           },
           {
             index: 3,
-            id: 'villaFiorito',
+            id: 'villafiorito',
             name: 'Villa Fiorito',
             position: {lat: -34.7053789, lng: -58.4409217}
           },
           {
             index: 4,
-            id: 'ingBudge',
+            id: 'ingbudge',
             name: 'Ing. Budge',
             position: {lat: -34.7186633, lng: -58.4621518}
           },
           {
             index: 5,
-            id: 'laSalada',
+            id: 'lasalada',
             name: 'La Salada',
             position: {lat: -34.7188075, lng: -58.4727139}
           },
           {
             index: 6,
-            id: 'apeaderoKm12',
+            id: 'apeaderokm12',
             name: 'Apeadero Km 12',
             position: {lat: -34.7100582, lng: -58.5059269}
           },
           {
             index: 7,
-            id: 'aldoBonzi',
+            id: 'aldobonzi',
             name: 'Aldo Bonzi',
             position: {lat: -34.7111965, lng: -58.5160229}
           }
@@ -1470,43 +1470,43 @@ export const LINES = [
         stations: [
           {
             index: 0,
-            id: 'buenosAires',
+            id: 'buenosaires',
             name: 'Buenos Aires',
             position: {lat: -34.6455629, lng: -58.3939958}
           },
           {
             index: 1,
-            id: 'drSaenz',
+            id: 'drsaenz',
             name: 'Dr Saenz',
             position: {lat: -34.6490653, lng: -58.4154020}
           },
           {
             index: 2,
-            id: 'villaSoldati',
+            id: 'villasoldati',
             name: 'Villa Soldati',
             position: {lat: -34.6622014, lng: -58.4408973}
           },
           {
             index: 3,
-            id: 'presidenteIllia',
+            id: 'presidenteillia',
             name: 'Presidente Illia',
             position: {lat: -34.6660552, lng: -58.4500286}
           },
           {
             index: 4,
-            id: 'villaLugano',
+            id: 'villalugano',
             name: 'Villa Lugano',
             position: {lat: -34.6771300, lng: -58.4769699}
           },
           {
             index: 5,
-            id: 'villaMadero',
+            id: 'villamadero',
             name: 'Villa Madero',
             position: {lat: -34.6840978, lng: -58.4925366}
           },
           {
             index: 6,
-            id: 'marinosDeFournier',
+            id: 'marinosdefournier',
             name: 'Marinos del Fournier',
             position: {lat: -34.6901777, lng: -58.5076299}
           },
@@ -1518,7 +1518,7 @@ export const LINES = [
           },
           {
             index: 8,
-            id: 'ingenieroCastello',
+            id: 'ingenierocastello',
             name: 'Ingeniero Castello',
             position: {lat: -34.7105416, lng: -58.5063521}
           },
@@ -1536,7 +1536,7 @@ export const LINES = [
           },
           {
             index: 11,
-            id: 'mariaEvaDuarte',
+            id: 'mariaevaduarte',
             name: 'Maria Eva Duarte',
             position: {lat: -34.7559594, lng: -58.6001849}
           },
@@ -1548,7 +1548,7 @@ export const LINES = [
           },
           {
             index: 13,
-            id: 'gonzalezCatan',
+            id: 'gonzalezcatan',
             name: 'Gonzalez Catan',
             position: {lat: -34.7702708, lng: -58.6449081}
           }
@@ -1559,7 +1559,6 @@ export const LINES = [
   }
 ]
 
-export const GOOGLE_MAPS_API_KEY = 'AIzaSyD40iBClWX-S8w5BeFPSfWFDJNfa2DI8fw'
 export const SUCCESS_FETCH_TIME = 10000
 export const FAILURE_FETCH_TIME = 3000
-export const API_URL = 'https://trenesargentinosapi.herokuapp.com/api/v1/data/'
+export const API_URL = 'http://localhost:8080/api/v1/data/'

@@ -63,7 +63,7 @@ export function* fetchDataWatcher () {
 }
 
 export function* clearDataWatcher () {
-  yield takeEvery(clearPreferences.type, clearDataWorker)
+  yield takeEvery([clearPreferences.type, preferencesChanged.type], clearDataWorker)
 }
 
 export function* preferencesReadyWatcher () {

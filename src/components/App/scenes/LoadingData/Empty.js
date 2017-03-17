@@ -1,30 +1,23 @@
 // @flow
 
-import React, {PropTypes} from 'react'
+import React from 'react'
+import {Link} from 'react-router-dom'
 
 import ErrorScreen from '../../../ErrorScreen'
 
-export type LoadingDataEmptyProps = {
-  goBack: () => void
-}
-
-const LoadingDataEmpty = ({goBack}: LoadingDataEmptyProps) => <ErrorScreen>
+const LoadingDataEmpty = () => <ErrorScreen>
   <div className='LoadingData empty'>
     El servidor respondio correctamente, pero sin resultados, es muy posible que no se encuentren formaciones circulando en este horario, intente de nuevo mas tarde
     <div>
-      <a
-        onClick={() => goBack()}
+      <Link
+        to='/'
         className="button is-outlined is-inverted is-warning"
         style={{marginTop: 10}}
       >
         Volver atras
-      </a>
+      </Link>
     </div>
   </div>
 </ErrorScreen>
-
-LoadingDataEmpty.propTypes = {
-  goBack: PropTypes.func
-}
 
 export default LoadingDataEmpty

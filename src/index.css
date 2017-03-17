@@ -12,3 +12,14 @@ body, html, #root {
   flex-direction: column;
   flex: 1;
 }
+
+.preferences .subtitle a {
+  margin: 5px;
+}
+
+.preferences .hero-foot {
+  position: absolute !important;
+  bottom: 10px;
+  left: 10px;
+  width: 100%;
+}

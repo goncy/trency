@@ -9,10 +9,10 @@ export const getLines: Line[] = LINES
 export const getLine = (id: string): Line => LINES
   .find(line => line.id === id)
 
-export const getBranch = (line: Line, id: number): Branch => LINES
+export const getBranch = (line: Line, slug: string): Branch => LINES
   .find(ln => ln.id === line.id)
   .branches
-  .find(branch => branch.id === id)
+  .find(branch => branch.slug === slug)
 
 export const getStation = (branch: Branch, id: number): Station => branch
   .stations

@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import configureStore from './store/configureStore'
 import rootSaga from './sagas'
 
-import App from './components/App/'
+import AppRouter from './AppRouter'
 
 import './index.css'
 
@@ -16,7 +16,7 @@ store.runSaga(rootSaga)
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <AppRouter />
   </Provider>,
   document.getElementById('root')
 )
