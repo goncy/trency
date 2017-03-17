@@ -1,3 +1,5 @@
+/* global google */
+
 import {Component} from 'react'
 
 import {getInfoWindow} from './selectors'

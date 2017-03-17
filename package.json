@@ -34,9 +34,6 @@
     "lintfix": "eslint ./src"
   },
   "eslintConfig": {
-    "globals": {
-      "google": true
-    },
     "extends": [
       "react-app",
       "standard"
