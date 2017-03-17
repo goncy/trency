@@ -10,8 +10,8 @@ export const getStationMarkerOptions = ({station}: any, marker: any) => {
     optimized: false,
     icon: {
       url: getStationMarkerIcon(isSelected),
-      size: new google.maps.Size(32, 32), // eslint-disable-line
-      anchor: new google.maps.Point(16, 16) // eslint-disable-line
+      size: new google.maps.Size(32, 32),
+      anchor: new google.maps.Point(16, 16)
     }
   }
 }
@@ -22,7 +22,7 @@ export const getPositionMarkerOptions = (marker: any) => ({
     url: marker.moviendose
       ? getPositionIcon(marker.direction.color)
       : getPositionIcon('danger'),
-    anchor: new google.maps.Point(12, 12) // eslint-disable-line
+    anchor: new google.maps.Point(12, 12)
   }
 })
 
