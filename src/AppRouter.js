@@ -1,9 +1,9 @@
 import React from 'react'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
-import Line from './components/PreferencesSetter/Line'
-import Branch from './components/PreferencesSetter/Branch'
-import Station from './components/PreferencesSetter/Station'
+import Line from './components/PreferencesSetter/scenes/Line'
+import Branch from './components/PreferencesSetter/scenes/Branch'
+import Station from './components/PreferencesSetter/scenes/Station'
 
 import App from './components/App'
 

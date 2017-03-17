@@ -44,8 +44,8 @@ class AppContainer extends Component {
         // Empty response
         if (!hasData && hasSucceeded) {
           return <LoadingData.Empty />
-        // Application scene
         } else {
+          // Application scene
           return <App />
         }
       }
