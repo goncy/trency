@@ -2,8 +2,8 @@ import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 
-import {getLines} from '../../selectors/constants'
-import {clearPreferences} from '../../actions/preferences'
+import {getLines} from '../../../selectors/constants'
+import {clearPreferences} from '../../../actions/preferences'
 
 class Line extends Component {
   componentWillMount () {

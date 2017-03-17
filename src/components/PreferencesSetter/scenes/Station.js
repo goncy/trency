@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 
-import {changeLine, changeBranch} from '../../actions/preferences'
+import {changeLine, changeBranch} from '../../../actions/preferences'
 
 class Station extends Component {
   componentWillMount () {
