@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {HashRouter as Router, Switch, Route} from 'react-router-dom'
 
 import Line from './components/PreferencesSetter/scenes/Line'
 import Branch from './components/PreferencesSetter/scenes/Branch'
