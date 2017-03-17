@@ -12,13 +12,12 @@ import PolyLine from '../PolyLine'
 import Map from '../Map'
 import Marker from '../Marker'
 
-import type {GMaps, AppState} from '../../flowtypes/globals'
+import type {AppState} from '../../flowtypes/globals'
 import type {PreferencesState} from '../../flowtypes/preferences'
 import type {Branch, Station} from '../../flowtypes/constants'
 import type {Position} from '../../flowtypes/data'
 
 export type AppMapProps = {
-  gmaps: GMaps,
   preferences: PreferencesState,
   branch: Branch,
   station: Station,
@@ -26,9 +25,9 @@ export type AppMapProps = {
 }
 
 const AppMap = (props: AppMapProps) => {
-  const {gmaps, branch, positions} = props
+  const {branch, positions} = props
   return (
-    <Map className='animated fadeIn' gmaps={gmaps}>
+    <Map className='animated fadeIn'>
       {/* Recorrido */}
       <PolyLine line={branch.path} />
       {/* Stations */}
@@ -45,7 +44,7 @@ const AppMap = (props: AppMapProps) => {
       {positions.map((position, index) => (
         <Marker
           key={index}
-          options={getPositionMarkerOptions(props, position)}
+          options={getPositionMarkerOptions(position)}
         >
           {/* InfoWindow Positions */}
           <InfoWindow content={getPositionInfoWindowContent(position)} />
@@ -58,8 +57,7 @@ const AppMap = (props: AppMapProps) => {
 AppMap.propTypes = {
   positions: PropTypes.object.isRequired,
   branch: PropTypes.object.isRequired,
-  station: PropTypes.object.isRequired,
-  gmaps: PropTypes.object.isRequired
+  station: PropTypes.object.isRequired
 }
 
 const mapStateToProps = ({data, preferences}: AppState) => ({

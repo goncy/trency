@@ -1,29 +1,23 @@
 // @flow
 
-import React, {PropTypes} from 'react'
+import React from 'react'
 
 import AppMap from '../AppMap'
 import Directions from '../Directions'
 import Preferences from '../Preferences'
 import Arrivals from '../Arrivals'
 
-import type {GMaps} from '../../flowtypes/globals'
-
-const App = ({gmaps}: GMaps) => (
+const App = () => (
   <div className='App-container flex-column'>
     {/* Directions */}
     <Directions />
     {/* Preferences */}
     <Preferences />
     {/* Mapa */}
-    <AppMap gmaps={gmaps} />
+    <AppMap />
     {/* Arrivals */}
     <Arrivals />
   </div>
 )
-
-App.propTypes = {
-  gmaps: PropTypes.object.isRequired
-}
 
 export default App

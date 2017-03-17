@@ -6,5 +6,3 @@ export type AppState = {
   data: DataState,
   preferences: PreferencesState
 }
-
-export type GMaps = any

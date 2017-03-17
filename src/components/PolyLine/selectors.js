@@ -1,1 +1,3 @@
-export const getPath = (gmaps, linePath) => gmaps.geometry.encoding.decodePath(decodeURI(linePath))
+/* global google */
+
+export const getPath = (linePath) => google.maps.geometry.encoding.decodePath(decodeURI(linePath))

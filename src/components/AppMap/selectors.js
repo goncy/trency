@@ -1,8 +1,9 @@
 // @flow
+/* global google */
 
 import {getStationMarkerIcon, getStationIcon, getPositionIcon} from '../../selectors/constants'
 
-export const getStationMarkerOptions = ({gmaps, station}: any, marker: any) => {
+export const getStationMarkerOptions = ({station}: any, marker: any) => {
   const isSelected = marker.id === station.id
   return {
     position: marker.position,
@@ -10,19 +11,19 @@ export const getStationMarkerOptions = ({gmaps, station}: any, marker: any) => {
     optimized: false,
     icon: {
       url: getStationMarkerIcon(isSelected),
-      size: new gmaps.Size(32, 32),
-      anchor: new gmaps.Point(16, 16)
+      size: new google.maps.Size(32, 32),
+      anchor: new google.maps.Point(16, 16)
     }
   }
 }
 
-export const getPositionMarkerOptions = ({gmaps}: any, marker: any) => ({
+export const getPositionMarkerOptions = (marker: any) => ({
   position: marker.position,
   icon: {
     url: marker.moviendose
       ? getPositionIcon(marker.direction.color)
       : getPositionIcon('danger'),
-    anchor: new gmaps.Point(12, 12)
+    anchor: new google.maps.Point(12, 12)
   }
 })
 

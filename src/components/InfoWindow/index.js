@@ -1,13 +1,15 @@
+/* global google */
+
 import {Component} from 'react'
 
 import {getInfoWindow} from './selectors'
 
 class InfoWindow extends Component {
   componentDidMount () {
-    const {marker, gmaps, map} = this.props
+    const {marker, map} = this.props
     if (marker) {
       this.infoWindow = getInfoWindow(this.props)
-      gmaps.event.addListener(marker, 'click', () => this.infoWindow.open(map, marker))
+      google.maps.event.addListener(marker, 'click', () => this.infoWindow.open(map, marker))
     }
   }
 

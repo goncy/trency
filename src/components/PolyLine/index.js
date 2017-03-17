@@ -1,13 +1,15 @@
+/* global google */
+
 import {Component} from 'react'
 
 import {getPath} from './selectors'
 
 export default class PolyLine extends Component {
   componentDidMount () {
-    const {gmaps, line, map, color = '#00D1B2'} = this.props
-    this.polyLine = new gmaps.Polyline({
+    const {line, map, color = '#00D1B2'} = this.props
+    this.polyLine = new google.maps.Polyline({
       map,
-      path: getPath(gmaps, line),
+      path: getPath(line),
       strokeColor: color,
       strokeOpacity: 1,
       strokeWeight: 4

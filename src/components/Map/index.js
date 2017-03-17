@@ -1,3 +1,4 @@
+/* global google */
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 
@@ -15,11 +16,11 @@ class Map extends Component {
   }
 
   setMap () {
-    const {preferences, gmaps} = this.props
+    const {preferences} = this.props
     const {station} = preferences
 
     this.setState({
-      map: new gmaps.Map(
+      map: new google.maps.Map(
         this.refs.map,
         {
           ...getOptions(this.props),
@@ -31,7 +32,7 @@ class Map extends Component {
 
   render () {
     const {map} = this.state
-    const {preferences, gmaps, className, children} = this.props
+    const {preferences, className, children} = this.props
 
     return (
       <div ref="map" className={className} id="map-canvas">
@@ -41,7 +42,6 @@ class Map extends Component {
             element => React.cloneElement(
               element,
               {
-                gmaps,
                 map,
                 preferences,
                 ...element.props

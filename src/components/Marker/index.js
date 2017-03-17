@@ -1,3 +1,5 @@
+/* global google */
+
 import React, {Component} from 'react'
 
 export default class Marker extends Component {
@@ -10,10 +12,10 @@ export default class Marker extends Component {
   }
 
   placeMarker () {
-    const {gmaps, map, options = {}} = this.props
+    const {map, options = {}} = this.props
     if (options.position) {
       this.setState({
-        marker: new gmaps.Marker({
+        marker: new google.maps.Marker({
           map,
           ...options
         })
@@ -55,7 +57,7 @@ export default class Marker extends Component {
   }
 
   render () {
-    const {gmaps, map} = this.props
+    const {map} = this.props
     const {marker} = this.state
 
     return (
@@ -67,7 +69,6 @@ export default class Marker extends Component {
               element,
               {
                 marker,
-                gmaps,
                 map,
                 ...element.props
               }
