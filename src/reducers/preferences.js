@@ -6,7 +6,7 @@ import type {PreferencesState} from '../flowtypes/preferences'
 
 type PreferencesAction = {
   type: string,
-  payload: string
+  payload: any
 }
 
 const preferences = (
