@@ -1,6 +1,5 @@
 // @flow
 import {changeStation, changeLine, changeBranch, clearPreferences} from '../actions/preferences'
-import {getLine, getBranch, getStation} from '../selectors/constants'
 
 import type {PreferencesState} from '../flowtypes/preferences'
 
@@ -17,23 +16,23 @@ const preferences = (
   },
   {type, payload}: PreferencesAction): PreferencesState => {
   switch (type) {
-    case changeLine.type:
+    case changeLine.SUCCESS:
       return {
         ...state,
         branch: null,
         station: null,
-        line: getLine(payload)
+        line: payload
       }
-    case changeBranch.type:
+    case changeBranch.SUCCESS:
       return {
         ...state,
         station: null,
-        branch: getBranch(state.line, payload)
+        branch: payload
       }
-    case changeStation.type:
+    case changeStation.SUCCESS:
       return {
         ...state,
-        station: getStation(state.branch, payload)
+        station: payload
       }
     case clearPreferences.type:
       return {
