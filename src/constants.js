@@ -1258,7 +1258,7 @@ export const LINES = [
     ]
   },
   {
-    id: 'belgranoSur',
+    id: 'belgranosur',
     name: 'Belgrano Sur',
     branches: [
       {
