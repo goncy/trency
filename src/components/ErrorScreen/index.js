@@ -2,9 +2,9 @@ import React from 'react'
 
 import './ErrorScreen.css'
 
-const ErrorScreen = props => (
+const ErrorScreen = ({children}) => (
   <div className='ErrorScreen'>
-    {props.children || <p>Hubo un error, por favor, intenta de nuevo mas tarde, gracias!</p>}
+    {children || <p>Hubo un error, por favor, intenta de nuevo mas tarde, gracias!</p>}
   </div>
 )
 

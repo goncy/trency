@@ -1,12 +1,14 @@
-import {put, call, takeEvery, select, take, race} from 'redux-saga/effects'
+import {put, call, takeEvery, select, take, race, fork} from 'redux-saga/effects'
 import {delay} from 'redux-saga'
 
-import {fetchData, clearData} from '../actions/api'
-import {preferencesReady, preferencesChanged, clearPreferences} from '../actions/preferences'
-import {FAILURE_FETCH_TIME, SUCCESS_FETCH_TIME, API_URL} from '../constants'
+import {fetchData, clearData, stopFetch, startFetch} from '../actions/api'
+import {idleChanged} from '../actions/user'
+import {preferencesChanged, preferencesReady} from '../actions/preferences'
+import {FAILURE_FETCH_TIME, SUCCESS_FETCH_TIME, API_URL, IDLE_TIME} from '../constants'
 import {shapeResponse} from '../selectors/data'
+import {preferencesSet} from '../selectors/preferences'
 
-export function* fetchDataApi () {
+function* fetchDataApi () {
   const {preferences} = yield select()
   const {branch} = preferences
   return yield fetch(API_URL + branch.id)
@@ -15,7 +17,7 @@ export function* fetchDataApi () {
     .catch(error => ({error}))
 }
 
-export function* fetchDataSaga () {
+function* fetchDataSaga () {
   yield put(fetchData.start())
   const {response, error} = yield call(fetchDataApi)
   if (error) {
@@ -26,14 +28,20 @@ export function* fetchDataSaga () {
   }
 }
 
-export function* fetchDataLoop (time = SUCCESS_FETCH_TIME) {
+function* fetchDataLoop () {
   while (true) {
-    yield call(delay, time)
+    yield call(delay, SUCCESS_FETCH_TIME)
     yield put(fetchData.run())
   }
 }
 
-export function* preferencesReadyWorker () {
+function* fetchTimeout (timeout) {
+  yield call(delay, timeout)
+  yield put(idleChanged.run(true))
+}
+
+function* startFetchWorker () {
+  yield fork(fetchTimeout, IDLE_TIME)
   while (true) {
     yield put(fetchData.run())
     const fetchResult = yield take([fetchData.SUCCESS, fetchData.FAILURE])
@@ -54,29 +62,55 @@ export function* preferencesReadyWorker () {
   }
 }
 
-export function* clearDataWorker () {
+function* preferencesReadyWorker () {
+  yield put(startFetch.run())
+}
+
+function* idleWorker ({payload}) {
+  if (payload) {
+    yield put(stopFetch.run())
+  } else {
+    yield put(startFetch.run())
+  }
+}
+
+function* preferencesChangedWorker () {
+  yield put(stopFetch.run())
   yield put(clearData.run())
 }
 
-export function* fetchDataWatcher () {
+function* fetchDataWatcher () {
   yield takeEvery(fetchData.type, fetchDataSaga)
 }
 
-export function* clearDataWatcher () {
-  yield takeEvery([clearPreferences.type, preferencesChanged.type], clearDataWorker)
+function* preferencesReadyWatcher () {
+  yield takeEvery(preferencesReady.type, preferencesReadyWorker)
 }
 
-export function* preferencesReadyWatcher () {
-  while (yield take(preferencesReady.type)) {
-    yield race({
-      task: call(preferencesReadyWorker),
-      cancel: take(preferencesChanged.type)
-    })
+function* preferencesChangedWatcher () {
+  yield takeEvery(preferencesChanged.type, preferencesChangedWorker)
+}
+
+function* idleWatcher () {
+  yield takeEvery(idleChanged.type, idleWorker)
+}
+
+function* startFetchWatcher () {
+  while (yield take(startFetch.type)) {
+    const {preferences} = yield select()
+    if (preferencesSet(preferences)) {
+      yield race({
+        task: call(startFetchWorker),
+        cancel: take(stopFetch.type)
+      })
+    }
   }
 }
 
 export default [
   fetchDataWatcher,
-  clearDataWatcher,
-  preferencesReadyWatcher
+  preferencesChangedWatcher,
+  preferencesReadyWatcher,
+  startFetchWatcher,
+  idleWatcher
 ]

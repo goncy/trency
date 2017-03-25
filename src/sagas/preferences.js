@@ -35,7 +35,7 @@ function* stationChangedWorker ({payload}) {
   }
 }
 
-function* preferencesChangeWatcher () {
+function* preferencesChangedWatcher () {
   const changeActions = take([changeStation.SUCCESS, changeLine.SUCCESS, changeBranch.SUCCESS, clearPreferences.type])
   while (yield changeActions) {
     yield put(preferencesChanged.run())
@@ -65,7 +65,7 @@ function* stationChangedWatcher () {
 }
 
 export default [
-  preferencesChangeWatcher,
+  preferencesChangedWatcher,
   lineChangedWatcher,
   branchChangedWatcher,
   stationChangedWatcher,
