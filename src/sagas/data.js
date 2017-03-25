@@ -28,9 +28,9 @@ function* fetchDataSaga () {
   }
 }
 
-function* fetchDataLoop () {
+function* fetchDataLoop (time) {
   while (true) {
-    yield call(delay, SUCCESS_FETCH_TIME)
+    yield call(delay, time)
     yield put(fetchData.run())
   }
 }
@@ -47,7 +47,7 @@ function* startFetchWorker () {
     const fetchResult = yield take([fetchData.SUCCESS, fetchData.FAILURE])
     if (fetchResult.type === fetchData.SUCCESS) {
       yield race({
-        task: call(fetchDataLoop),
+        task: call(fetchDataLoop, SUCCESS_FETCH_TIME),
         cancel: take(fetchData.FAILURE)
       })
       yield call(delay, FAILURE_FETCH_TIME)
