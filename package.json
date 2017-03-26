@@ -29,7 +29,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "yarn build && gh-pages -d build",
+    "deploy": "yarn build && git add -A . && git commit -am 'redeploy' && git push origin master && gh-pages -d build",
     "flow": "flow stop && flow start",
     "lintfix": "eslint ./src"
   },
