@@ -1,8 +1,8 @@
-#Trains
+# Trency - ¿Dónde está el tren?
 
-Aplicacion para obtener la posicion y arrival de los proximos trenes llegando a las stations
+Aplicacion para obtener la posicion y llegada de los proximos trenes llegando a las estaciones
 
-##Librerias
+## Librerias
 * React
 * Redux
 * Immutable
@@ -13,15 +13,15 @@ Aplicacion para obtener la posicion y arrival de los proximos trenes llegando a 
 * Bulma
 * Animate.css
 
-##Code style
+## Code style
 * Standard
 
-##Instalacion
+## Instalacion
 ```
 yarn install
 ```
 
-##Inicializacion
+## Inicializacion
 ```
 yarn start
 ```
