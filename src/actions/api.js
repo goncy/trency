@@ -1,5 +1,5 @@
-import * as types from '../types'
-import {makeAction} from '../utils/makeActionCreator'
+import * as types from "../types"
+import { makeAction } from "../utils/makeActionCreator"
 
 export const fetchData = makeAction(types.FETCH_DATA)
 export const clearData = makeAction(types.CLEAR_DATA)

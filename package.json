@@ -4,18 +4,27 @@
   "private": true,
   "homepage": "https://goncy.github.io/trenes",
   "devDependencies": {
-    "eslint-config-standard": "^6.2.1",
-    "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-standard": "^2.0.1",
-    "flow-bin": "^0.37.4",
+    "babel-eslint": "^8.0.1",
+    "eslint": "^4.8.0",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard-react": "^5.0.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-standard": "^3.0.1",
     "gh-pages": "^0.12.0",
+    "prettier": "^1.7.4",
     "react-scripts": "0.8.5"
   },
   "dependencies": {
     "animate.css": "^3.5.2",
     "bulma": "^0.3.1",
     "immutable": "^3.8.1",
-    "load-google-maps-api": "^0.0.2",
+    "prop-types": "^15.6.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.2",
@@ -30,13 +39,6 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy": "yarn build && git add -A . && git commit -am 'redeploy' && git push origin master && gh-pages -d build",
-    "flow": "flow stop && flow start",
-    "lintfix": "eslint ./src"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "standard"
-    ]
+    "lintfix": "eslint ./src --fix"
   }
 }

@@ -1,5 +1,5 @@
-import * as types from '../types'
-import {makeAction} from '../utils/makeActionCreator'
+import * as types from "../types"
+import { makeAction } from "../utils/makeActionCreator"
 
 export const changeLine = makeAction(types.CHANGE_LINE)
 export const changeBranch = makeAction(types.CHANGE_BRANCH)

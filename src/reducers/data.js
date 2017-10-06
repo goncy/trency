@@ -1,10 +1,10 @@
 // @flow
 
-import {List} from 'immutable'
+import { List } from "immutable"
 
-import type {DataState, Position, Arrival} from '../flowtypes/data'
+import type { DataState, Position, Arrival } from "../flowtypes/data"
 
-import {fetchData, clearData} from '../actions/api'
+import { fetchData, clearData } from "../actions/api"
 
 type DataAction = {
   type: string,
@@ -20,14 +20,15 @@ const data = (
     positions: List(),
     arrivals: List(),
     error: null,
-    status: 'init'
+    status: "init"
   },
-  {type, payload}: DataAction): DataState => {
+  { type, payload }: DataAction
+): DataState => {
   switch (type) {
     case fetchData.SUCCESS:
       return {
         ...state,
-        status: 'success',
+        status: "success",
         error: null,
         positions: payload.positions,
         arrivals: payload.arrivals
@@ -36,19 +37,19 @@ const data = (
       return {
         ...state,
         error: payload.error,
-        status: 'failure'
+        status: "failure"
       }
     case fetchData.START:
       return {
         ...state,
-        status: 'pending'
+        status: "pending"
       }
     case clearData.type:
       return {
         positions: List(),
         arrivals: List(),
         error: null,
-        status: 'init'
+        status: "init"
       }
     default:
       return state

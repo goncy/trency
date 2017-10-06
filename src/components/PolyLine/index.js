@@ -1,12 +1,19 @@
 /* global google */
 
-import {Component} from 'react'
+import { Component } from "react"
+import PropTypes from "prop-types"
 
-import {getPath} from './selectors'
+import { getPath } from "./selectors"
 
 export default class PolyLine extends Component {
-  componentDidMount () {
-    const {line, map, color = '#00D1B2'} = this.props
+  static propTypes = {
+    map: PropTypes.any.isRequired,
+    line: PropTypes.any.isRequired,
+    color: PropTypes.string
+  }
+
+  componentDidMount() {
+    const { line, map, color = "#00D1B2" } = this.props
     this.polyLine = new google.maps.Polyline({
       map,
       path: getPath(line),
@@ -16,17 +23,17 @@ export default class PolyLine extends Component {
     })
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     this.removePolyLine()
   }
 
-  removePolyLine () {
+  removePolyLine() {
     if (this.polyLine) {
       this.polyLine.setMap(null)
     }
   }
 
-  render () {
+  render() {
     return null
   }
 }

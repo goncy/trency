@@ -1,8 +1,12 @@
 // @flow
 
-import {getStationMarkerIcon, getStationIcon, getPositionIcon} from '../../selectors/constants'
+import {
+  getStationMarkerIcon,
+  getStationIcon,
+  getPositionIcon
+} from "../../selectors/constants"
 
-export const getStationMarkerOptions = ({station}: any, marker: any) => {
+export const getStationMarkerOptions = ({ station }: any, marker: any) => {
   const isSelected = marker.id === station.id
   return {
     position: marker.position,
@@ -21,12 +25,15 @@ export const getPositionMarkerOptions = (marker: any) => ({
   icon: {
     url: marker.moviendose
       ? getPositionIcon(marker.direction.color)
-      : getPositionIcon('danger'),
+      : getPositionIcon("danger"),
     anchor: new google.maps.Point(12, 12) // eslint-disable-line
   }
 })
 
-export const getStationInfoWindowContent = ({station}: any, infoWindow: any) => {
+export const getStationInfoWindowContent = (
+  { station }: any,
+  infoWindow: any
+) => {
   const isSelected = infoWindow.id === station.id
   return `
   <table style='margin-top: 5px'>
@@ -44,6 +51,9 @@ export const getStationInfoWindowContent = ({station}: any, infoWindow: any) => 
 `
 }
 
-export const getPositionInfoWindowContent = ({direction, moviendose}: any) => `
+export const getPositionInfoWindowContent = ({
+  direction,
+  moviendose
+}: any) => `
   <span style='margin: 10px 5px 8px 5px' class='tag is-${direction.color} is-medium'>Destino ${direction.name}</span>
 `

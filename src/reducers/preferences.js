@@ -1,7 +1,12 @@
 // @flow
-import {changeStation, changeLine, changeBranch, clearPreferences} from '../actions/preferences'
+import {
+  changeStation,
+  changeLine,
+  changeBranch,
+  clearPreferences
+} from "../actions/preferences"
 
-import type {PreferencesState} from '../flowtypes/preferences'
+import type { PreferencesState } from "../flowtypes/preferences"
 
 type PreferencesAction = {
   type: string,
@@ -14,7 +19,8 @@ const preferences = (
     branch: null,
     station: null
   },
-  {type, payload}: PreferencesAction): PreferencesState => {
+  { type, payload }: PreferencesAction
+): PreferencesState => {
   switch (type) {
     case changeLine.SUCCESS:
       return {

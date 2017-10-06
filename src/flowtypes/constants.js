@@ -1,3 +1,4 @@
+// @flow
 export type Direction = {
   id: number,
   name: string,
@@ -7,7 +8,7 @@ export type Direction = {
 export type Station = {
   id: string,
   name: string,
-  position: {lat: number, lng: number}
+  position: { lat: number, lng: number }
 }
 
 export type Branch = {

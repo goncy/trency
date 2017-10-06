@@ -1,10 +1,18 @@
-import {select, take, put, takeEvery} from 'redux-saga/effects'
+import { select, take, put, takeEvery } from "redux-saga/effects"
 
-import {changeStation, changeLine, changeBranch, clearPreferences, preferencesReady, preferencesChanged, preferencesNoMatch} from '../actions/preferences'
-import {preferencesSet} from '../selectors/preferences'
-import {getLine, getBranch, getStation} from '../selectors/constants'
+import {
+  changeStation,
+  changeLine,
+  changeBranch,
+  clearPreferences,
+  preferencesReady,
+  preferencesChanged,
+  preferencesNoMatch
+} from "../actions/preferences"
+import { preferencesSet } from "../selectors/preferences"
+import { getLine, getBranch, getStation } from "../selectors/constants"
 
-function* lineChangedWorker ({payload}) {
+function* lineChangedWorker({ payload }) {
   const line = getLine(payload)
   if (line) {
     return yield put(changeLine.success(line))
@@ -13,9 +21,9 @@ function* lineChangedWorker ({payload}) {
   }
 }
 
-function* branchChangedWorker ({payload}) {
-  const {preferences} = yield select()
-  const {line} = preferences
+function* branchChangedWorker({ payload }) {
+  const { preferences } = yield select()
+  const { line } = preferences
   const branch = getBranch(line, payload)
   if (branch) {
     return yield put(changeBranch.success(branch))
@@ -24,9 +32,9 @@ function* branchChangedWorker ({payload}) {
   }
 }
 
-function* stationChangedWorker ({payload}) {
-  const {preferences} = yield select()
-  const {branch} = preferences
+function* stationChangedWorker({ payload }) {
+  const { preferences } = yield select()
+  const { branch } = preferences
   const station = getStation(branch, payload)
   if (station) {
     return yield put(changeStation.success(station))
@@ -35,32 +43,37 @@ function* stationChangedWorker ({payload}) {
   }
 }
 
-function* preferencesChangedWatcher () {
-  const changeActions = take([changeStation.SUCCESS, changeLine.SUCCESS, changeBranch.SUCCESS, clearPreferences.type])
+function* preferencesChangedWatcher() {
+  const changeActions = take([
+    changeStation.SUCCESS,
+    changeLine.SUCCESS,
+    changeBranch.SUCCESS,
+    clearPreferences.type
+  ])
   while (yield changeActions) {
     yield put(preferencesChanged.run())
-    const {preferences} = yield select()
+    const { preferences } = yield select()
     if (preferencesSet(preferences)) {
       yield put(preferencesReady.run())
     }
   }
 }
 
-function* redirectToHomeWatcher () {
+function* redirectToHomeWatcher() {
   while (yield take(preferencesNoMatch.type)) {
-    location.replace('/')
+    location.replace("/")
   }
 }
 
-function* lineChangedWatcher () {
+function* lineChangedWatcher() {
   yield takeEvery(changeLine.type, lineChangedWorker)
 }
 
-function* branchChangedWatcher () {
+function* branchChangedWatcher() {
   yield takeEvery(changeBranch.type, branchChangedWorker)
 }
 
-function* stationChangedWatcher () {
+function* stationChangedWatcher() {
   yield takeEvery(changeStation.type, stationChangedWorker)
 }
 
