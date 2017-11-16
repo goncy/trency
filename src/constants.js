@@ -1562,4 +1562,4 @@ export const LINES = [
 export const SUCCESS_FETCH_TIME = 30000
 export const FAILURE_FETCH_TIME = 3000
 export const IDLE_TIME = 300000
-export const API_URL = "http://localhost:8080/api/v1/data/"
+export const API_URL = "https://server-qptnzsopxc.now.sh/api/v1/data/"

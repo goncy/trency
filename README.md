@@ -18,10 +18,12 @@ Aplicacion para obtener la posicion y llegada de los proximos trenes llegando a 
 
 ## Instalacion
 ```
-yarn install
+yarn
 ```
 
 ## Inicializacion
 ```
 yarn start
 ```
+
+API: https://github.com/goncy/trency-api

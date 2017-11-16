@@ -1,8 +1,8 @@
 {
-  "name": "trenes",
+  "name": "trency",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://goncy.github.io/trenes",
+  "homepage": "https://goncy.github.io/trency",
   "devDependencies": {
     "babel-eslint": "^8.0.1",
     "eslint": "^4.8.0",
@@ -33,7 +33,6 @@
     "redux-saga": "^0.14.2"
   },
   "scripts": {
-    "prestart": "yarn flow",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
