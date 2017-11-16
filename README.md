@@ -1,4 +1,4 @@
-# Trency - ¿Dónde está el tren?
+# Trency - ¿Dónde está el tren? - Cliente
 
 Aplicacion para obtener la posicion y llegada de los proximos trenes llegando a las estaciones
 
@@ -26,5 +26,5 @@ yarn
 yarn start
 ```
 
-API:
+## API:
 https://github.com/goncy/trency-api
