@@ -2,6 +2,7 @@ import React from "react"
 import ReactDOM from "react-dom"
 import { Provider } from "react-redux"
 
+import registerServiceWorker from "./registerServiceWorker"
 import configureStore from "./store/configureStore"
 import rootSaga from "./sagas"
 
@@ -21,3 +22,5 @@ ReactDOM.render(
   </Provider>,
   document.getElementById("root")
 )
+
+registerServiceWorker()

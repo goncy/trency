@@ -1,0 +1,15 @@
+{
+  "short_name": "Trency",
+  "name": "Trency - ¿Dónde está el tren?",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "512x512 192x192 64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#00CBA9",
+  "background_color": "#ffffff"
+}

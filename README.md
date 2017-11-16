@@ -26,4 +26,5 @@ yarn
 yarn start
 ```
 
-API: https://github.com/goncy/trency-api
+API:
+https://github.com/goncy/trency-api
