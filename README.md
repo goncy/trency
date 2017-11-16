@@ -1,5 +1,4 @@
 # Trency - ¿Dónde está el tren? - Cliente
-
 Aplicacion para obtener la posicion y llegada de los proximos trenes llegando a las estaciones
 
 ## Librerias
