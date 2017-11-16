@@ -28,7 +28,7 @@ const Arrivals = (props: ArrivalsProps) => {
             <div className="level-item has-text-centered">
               <div>
                 <p className="heading">
-                  Proximo tren{" "}
+                  Primer tren{" "}
                   <span className={`tag is-${branch.color} is-small`}>
                     destino {branch.destino}
                   </span>
@@ -39,7 +39,7 @@ const Arrivals = (props: ArrivalsProps) => {
             <div className="level-item has-text-centered">
               <div>
                 <p className="heading">
-                  Siguiente tren{" "}
+                  Segundo tren{" "}
                   <span className={`tag is-${branch.color} is-small`}>
                     destino {branch.destino}
                   </span>
