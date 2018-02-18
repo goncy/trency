@@ -1,8 +1,22 @@
-const APP_URL = Cypress.env("APP_URL");
-
 describe("Wizard", function() {
+  before(function() {
+    Cypress.on("window:before:load", win => {
+      win.fetch = null;
+    });
+  });
+
+  beforeEach(function() {
+    cy.server();
+  });
+
   it("navigates correctly", function() {
-    cy.visit(APP_URL);
+    cy.route({
+      method: "GET",
+      url: "/api/v1/data/11",
+      response: "fixture:statuses/success"
+    });
+
+    cy.visit("/");
 
     cy.contains("Quiero tomarme la linea");
     cy.contains("Roca").click();

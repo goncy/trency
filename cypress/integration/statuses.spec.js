@@ -10,9 +10,13 @@ describe("Statuses", function() {
   });
 
   it("shows the ui for success response correctly", function() {
-    cy.route("GET", "/api/v1/data/11", "fixture:statuses/success");
+    cy
+      .route("GET", "/api/v1/data/11", "fixture:statuses/success")
+      .as("getData");
 
     cy.visit("/#/roca/laplata/bernal");
+
+    cy.wait(["@getData"]);
 
     cy.contains("Destino La Plata");
     cy.contains("Destino Constitucion");
@@ -32,5 +36,25 @@ describe("Statuses", function() {
       "El servidor respondio correctamente, pero sin resultados, es muy posible que no se encuentren formaciones circulando en este horario, intente de nuevo mas tarde"
     );
     cy.contains("volver atrás");
+  });
+
+  it("shows the ui for error response correctly", function() {
+    cy
+      .route({
+        method: "GET",
+        url: "/api/v1/data/11",
+        response: "fixture:statuses/error",
+        status: 500,
+        delay: 1000
+      })
+      .as("getData");
+
+    cy.visit("/#/roca/laplata/bernal");
+
+    cy.contains("Cargando datos de ubicación y horarios de los trenes");
+    cy.wait(["@getData"]);
+    cy.contains(
+      "Parece que el servidor esta teniendo problemas, volviendo a intentar"
+    );
   });
 });
