@@ -1,28 +1,28 @@
 /* global google */
-import { Component } from "react"
-import PropTypes from "prop-types"
+import { Component } from "react";
+import PropTypes from "prop-types";
 
-import { getInfoWindow } from "./selectors"
+import { getInfoWindow } from "./selectors";
 
 class InfoWindow extends Component {
   componentDidMount() {
-    const { marker, map } = this.props
+    const { marker, map } = this.props;
     if (marker) {
-      this.infoWindow = getInfoWindow(this.props)
+      this.infoWindow = getInfoWindow(this.props);
       google.maps.event.addListener(marker, "click", () =>
         this.infoWindow.open(map, marker)
-      )
+      );
     }
   }
 
   render() {
-    return null
+    return null;
   }
 }
 
 InfoWindow.propTypes = {
   marker: PropTypes.any,
   map: PropTypes.any
-}
+};
 
-export default InfoWindow
+export default InfoWindow;

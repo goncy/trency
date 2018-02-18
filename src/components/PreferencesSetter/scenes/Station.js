@@ -1,9 +1,9 @@
-import React, { Component } from "react"
-import PropTypes from "prop-types"
-import { Link } from "react-router-dom"
-import { connect } from "react-redux"
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
-import { changeLine, changeBranch } from "../../../actions/preferences"
+import { changeLine, changeBranch } from "../../../actions/preferences";
 
 class Station extends Component {
   static propTypes = {
@@ -11,17 +11,17 @@ class Station extends Component {
     preferences: PropTypes.any.isRequired,
     changeLine: PropTypes.func.isRequired,
     changeBranch: PropTypes.func.isRequired
-  }
+  };
 
   componentWillMount() {
-    const { match, changeLine, changeBranch } = this.props
-    changeLine(match.params.line)
-    changeBranch(match.params.branch)
+    const { match, changeLine, changeBranch } = this.props;
+    changeLine(match.params.line);
+    changeBranch(match.params.branch);
   }
 
   render() {
-    const { preferences, match } = this.props
-    const { branch, line } = preferences
+    const { preferences, match } = this.props;
+    const { branch, line } = preferences;
     return (
       branch &&
       line && (
@@ -30,7 +30,7 @@ class Station extends Component {
         >
           <div className="hero-body">
             <div className="container has-text-centered animated fadeIn">
-              <h1 className="title">En la estacion</h1>
+              <h1 className="title">En la estación</h1>
               <h2 className="subtitle">
                 {branch.stations.map((station, key) => (
                   <Link
@@ -47,23 +47,23 @@ class Station extends Component {
           <div className="hero-foot">
             <nav className="level">
               <p className="has-text-centered">
-                <Link to={`/${match.params.line}`}>Volver atras</Link>
+                <Link to={`/${match.params.line}`}>volver atrás</Link>
               </p>
             </nav>
           </div>
         </section>
       )
-    )
+    );
   }
 }
 
 const mapStateToProps = ({ preferences }) => ({
   preferences
-})
+});
 
 const mapDispatchToProps = {
   changeLine: changeLine.run,
   changeBranch: changeBranch.run
-}
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(Station)
+export default connect(mapStateToProps, mapDispatchToProps)(Station);

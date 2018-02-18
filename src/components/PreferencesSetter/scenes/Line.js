@@ -1,19 +1,19 @@
-import React, { Component } from "react"
-import PropTypes from "prop-types"
-import { Link } from "react-router-dom"
-import { connect } from "react-redux"
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
-import { getLines } from "../../../selectors/constants"
-import { clearPreferences } from "../../../actions/preferences"
+import { getLines } from "../../../selectors/constants";
+import { clearPreferences } from "../../../actions/preferences";
 
 class Line extends Component {
   static propTypes = {
     clearPreferences: PropTypes.func
-  }
+  };
 
   componentWillMount() {
-    const { clearPreferences } = this.props
-    clearPreferences()
+    const { clearPreferences } = this.props;
+    clearPreferences();
   }
 
   render() {
@@ -38,12 +38,12 @@ class Line extends Component {
           </div>
         </div>
       </section>
-    )
+    );
   }
 }
 
 const mapDispatchToProps = {
   clearPreferences: clearPreferences.run
-}
+};
 
-export default connect(undefined, mapDispatchToProps)(Line)
+export default connect(undefined, mapDispatchToProps)(Line);

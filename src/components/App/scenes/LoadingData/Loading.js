@@ -1,13 +1,13 @@
-import React from "react"
+import React from "react";
 
-import Spinner from "../../../Spinner"
+import Spinner from "../../../Spinner";
 
 const LoadingDataLoading = () => (
   <Spinner>
     <p className="LoadingData loading">
-      Cargando datos de ubicacion y horarios de los trenes
+      Cargando datos de ubicación y horarios de los trenes
     </p>
   </Spinner>
-)
+);
 
-export default LoadingDataLoading
+export default LoadingDataLoading;

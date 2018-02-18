@@ -5,10 +5,12 @@
   "homepage": "https://goncy.github.io/trency",
   "devDependencies": {
     "babel-eslint": "^8.0.1",
+    "cypress": "^2.0.1",
     "eslint": "^4.8.0",
     "eslint-config-prettier": "^2.6.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-config-standard-react": "^5.0.0",
+    "eslint-plugin-cypress": "^2.0.1",
     "eslint-plugin-flowtype": "^2.39.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.2.0",
@@ -17,8 +19,7 @@
     "eslint-plugin-react": "^7.4.0",
     "eslint-plugin-standard": "^3.0.1",
     "gh-pages": "^0.12.0",
-    "prettier": "^1.7.4",
-    "react-scripts": "0.8.5"
+    "prettier": "^1.7.4"
   },
   "dependencies": {
     "animate.css": "^3.5.2",
@@ -29,15 +30,16 @@
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.2",
     "react-router-dom": "^4.0.0",
+    "react-scripts": "1.1.1",
     "redux": "^3.6.0",
     "redux-saga": "^0.14.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "cypress open",
     "eject": "react-scripts eject",
-    "predeploy": "yarn build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "lintfix": "eslint ./src --fix"
   }

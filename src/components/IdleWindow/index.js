@@ -1,19 +1,19 @@
 // @flow
 
-import React from "react"
-import { connect } from "react-redux"
-import PropTypes from "prop-types"
+import React from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
-import { idleChanged } from "../../actions/user"
+import { idleChanged } from "../../actions/user";
 
-import type { AppState } from "../../flowtypes/globals"
+import type { AppState } from "../../flowtypes/globals";
 
-import "./IdleWindow.css"
+import "./IdleWindow.css";
 
 export type IdleWindowProps = {
   close: () => void,
   isIdle: boolean
-}
+};
 
 const IdleWindow = ({ close, isIdle }: IdleWindowProps) => (
   <div className="IdleWindow">
@@ -39,19 +39,19 @@ const IdleWindow = ({ close, isIdle }: IdleWindowProps) => (
       </div>
     </div>
   </div>
-)
+);
 
 const mapStateToProps = ({ user }: AppState) => ({
   isIdle: user.idle
-})
+});
 
 const mapDispatchToProps = {
   close: () => idleChanged.run(false)
-}
+};
 
 IdleWindow.propTypes = {
   isIdle: PropTypes.bool,
   close: PropTypes.func
-}
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(IdleWindow)
+export default connect(mapStateToProps, mapDispatchToProps)(IdleWindow);

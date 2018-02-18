@@ -1,36 +1,36 @@
 // @flow
-import React from "react"
-import PropTypes from "prop-types"
-import { connect } from "react-redux"
-import { List } from "immutable"
+import React from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { List } from "immutable";
 
-import { getPositions } from "../../selectors/data"
+import { getPositions } from "../../selectors/data";
 import {
   getPositionMarkerOptions,
   getStationMarkerOptions,
   getPositionInfoWindowContent,
   getStationInfoWindowContent
-} from "./selectors"
+} from "./selectors";
 
-import InfoWindow from "../InfoWindow"
-import PolyLine from "../PolyLine"
-import Map from "../Map"
-import Marker from "../Marker"
+import InfoWindow from "../InfoWindow";
+import PolyLine from "../PolyLine";
+import Map from "../Map";
+import Marker from "../Marker";
 
-import type { AppState } from "../../flowtypes/globals"
-import type { PreferencesState } from "../../flowtypes/preferences"
-import type { Branch, Station } from "../../flowtypes/constants"
-import type { Position } from "../../flowtypes/data"
+import type { AppState } from "../../flowtypes/globals";
+import type { PreferencesState } from "../../flowtypes/preferences";
+import type { Branch, Station } from "../../flowtypes/constants";
+import type { Position } from "../../flowtypes/data";
 
 export type AppMapProps = {
   preferences: PreferencesState,
   branch: Branch,
   station: Station,
   positions: List<Position>
-}
+};
 
 const AppMap = (props: AppMapProps) => {
-  const { branch, positions } = props
+  const { branch, positions } = props;
   return (
     <Map className="animated fadeIn">
       {/* Recorrido */}
@@ -50,19 +50,19 @@ const AppMap = (props: AppMapProps) => {
         </Marker>
       ))}
     </Map>
-  )
-}
+  );
+};
 
 AppMap.propTypes = {
   positions: PropTypes.object.isRequired,
   branch: PropTypes.object.isRequired,
   station: PropTypes.object.isRequired
-}
+};
 
 const mapStateToProps = ({ data, preferences }: AppState) => ({
   positions: getPositions(data),
   branch: preferences.branch,
   station: preferences.station
-})
+});
 
-export default connect(mapStateToProps)(AppMap)
+export default connect(mapStateToProps)(AppMap);

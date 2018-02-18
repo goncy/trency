@@ -4,10 +4,10 @@ import {
   getStationMarkerIcon,
   getStationIcon,
   getPositionIcon
-} from "../../selectors/constants"
+} from "../../selectors/constants";
 
 export const getStationMarkerOptions = ({ station }: any, marker: any) => {
-  const isSelected = marker.id === station.id
+  const isSelected = marker.id === station.id;
   return {
     position: marker.position,
     zIndex: isSelected ? 9999 : 0,
@@ -17,8 +17,8 @@ export const getStationMarkerOptions = ({ station }: any, marker: any) => {
       size: new google.maps.Size(32, 32), // eslint-disable-line
       anchor: new google.maps.Point(16, 16) // eslint-disable-line
     }
-  }
-}
+  };
+};
 
 export const getPositionMarkerOptions = (marker: any) => ({
   position: marker.position,
@@ -28,13 +28,13 @@ export const getPositionMarkerOptions = (marker: any) => ({
       : getPositionIcon("danger"),
     anchor: new google.maps.Point(12, 12) // eslint-disable-line
   }
-})
+});
 
 export const getStationInfoWindowContent = (
   { station }: any,
   infoWindow: any
 ) => {
-  const isSelected = infoWindow.id === station.id
+  const isSelected = infoWindow.id === station.id;
   return `
   <table style='margin-top: 5px'>
     <tbody>
@@ -48,12 +48,9 @@ export const getStationInfoWindowContent = (
         </tr>
     </tbody>
   </table>
-`
-}
+`;
+};
 
-export const getPositionInfoWindowContent = ({
-  direction,
-  moviendose
-}: any) => `
+export const getPositionInfoWindowContent = ({ direction }: any) => `
   <span style='margin: 10px 5px 8px 5px' class='tag is-${direction.color} is-medium'>Destino ${direction.name}</span>
-`
+`;

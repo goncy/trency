@@ -1,9 +1,9 @@
 // @flow
 
-import React from "react"
-import { Link } from "react-router-dom"
+import React from "react";
+import { Link } from "react-router-dom";
 
-import ErrorScreen from "../../../ErrorScreen"
+import ErrorScreen from "../../../ErrorScreen";
 
 const LoadingDataEmpty = () => (
   <ErrorScreen>
@@ -17,11 +17,11 @@ const LoadingDataEmpty = () => (
           className="button is-outlined is-inverted is-warning"
           style={{ marginTop: 10 }}
         >
-          Volver atras
+          volver atrás
         </Link>
       </div>
     </div>
   </ErrorScreen>
-)
+);
 
-export default LoadingDataEmpty
+export default LoadingDataEmpty;

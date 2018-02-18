@@ -8,7 +8,7 @@ type asyncAction = {
   START: string,
   SUCCESS: string,
   FAILURE: string
-}
+};
 
 export const makeAction = (type: string): asyncAction => ({
   type,
@@ -19,4 +19,4 @@ export const makeAction = (type: string): asyncAction => ({
   START: `${type}_START`,
   SUCCESS: `${type}_SUCCESS`,
   FAILURE: `${type}_FAILURE`
-})
+});

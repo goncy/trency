@@ -1,43 +1,43 @@
 /* global google */
 
-import React, { Component } from "react"
-import PropTypes from "prop-types"
-import { connect } from "react-redux"
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 
-import { getOptions } from "./selectors"
+import { getOptions } from "./selectors";
 
-import "./Map.css"
+import "./Map.css";
 
 class Map extends Component {
   state = {
     map: null
-  }
+  };
 
   static propTypes = {
     preferences: PropTypes.object.isRequired,
     className: PropTypes.string,
     children: PropTypes.node
-  }
+  };
 
   componentDidMount() {
-    this.setMap()
+    this.setMap();
   }
 
   setMap() {
-    const { preferences } = this.props
-    const { station } = preferences
+    const { preferences } = this.props;
+    const { station } = preferences;
 
     this.setState({
       map: new google.maps.Map(this.mapElement, {
         ...getOptions(this.props),
         center: station.position
       })
-    })
+    });
   }
 
   render() {
-    const { map } = this.state
-    const { preferences, className, children } = this.props
+    const { map } = this.state;
+    const { preferences, className, children } = this.props;
 
     return (
       <div
@@ -55,12 +55,12 @@ class Map extends Component {
             })
           )}
       </div>
-    )
+    );
   }
 }
 
 const mapStateToProps = ({ preferences }) => ({
   preferences
-})
+});
 
-export default connect(mapStateToProps)(Map)
+export default connect(mapStateToProps)(Map);

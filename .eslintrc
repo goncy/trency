@@ -1,8 +1,6 @@
 {
   "root": true,
   "extends": [
-    "standard",
-    "react-app",
     "prettier",
     "prettier/react",
     "eslint:recommended",
@@ -12,7 +10,8 @@
   "plugins": [
     "react",
     "prettier",
-    "flowtype"
+    "flowtype",
+    "cypress"    
   ],
   "parser": "babel-eslint",
   "parserOptions": {
@@ -28,7 +27,9 @@
     "node": true,
     "es6": true,
     "jest": true,
-    "mocha": true
+    "mocha": true,
+    "cypress/globals": true
+    
   },
   "settings": {
     "flowtype": {
@@ -36,11 +37,13 @@
     }
   },
   "rules": {
-    "no-console": 1,
+    "no-debugger": "off",
+    "no-console": "off",
+    "react/prop-types": "off",
     "prettier/prettier": [
       "error",
       {
-        "semi": false
+        "semi": true
       }
     ]
   }

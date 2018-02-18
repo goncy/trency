@@ -1,12 +1,12 @@
 // @flow
 
-import React from "react"
+import React from "react";
 
-import AppMap from "../AppMap"
-import IdleWindow from "../IdleWindow"
-import Directions from "../Directions"
-import Preferences from "../Preferences"
-import Arrivals from "../Arrivals"
+import AppMap from "../AppMap";
+import IdleWindow from "../IdleWindow";
+import Directions from "../Directions";
+import Preferences from "../Preferences";
+import Arrivals from "../Arrivals";
 
 const App = () => (
   <div className="App-container flex-column">
@@ -21,6 +21,6 @@ const App = () => (
     {/* Arrivals */}
     <Arrivals />
   </div>
-)
+);
 
-export default App
+export default App;

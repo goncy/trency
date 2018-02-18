@@ -1,8 +1,8 @@
 // @flow
 
-import { List } from "immutable"
+import { List } from "immutable";
 
-import { getDirection } from "./constants"
+import { getDirection } from "./constants";
 
 import type {
   RawArrival,
@@ -11,9 +11,9 @@ import type {
   Position,
   DataState,
   DataResponse
-} from "../flowtypes/data"
-import type { PreferencesState } from "../flowtypes/preferences"
-import type { AppState } from "../flowtypes/globals"
+} from "../flowtypes/data";
+import type { PreferencesState } from "../flowtypes/preferences";
+import type { AppState } from "../flowtypes/globals";
 
 export const shapeArrivals = (arrivals: RawArrival[]): List<Arrival> =>
   List(
@@ -30,7 +30,7 @@ export const shapeArrivals = (arrivals: RawArrival[]): List<Arrival> =>
         }
       ]
     }))
-  )
+  );
 
 export const shapePositions = (
   preferences: PreferencesState,
@@ -46,7 +46,7 @@ export const shapePositions = (
         lng: Number(position.longitud)
       }
     }))
-  )
+  );
 
 export const shapeResponse = (
   { preferences }: AppState,
@@ -54,12 +54,12 @@ export const shapeResponse = (
 ) => ({
   arrivals: shapeArrivals(arrivals),
   positions: shapePositions(preferences, positions)
-})
+});
 
 export const hasData = ({ positions, arrivals }: DataState): boolean =>
-  !positions.isEmpty() && !!arrivals
+  !positions.isEmpty() && !!arrivals;
 export const hasSucceeded = ({ status }: DataState): boolean =>
-  status === "success"
-export const hasError = ({ error }: DataState): boolean => !!error
-export const getPositions = ({ positions }: DataState) => positions
-export const getArrivals = ({ arrivals }: DataState) => arrivals
+  status === "success";
+export const hasError = ({ error }: DataState): boolean => !!error;
+export const getPositions = ({ positions }: DataState) => positions;
+export const getArrivals = ({ arrivals }: DataState) => arrivals;

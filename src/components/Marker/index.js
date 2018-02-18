@@ -1,71 +1,71 @@
 /* global google */
-import React, { Component } from "react"
-import PropTypes from "prop-types"
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 export default class Marker extends Component {
   static propTypes = {
     map: PropTypes.any.isRequired,
     options: PropTypes.object,
     children: PropTypes.node
-  }
+  };
 
   state = {
     marker: null
-  }
+  };
 
   componentDidMount() {
-    this.placeMarker()
+    this.placeMarker();
   }
 
   placeMarker() {
-    const { map, options = {} } = this.props
+    const { map, options = {} } = this.props;
     if (options.position) {
       this.setState({
         marker: new google.maps.Marker({
           map,
           ...options
         })
-      })
+      });
     }
   }
 
   componentWillUnmount() {
-    this.removeMarker()
+    this.removeMarker();
   }
 
   componentDidUpdate(prevProps) {
-    const { options } = this.props
-    const { options: prevOptions } = prevProps
+    const { options } = this.props;
+    const { options: prevOptions } = prevProps;
 
     if (options) {
       // Position changed
       if (options.position !== prevOptions.position)
-        this.setPosition(options.position)
+        this.setPosition(options.position);
       // Icon changed
-      if (options.icon.url !== prevOptions.icon.url) this.setIcon(options.icon)
+      if (options.icon.url !== prevOptions.icon.url) this.setIcon(options.icon);
       // No position, remove marker
-      if (!options.position) this.removeMarker()
+      if (!options.position) this.removeMarker();
     }
   }
 
   setIcon(icon) {
-    const { marker } = this.state
-    marker.setIcon(icon)
+    const { marker } = this.state;
+    marker.setIcon(icon);
   }
 
   setPosition(position) {
-    const { marker } = this.state
-    marker.setPosition(position)
+    const { marker } = this.state;
+    marker.setPosition(position);
   }
 
   removeMarker() {
-    const { marker } = this.state
-    if (marker) marker.setMap(null)
+    const { marker } = this.state;
+    if (marker) marker.setMap(null);
   }
 
   render() {
-    const { map, children } = this.props
-    const { marker } = this.state
+    const { map, children } = this.props;
+    const { marker } = this.state;
 
     return (
       <div>
@@ -79,6 +79,6 @@ export default class Marker extends Component {
             })
           )}
       </div>
-    )
+    );
   }
 }

@@ -1,12 +1,12 @@
 // @flow
-import { idleChanged } from "../actions/user"
+import { idleChanged } from "../actions/user";
 
-import type { UserState } from "../flowtypes/user"
+import type { UserState } from "../flowtypes/user";
 
 type UserAction = {
   type: string,
   payload: any
-}
+};
 
 const user = (
   state: UserState = {
@@ -19,10 +19,10 @@ const user = (
       return {
         ...state,
         idle: payload
-      }
+      };
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default user
+export default user;

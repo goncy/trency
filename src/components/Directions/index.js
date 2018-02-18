@@ -1,16 +1,16 @@
 // @flow
-import React from "react"
-import PropTypes from "prop-types"
-import { connect } from "react-redux"
+import React from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 
-import type { AppState } from "../../flowtypes/globals"
-import type { Branch } from "../../flowtypes/constants"
+import type { AppState } from "../../flowtypes/globals";
+import type { Branch } from "../../flowtypes/constants";
 
-import "./Directions.css"
+import "./Directions.css";
 
 export type DirectionsProps = {
   branch: Branch
-}
+};
 
 const Directions = ({ branch }: DirectionsProps) => (
   <div className="Directions">
@@ -32,14 +32,14 @@ const Directions = ({ branch }: DirectionsProps) => (
     </span>
     <span className={`tag is-hidden-tablet is-danger`}>Tren parado</span>
   </div>
-)
+);
 
 Directions.propTypes = {
   branch: PropTypes.object
-}
+};
 
 const mapStateToProps = ({ preferences }: AppState) => ({
   branch: preferences.branch
-})
+});
 
-export default connect(mapStateToProps)(Directions)
+export default connect(mapStateToProps)(Directions);

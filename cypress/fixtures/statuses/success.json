@@ -1,0 +1,213 @@
+{
+  "response": {
+    "arrivals": [
+      {
+        "nombre": "Constitución",
+        "minutos_1": "0",
+        "minutos_2": "0",
+        "minutos_3": "-1",
+        "minutos_4": "-1"
+      },
+      {
+        "nombre": "Santillán y Kosteki",
+        "minutos_1": "1",
+        "minutos_2": "3",
+        "minutos_3": "12",
+        "minutos_4": "17"
+      },
+      {
+        "nombre": "Sarandí",
+        "minutos_1": "0",
+        "minutos_2": "5",
+        "minutos_3": "2",
+        "minutos_4": "10"
+      },
+      {
+        "nombre": "Villa Domínico",
+        "minutos_1": "5",
+        "minutos_2": "10",
+        "minutos_3": "5",
+        "minutos_4": "9"
+      },
+      {
+        "nombre": "Wilde",
+        "minutos_1": "0",
+        "minutos_2": "9",
+        "minutos_3": "0",
+        "minutos_4": "4"
+      },
+      {
+        "nombre": "Don Bosco",
+        "minutos_1": "5",
+        "minutos_2": "14",
+        "minutos_3": "0",
+        "minutos_4": "4"
+      },
+      {
+        "nombre": "Bernal",
+        "minutos_1": "8",
+        "minutos_2": "17",
+        "minutos_3": "0",
+        "minutos_4": "0"
+      },
+      {
+        "nombre": "Quilmes",
+        "minutos_1": "0",
+        "minutos_2": "12",
+        "minutos_3": "7",
+        "minutos_4": "11"
+      },
+      {
+        "nombre": "Ezpeleta",
+        "minutos_1": "1",
+        "minutos_2": "3",
+        "minutos_3": "4",
+        "minutos_4": "6"
+      },
+      {
+        "nombre": "Berazategui",
+        "minutos_1": "0",
+        "minutos_2": "6",
+        "minutos_3": "1",
+        "minutos_4": "2"
+      },
+      {
+        "nombre": "Plátanos",
+        "minutos_1": "5",
+        "minutos_2": "10",
+        "minutos_3": "0",
+        "minutos_4": "3"
+      },
+      {
+        "nombre": "Hudson",
+        "minutos_1": "12",
+        "minutos_2": "14",
+        "minutos_3": "0",
+        "minutos_4": "3"
+      },
+      {
+        "nombre": "Pereyra",
+        "minutos_1": "20",
+        "minutos_2": "21",
+        "minutos_3": "8",
+        "minutos_4": "12"
+      },
+      {
+        "nombre": "Villa Elisa",
+        "minutos_1": "4",
+        "minutos_2": "25",
+        "minutos_3": "2",
+        "minutos_4": "6"
+      },
+      {
+        "nombre": "City Bell",
+        "minutos_1": "28",
+        "minutos_2": "33",
+        "minutos_3": "0",
+        "minutos_4": "11"
+      },
+      {
+        "nombre": "Gonnet",
+        "minutos_1": "4",
+        "minutos_2": "38",
+        "minutos_3": "7",
+        "minutos_4": "7"
+      },
+      {
+        "nombre": "Ringuelet",
+        "minutos_1": "7",
+        "minutos_2": "41",
+        "minutos_3": "4",
+        "minutos_4": "25"
+      },
+      {
+        "nombre": "Tolosa",
+        "minutos_1": "12",
+        "minutos_2": "46",
+        "minutos_3": "19",
+        "minutos_4": "28"
+      },
+      {
+        "nombre": "La Plata",
+        "minutos_1": "-1",
+        "minutos_2": "-1",
+        "minutos_3": "15",
+        "minutos_4": "24"
+      }
+    ],
+    "positions": [
+      {
+        "formacion_id": 1010068,
+        "latitud": "-34.886747",
+        "longitud": "-57.973803",
+        "ramal": 12,
+        "estado_servicio": 1,
+        "estado_mov": 1
+      },
+      {
+        "formacion_id": 1010097,
+        "latitud": "-34.656804",
+        "longitud": "-58.378011",
+        "ramal": 11,
+        "estado_servicio": 1,
+        "estado_mov": 1
+      },
+      {
+        "formacion_id": 1010098,
+        "latitud": "-34.734228",
+        "longitud": "-58.251891",
+        "ramal": 11,
+        "estado_servicio": 1,
+        "estado_mov": 1
+      },
+      {
+        "formacion_id": 1010106,
+        "latitud": "-34.764643",
+        "longitud": "-58.207313",
+        "ramal": 11,
+        "estado_servicio": 1,
+        "estado_mov": 1
+      },
+      {
+        "formacion_id": 1010111,
+        "latitud": "-34.768059",
+        "longitud": "-58.200118",
+        "ramal": 12,
+        "estado_servicio": 1,
+        "estado_mov": 1
+      },
+      {
+        "formacion_id": 200030,
+        "latitud": "-34.710423",
+        "longitud": "-58.277855",
+        "ramal": 12,
+        "estado_servicio": 1,
+        "estado_mov": 1
+      },
+      {
+        "formacion_id": 1010069,
+        "latitud": "-34.866274",
+        "longitud": "-58.040917",
+        "ramal": 11,
+        "estado_servicio": 1,
+        "estado_mov": 1
+      },
+      {
+        "formacion_id": 1010070,
+        "latitud": "-34.650634",
+        "longitud": "-58.379608",
+        "ramal": 12,
+        "estado_servicio": 1,
+        "estado_mov": 1
+      },
+      {
+        "formacion_id": 1010091,
+        "latitud": "-34.629269",
+        "longitud": "-58.380599",
+        "ramal": 12,
+        "estado_servicio": 1,
+        "estado_mov": 1
+      }
+    ]
+  }
+}

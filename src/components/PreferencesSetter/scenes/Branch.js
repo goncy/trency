@@ -1,25 +1,25 @@
-import React, { Component } from "react"
-import PropTypes from "prop-types"
-import { Link } from "react-router-dom"
-import { connect } from "react-redux"
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
-import { changeLine } from "../../../actions/preferences"
+import { changeLine } from "../../../actions/preferences";
 
 class Branch extends Component {
   static propTypes = {
     match: PropTypes.any.isRequired,
     preferences: PropTypes.any.isRequired,
     changeLine: PropTypes.func.isRequired
-  }
+  };
 
   componentWillMount() {
-    const { match, changeLine } = this.props
-    changeLine(match.params.line)
+    const { match, changeLine } = this.props;
+    changeLine(match.params.line);
   }
 
   render() {
-    const { preferences, match } = this.props
-    const { line } = preferences
+    const { preferences, match } = this.props;
+    const { line } = preferences;
     return (
       line && (
         <section
@@ -44,22 +44,22 @@ class Branch extends Component {
           <div className="hero-foot">
             <nav className="level">
               <p className="has-text-centered">
-                <Link to="/">Volver atras</Link>
+                <Link to="/">volver atrás</Link>
               </p>
             </nav>
           </div>
         </section>
       )
-    )
+    );
   }
 }
 
 const mapStateToProps = ({ preferences }) => ({
   preferences
-})
+});
 
 const mapDispatchToProps = {
   changeLine: changeLine.run
-}
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(Branch)
+export default connect(mapStateToProps, mapDispatchToProps)(Branch);

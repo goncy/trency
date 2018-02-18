@@ -2,4 +2,4 @@
 
 export type UserState = {
   idle: boolean
-}
+};

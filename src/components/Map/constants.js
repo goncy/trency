@@ -76,4 +76,4 @@ export const MAP_DEFAULT_OPTIONS = {
       ]
     }
   ]
-}
+};

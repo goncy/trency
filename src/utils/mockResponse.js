@@ -176,4 +176,4 @@ export default {
       minutos_4: "-1"
     }
   ]
-}
+};
