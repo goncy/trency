@@ -10,13 +10,9 @@ describe("Statuses", function() {
   });
 
   it("shows the ui for success response correctly", function() {
-    cy
-      .route("GET", "/api/v1/data/11", "fixture:statuses/success")
-      .as("getData");
+    cy.route("GET", "/api/v1/data/11", "fixture:statuses/success");
 
     cy.visit("/#/roca/laplata/bernal");
-
-    cy.wait(["@getData"]);
 
     cy.contains("Destino La Plata");
     cy.contains("Destino Constitucion");
