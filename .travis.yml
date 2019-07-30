@@ -1,0 +1,13 @@
+language: node_js
+
+node_js:
+  - stable
+
+install:
+  - yarn install
+
+script:
+  - yarn test --record --key a6f44c19-0e47-4373-9538-394221da3e6b
+
+env:
+  - CYPRESS_BASE_URL=https://goncy.github.io/trency

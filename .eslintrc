@@ -29,7 +29,6 @@
     "jest": true,
     "mocha": true,
     "cypress/globals": true
-    
   },
   "settings": {
     "flowtype": {
